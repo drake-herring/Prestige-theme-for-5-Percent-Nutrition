@@ -1,0 +1,50 @@
+{
+  "sections": {
+    "main": {
+      "type": "blog-template",
+      "settings": {
+        "blog_heading": "",
+        "blogmenu": "",
+        "featured_first_image": true,
+        "show_title": true,
+        "sidebar": true,
+        "show_rss": false,
+        "show_tags": true,
+        "show_featured_article": true,
+        "show_category": true,
+        "show_yotpo": false
+      }
+    },
+    "16546764999dd64af7": {
+      "type": "newsletter-sitewide",
+      "settings": {
+        "enable_bar": false,
+        "section_size": "small",
+        "text_color": "#ffffff",
+        "button_color": "#000000",
+        "subheading": "Keep updated",
+        "title": "Newsletter",
+        "content": "<p>A short sentence describing what someone will receive by subscribing<\/p>",
+        "graphic_aligment": "flat"
+      }
+    },
+    "shop-now": {
+      "type": "shop-now",
+      "disabled": true,
+      "settings": {
+        "show_section": false,
+        "title": "Best Sellers",
+        "collection": "best-sellers",
+        "grid_items_count": 9,
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16546764999dd64af7",
+    "shop-now"
+  ]
+}

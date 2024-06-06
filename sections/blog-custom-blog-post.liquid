@@ -1,0 +1,171 @@
+<section class="Section Section--spacingNormal {% if template.name == 'page' %} normal-blog-grid {% else %} featured-blog-grid {% endif %}" id="section-{{ section.id }}" data-section-type="article-list" data-section-id="{{ section.id }}">
+  <div class="Container">
+    <div class="ArticleListWrapper custom-blog-post">
+      <div class="ArticleList Grid Grid--m Grid--center">
+              {% for block in section.blocks %}
+                {%- case block.type -%}
+                  {%- when 'article' -%}
+                    <div class="article-content">
+                        {% if block.settings.heading != blank  %}
+                          <div class="heading-wrapper">
+                            {% if template.name contains 'blog' %}
+                               {%- if block.settings.sub-heading != blank or block.settings.heading != blank -%}{{ template.name }}
+                                  <header class="SectionHeader SectionHeader--center"> 
+                            
+                                    {%- if block.settings.heading != blank -%}
+                                      <h2 class="SectionHeader__Heading Heading u-h1">{{ block.settings.heading | escape }}</h2>
+                                    {%- endif -%}
+                                          {%- if block.settings.sub-heading != blank -%}
+                                      <h3 class="SectionHeader__SubHeading Heading u-h6">{{ block.settings.sub-heading | escape }}</h3>
+                                    {%- endif -%}
+                                  </header>
+                               {%- endif -%}
+                              
+                            {% else %}
+                              
+                            <p class="article-sub-heading"> {{ block.settings.sub-heading }}</h2>
+                            <h2 class="article-heading"> {{ block.settings.heading }}</h2>
+                            
+                          {% endif %}
+                      </div>
+                    {% endif %}
+                        {%- for i in (1..3) -%}
+                          {%- assign article_option = 'article_' | append: i -%}
+                          {%- assign article = articles[block.settings[article_option]] -%}
+                          {%- unless article == empty -%}
+                            <div class="Grid__Cell 1/2--tablet 1/3--lap-and-up {% if forloop.index == 3 %}hidden-tablet{% endif %}">
+                              {%- include 'article-item', article: article , hide_excerpt : section.settings.hide_excerpt , show_category : section.settings.show_category -%}
+                            </div>
+                          {%- endunless -%}
+                        {%- endfor -%}
+                      </div>
+                    {%- when 'blog' -%}
+                    {%- assign blog = blogs[block.settings.blog] -%}
+                      <div class="blog-article-content" id="{{ blog.handle }}">
+                        <div class="heading-wrapper">
+
+                        {% if block.settings.svg_icon_name %}
+                          <div class="svg-icon-img">
+                              {{ block.settings.svg_icon_name }}
+                          </div>
+                        {% else %}
+                          <div class="svg-icon-img">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="58" height="58" viewBox="0 0 58 58">
+                              <image id="Antioxidant" width="58" height="58" xlink:href="data:image/png;base64,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"/>
+                            </svg>    
+                          </div>
+                        {% endif %}
+                          
+                          {% if block.settings.heading != blank %}
+                            <h2 class="article-heading"> {{ block.settings.heading }} <sup><a href="{{ blog.url }}" class="Button--primary" style="font-family: Acumin Pro; font-size: 11px; padding: 6px 10px; margin-left:10px; border-radius:2px;">view all</a></sup></h2>
+                          {% else %}
+                            <h2 class="article-heading"> {{ blog.title | upcase }} <sup><a href="{{ blog.url }}" class="Button--primary" style="font-family: Acumin Pro; font-size: 11px; padding: 6px 10px; margin-left:10px; border-radius:2px;">view all</a></sup></h2>
+                          {% endif %}
+                        </div>
+                        
+                        {%- for article in blog.articles limit: 3 -%}
+                          <div class="Grid__Cell 1/2--tablet 1/3--lap-and-up {% if forloop.index == 3 %}hidden-tablet{% endif %}">
+                            {%- include 'article-item', article: article ,hide_excerpt : section.settings.hide_excerpt -%}
+                          </div>
+                        {%- endfor -%}
+                      </div>
+                  {%- endcase -%}
+                {% endfor %}
+          </div>
+      </div>
+  </div>
+</div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Custom Blog posts",
+  "class": "shopify-section--bordered",
+  "settings": [
+    {
+      "type" : "header",
+      "content" : "Use this settings for the Blogs content"
+    },
+    {
+      "type" : "richtext",
+      "id" : "content",
+      "label" : "Label"
+    },
+   
+    {
+      "type" : "checkbox",
+      "id" : "hide_excerpt",
+      "label" : "Hide Excerpt",
+      "default" : false
+    },
+    {
+      "type" : "checkbox",
+      "id" : "show_category",
+      "label" : "Show Category",
+      "default" : true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "article",
+      "name": "Featured Articles",
+      "settings": [
+        {
+          "type" : "text",
+          "id" : "heading",
+          "label" : "Heading"
+        },
+         {
+          "type" : "text",
+          "id" : "sub-heading",
+          "label" : "Sub-Heading"
+        },
+        {
+          "type": "article",
+          "id": "article_1",
+          "label": "Article 1"
+        },
+        {
+          "type": "article",
+          "id": "article_2",
+          "label": "Article 2"
+        },
+        {
+          "type": "article",
+          "id": "article_3",
+          "label": "Article 3"
+        }
+      ]
+    },
+    {
+      "type": "blog",
+      "name": "Latest Blog",
+      "settings": [
+        {
+          "type" : "text",
+          "id" : "heading",
+          "label" : "Heading"
+        },
+        {
+          "type": "blog",
+          "id": "blog",
+          "label": "Blog"
+        },
+        {
+          "type":"text",
+          "id":"svg_icon_name",
+          "label":"Fontawesome icon or svg icon for label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Blog",
+      "name": "Custom Blog posts",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

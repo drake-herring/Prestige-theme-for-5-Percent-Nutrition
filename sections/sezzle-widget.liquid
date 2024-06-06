@@ -1,0 +1,126 @@
+{% if section.settings.show-sezzle-widget or request.design_mode %}
+<script type="text/javascript"> document.sezzleConfig = {
+				"configGroups": [{
+					"targetXPath": "#sezzle-widget-v2-render-reference",
+					"renderToPath": "."
+				}]
+				} </script>
+<script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=77ebe370-8d7d-42a1-9db0-cb4eb4dd81e9"></script>
+{% endif %}
+
+<style>
+	.sezzle-shopify-info-button {
+	{% if request.design_mode and section.settings.show-sezzle-widget == false %}display: none !important{% endif %}
+}
+.sezzle-shopify-info-button .sezzle-button-text {
+	{% unless section.settings.color == "inherit" %}color: {{ section.settings.color }} !important;{% endunless %}
+	{% unless section.settings.font-size == "inherit" %}font-size: {{ section.settings.font-size }}px !important;{% endunless %}
+	{% unless section.settings.font-family == "inherit" %}font-family: {{ section.settings.font-family }} !important;{% endunless %}
+	text-align: {% if window.location.pathname == "/cart" and section.settings.cart-page-alignment != "auto"%} {{ section.settings.cart-page-alignment }} !important;{% elsif section.settings.product-page-alignment != "auto" %} {{ section.settings.product-page-alignment }} !important; {% endif %}
+	{% if request.design_mode %}max-width: unset !important;{% endif %}
+}
+</style>
+
+{% schema %}
+{
+	"name": "Sezzle Widget",
+	"settings": [
+		{
+		"id": "show-sezzle-widget",
+		"type": "checkbox",
+		"label": {"en": "Show Sezzle widget"},
+		"default": true
+		},
+		{
+		"id": "color",
+		"type": "select",
+		"label": {"en": "Text Color"},
+		"default": "inherit",
+		"options": [
+			{
+				"value": "inherit",
+				"label": "inherit"
+			},
+			{
+				"value": "black",
+				"label": "black"
+			},
+			{
+				"value": "white",
+				"label": "white"
+			}
+		]
+		},
+		{
+		"id": "font-size",
+		"type": "range",
+		"label": {"en": "Font Size"},
+		"default": 14,
+		"min": 9,
+		"max": 18,
+		"step": 0.5,
+		"unit": {"en": "px"}
+		},
+		{
+		"id": "font-family",
+		"type": "select",
+		"label": {"en": "Font Family"},
+		"default": "inherit",
+		"options": [
+			{
+				"value": "inherit",
+				"label": "inherit"
+			}
+		]
+		},
+		{
+		"id": "product-page-alignment",
+		"type": "select",
+		"label": {"en": "Product Page Alignment"},
+		"default": "auto",
+		"options": [
+			{
+				"value": "auto",
+				"label": "auto"
+			},
+			{
+				"value": "left",
+				"label": "left"
+			},
+			{
+				"value": "center",
+				"label": "center"
+			},
+			{
+				"value": "right",
+				"label": "right"
+			}
+		]
+		},
+		{
+		"id": "cart-page-alignment",
+		"type": "select",
+		"label": {"en": "Cart Page Alignment"},
+		"default": "auto",
+		"options": [
+			{
+				"value": "auto",
+				"label": "auto"
+			},
+			{
+				"value": "left",
+				"label": "left"
+			},
+			{
+				"value": "center",
+				"label": "center"
+			},
+			{
+				"value": "right",
+				"label": "right"
+			}
+		]
+		}
+	]
+	}
+{% endschema %}

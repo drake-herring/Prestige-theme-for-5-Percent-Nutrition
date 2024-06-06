@@ -1,0 +1,47 @@
+{
+  "sections": {
+    "page-rich-text-image": {
+      "type": "page-rich-text-image",
+      "settings": {
+        "subheading": "",
+        "title": "Daniel Collins",
+        "image": "shopify:\/\/shop_images\/DanielCollins_Bio-WEB2_92b1fdc3-04ca-4031-acc2-4710327bcedd.png",
+        "image_position": "left",
+        "content": "",
+        "height": "5' 9\"",
+        "weight": "205 lbs",
+        "DOB": "February 15th",
+        "residence": "Kansas City, Missouri",
+        "facebook_url": "https:\/\/www.facebook.com\/daniel.collins.98871174",
+        "instagram_url": "https:\/\/www.instagram.com\/accounts\/login\/?next=\/dc4fitlife\/",
+        "youtube_url": "",
+        "pinterest_url": "",
+        "snapchat_url": "",
+        "twitter_url": "",
+        "tumblr_url": "",
+        "google_plus_url": "",
+        "vimeo_url": "",
+        "linkedin_url": ""
+      }
+    },
+    "main": {
+      "type": "Athlete23",
+      "settings": {}
+    },
+    "page-featured-video": {
+      "type": "page-featured-video",
+      "settings": {
+        "section_size": "large",
+        "text_color": "#ffffff",
+        "subheading": "",
+        "title": "Your video",
+        "video_url": ""
+      }
+    }
+  },
+  "order": [
+    "page-rich-text-image",
+    "main",
+    "page-featured-video"
+  ]
+}

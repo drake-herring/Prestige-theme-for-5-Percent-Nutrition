@@ -1,0 +1,46 @@
+{
+  "sections": {
+    "upsell-products": {
+      "type": "upsell-products",
+      "blocks": {
+        "dfd38b78-2885-4a7c-9881-1f91b5fc2318": {
+          "type": "slide",
+          "settings": {
+            "product": "christmas-green-t-shirt"
+          }
+        },
+        "a7beaa37-25d7-4503-866b-7c6c968dbfcb": {
+          "type": "slide",
+          "settings": {
+            "product": "26oz-vacuum-insulated-ice-shaker-cup"
+          }
+        },
+        "7c1505ed-943b-4484-a032-8e1ed47ad20a": {
+          "type": "slide",
+          "settings": {
+            "product": "5-black-red-stringer-hoodie"
+          }
+        }
+      },
+      "block_order": [
+        "dfd38b78-2885-4a7c-9881-1f91b5fc2318",
+        "a7beaa37-25d7-4503-866b-7c6c968dbfcb",
+        "7c1505ed-943b-4484-a032-8e1ed47ad20a"
+      ],
+      "settings": {}
+    },
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "settings": {}
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    }
+  },
+  "order": [
+    "upsell-products",
+    "shogun-helper",
+    "main"
+  ]
+}

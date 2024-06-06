@@ -1,0 +1,280 @@
+{%- assign selected_variant = product.selected_or_first_available_variant -%}
+<section class="product-nav-section js-product-nav-section">
+  <div class="container">
+    <nav>
+      <ul class="product-nav-elements js-product-nav-elements">
+        {% for block in section.blocks %}
+          {% case block.settings.content_position %}
+            {% when 'reviews_homepage' %}
+              {% if block.type == 'review' %}
+                {% if block.settings.title != blank and block.settings.tab_url != blank %}            
+                  <li class="review {% if block.settings.hide_mobile %} hide_mobile {% endif %}">
+                    <a class="scrollTo" href="{{ block.settings.tab_url }}">{{ block.settings.title }}</a>
+                  </li>
+                {% endif %}
+              {% endif %}
+            {% when 'product_description' %}
+              {% if block.type == 'tab' %}
+                {% if block.settings.title != blank and block.settings.tab_url != blank %}
+                  
+                  <li class="js-description active {% if block.settings.hide_mobile %} hide_mobile {% endif %}">
+                    <a class="scrollTo" href="{{ block.settings.tab_url }}">{{ block.settings.title }}</a>
+                  </li>
+                {% endif %}
+              {% endif %}
+            {% when '5percent-nation' %}
+              {% if block.type == 'tab' %}
+                {% if block.settings.title != blank and block.settings.tab_url != blank and product.metafields.meta.instagram_feed != blank %}            
+                  <li class="js-5percent-nation {% if block.settings.hide_mobile %} hide_mobile {% endif %}">
+                    <a class="scrollTo" href="{{ block.settings.tab_url }}">{{ block.settings.title }}</a>
+                  </li>
+                {% endif %}
+              {% endif %}
+            {% when 'product-faq' %}
+              {% if block.type == 'tab' %}
+                {% if block.settings.title != blank and block.settings.tab_url != blank and product.metafields.meta.faq != blank %}            
+                  <li class="js-product-faq {% if block.settings.hide_mobile %} hide_mobile {% endif %}">
+                    <a class="scrollTo" href="{{ block.settings.tab_url }}">{{ block.settings.title }}</a>
+                  </li>
+                {% endif %}
+                {% endif %}
+            {% when 'supplements' %}
+                {% if block.type == 'tab' %}
+                  {% if block.settings.title != blank and block.settings.tab_url != blank and product.metafields.supplements != blank %}            
+                    <li class="js-supplements {% if block.settings.hide_mobile %} hide_mobile {% endif %} {% if template.suffix == 'core' %} active {% endif %}">
+                      <a class="scrollTo" href="{{ block.settings.tab_url }}">{{ block.settings.title }}</a>
+                    </li>
+                  {% endif %}
+                {% endif %}
+              {% when 'product-benefits' %}
+                {% if block.type == 'tab' %}
+                  {% if block.settings.title != blank and block.settings.tab_url != blank and product.metafields.meta.benefits != blank %}            
+                    <li class="js-product-benefits {% if block.settings.hide_mobile %} hide_mobile {% endif %}">
+                      <a class="scrollTo" href="{{ block.settings.tab_url }}">{{ block.settings.title }}</a>
+                    </li>
+                  {% endif %}
+                {% endif %}
+              {% when 'vimeo-iframe' %}
+                {% if block.type == 'tab' %}
+                  {% if block.settings.title != blank and block.settings.tab_url != blank and product.metafields.meta.video != blank or product.metafields.meta.video_mobile != blank %}            
+                    <li class="js-vimeo-iframe {% if block.settings.hide_mobile %} hide_mobile {% endif %}">
+                      <a class="scrollTo" href="{{ block.settings.tab_url }}">{{ block.settings.title }}</a>
+                    </li>
+                  {% endif %}
+               {% endif %}
+          {% endcase %}
+        {% endfor %}
+        
+          {% comment %}
+        {% for block in section.blocks %}
+            {% if block.settings.title and block.settings.tab_url  %}
+              <li class="js-description active">
+              <a class="scrollTo" href="{{ block.settings.tab_url }}">{{ block.settings.title }}</a>
+              </li>
+            {% endif %}
+            <li class="js-description active"><a class="scrollTo" href="#descriptionSection">Description</a></li>
+            {% if product.metafields.supplements != blank %} 
+              <li class="js-supplements"><a class="scrollTo" href="#supplementFactsSection">Supplement Facts</a></li>
+            {% endif %}
+            <li class="js-reviews"><a class="scrollTo" href="#reviewSection">Reviews</a></li>
+            {% unless product.metafields.meta.instagram_feed == blank %}
+              <li class="js-five-percent-nation"><a class="scrollTo" href="#5NationSection">5% Nation</a></li>
+            {% endunless %}
+            {% unless product.metafields.meta.faq == blank%}
+              <li class="js-faq"><a class="scrollTo" href="#faqSection">FAQs</a></li>
+            {% endunless %}
+        {% endfor %}
+          {% endcomment %}
+      </ul>
+    </nav>
+    {% if section.settings.show_addtocart %}
+    <div class="cart-options js-cart-options hide_mobile">
+      <div class="cart-options__cartBtn">
+        <button type="text" class="ProductForm__AddToCart ProductForm__AddToCart__productNav product-button--nav Button Button--navCart {% if selected_variant.available and section.settings.show_payment_button == false %}{% else %}{% endif %} Button--full">
+          <span class="text-uppercase">ADD TO CART</span>
+          {%- if section.settings.show_price_in_button -%}
+            <span class="Button__SeparatorDot"></span>
+            <span data-money-convertible>{{ selected_variant.price | money_without_trailing_zeros }}</span>
+          {%- endif -%}
+        </button>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% for block in section.blocks %}
+  {% case block.settings.content_position %}
+    {% when 'product_description' %}
+      {% if block.type == 'tab' %}
+        {% render 'product_description', hide_mobile : block.settings.hide_mobile %}
+      {% endif %}
+    {% when 'reviews_homepage' %}
+      {% if block.type == 'review' %}
+        {% assign review_type = block.settings.review_type %}
+        {% assign pdpshow = true %}
+        {% include 'reviews-homepage', hide_mobile : block.settings.hide_mobile %}
+      {% endif %}
+    {% when '5percent-nation' %}
+      {% if block.type == 'tab' %}
+        {% unless template.suffix == 'whitelabel' %}  
+          {% render '5percent-nation', hide_mobile : block.settings.hide_mobile %}
+        {% else %}
+          {% render '5percent-nation-coreline', hide_mobile : block.settings.hide_mobile %}
+        {% endunless %}
+      {% endif %}
+    {% when 'product-faq' %}
+      {% if block.type == 'tab' %}
+        {% render 'product-faq', hide_mobile : block.settings.hide_mobile %}
+      {% endif %}
+    {% when 'supplements' %}
+      {% if block.type == 'tab' %}
+        {% render 'supplements', hide_mobile : block.settings.hide_mobile %}
+      {% endif %}
+    {% when 'product-benefits' %}
+      {% if block.type == 'tab' %}
+        {% comment %}
+        {% render 'product-benefits', hide_mobile : block.settings.hide_mobile %}
+        {% endcomment %}
+        {% render 'product-benefits-section', hide_mobile : block.settings.hide_mobile %}
+      {% endif %}
+    {% when 'vimeo-iframe' %}
+      {% if block.type == 'tab' %}
+        {% render 'vimeo-iframe', hide_mobile : block.settings.hide_mobile %}
+      {% endif %}
+  {% endcase %}
+{% endfor %}
+
+{% if template.suffix == 'whitelabel' %} 
+  {% render 'related-metafield-products' %}
+  {% include 'product_references'%}
+{% endif %}
+            
+{% schema %}
+  {
+    "name": "Product navigation",
+    "settings": [
+      {
+        "type" : "checkbox",
+        "id" : "show_addtocart",
+        "label" : "Show add to cart button",
+        "default" : true
+      }
+    ],
+    "blocks" :[
+      {
+       "name": "Tab",
+       "type": "tab",
+       "settings": [
+         {
+            "type" : "checkbox",
+            "id" : "hide_mobile",
+            "label" : "Hide in mobile devices",
+            "default" : false
+         },
+         {
+           "type": "text",
+           "id": "title",
+           "label": "Tab Heading"
+         },
+         {
+           "type": "url",
+           "id": "tab_url",
+           "label": "Tab URL",
+           "info" : "Use this url to go to particular section #reviewSection , #5NationSection , #faqSection , #supplementFactsSection , #vimeo-iframe , #benefits-section"
+         },
+         {
+          "type": "select",
+          "id": "content_position",
+          "label": "Select respected content for this block",
+          "options": [
+            {
+              "value": "product_description",
+              "label": "Product Description"
+            },
+            {
+              "value": "5percent-nation",
+              "label": "5% Nation section"
+            },
+            {
+              "value": "product-faq",
+              "label": "FAQs"
+            },
+            {
+              "value": "supplements",
+              "label": "Supplements"
+            },
+            {
+              "value" : "product-benefits",
+              "label" : "Product benefits"
+            },
+            {
+              "value" : "vimeo-iframe",
+              "label" : "Vimeo Iframe"
+            }
+          ]
+        }
+       ]
+     },
+      {
+       "name": "Review",
+       "type": "review",
+       "settings": [
+         {
+           "type": "text",
+           "id": "title",
+           "label": "Tab Heading"
+         },
+          {
+            "type" : "select",
+            "label" : "Review type",
+            "id" : "review_type",
+            "default" : "slider",
+            "options" :[
+              {
+                "value" : "list",
+                "label" : "List"
+              },
+              {
+                "value" : "slider",
+                "label" : "Slider"
+              }
+            ]
+          },
+         {
+           "type": "url",
+           "id": "tab_url",
+           "label": "Tab URL",
+           "info" : "Use this url to go to particular section #faqSection , #supplementFactsSection , #vimeo-iframe , #benefits-section"
+         },
+         {
+          "type": "select",
+          "id": "content_position",
+          "label": "Select respected content for this block",
+          "options": [
+            {
+              "value": "reviews_homepage",
+              "label": "Reviews"
+            }
+          ]
+        }
+       ]
+     }
+    ],
+    "presets": [
+    {
+      "name": "Product navigation",
+      "settings": {
+      }
+    }
+  ],
+    "enabled_on": {
+      "templates": ["product"]
+    }
+  } 
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,50 @@
+{
+  "sections": {
+    "page-rich-text-image": {
+      "type": "page-rich-text-image",
+      "settings": {
+        "subheading": "",
+        "title": "Emma Isaacson",
+        "image": "shopify:\/\/shop_images\/EmmaIsaacson_Page_1200x1080_ceff9ea2-8d6f-4331-a8f6-07aea740eb44.png",
+        "image_position": "left",
+        "content": "",
+        "height": "5' 4\"",
+        "weight": "134 lbs",
+        "DOB": "April 15, 1994",
+        "residence": "Jacksonville, FL, USA",
+        "facebook_url": "https:\/\/www.facebook.com\/emma.isaacson",
+        "instagram_url": "https:\/\/www.instagram.com\/accounts\/login\/?next=\/Cycloneirma\/",
+        "youtube_url": "",
+        "pinterest_url": "",
+        "snapchat_url": "",
+        "twitter_url": "https:\/\/twitter.com\/Cycloneirma",
+        "tumblr_url": "",
+        "google_plus_url": "",
+        "vimeo_url": "",
+        "linkedin_url": ""
+      }
+    },
+    "main": {
+      "type": "Christina_Bashara",
+      "settings": {
+        "title1": "EXPERIENCE",
+        "title2": "INSTAGRAM"
+      }
+    },
+    "page-featured-video": {
+      "type": "page-featured-video",
+      "settings": {
+        "section_size": "large",
+        "text_color": "#ffffff",
+        "subheading": "",
+        "title": "Your video",
+        "video_url": ""
+      }
+    }
+  },
+  "order": [
+    "page-rich-text-image",
+    "main",
+    "page-featured-video"
+  ]
+}

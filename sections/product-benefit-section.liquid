@@ -1,0 +1,530 @@
+{% if product.metafields.custom.product_benefit_title != blank or product.metafields.custom.glb_file_url != blank or product.metafields.custom.benefit_section_image != blank or product.metafields.custom.benefits_content_1 != blank or product.metafields.custom.benefits_content_2 != blank or product.metafields.custom.benefits_content_3 != blank or product.metafields.custom.benefits_content_4 != blank or product.metafields.custom.benefits_content_5 != blank or product.metafields.custom.benefits_content_6 != blank %}
+<div class="bg-gray" id="benefits-section">
+  <div class="container">
+  <div class="benifit">
+      {% if product.metafields.custom.product_benefit_title != blank %}
+        <div class="benifit-main-title ">
+           <h2 class="text-uppercase product-h2">
+             <span class="underline-grey--notFull t-center">{{ product.metafields.custom.product_benefit_title }}</span>
+            </h2>
+        </div>
+      {% endif %}
+      
+      {% if product.metafields.custom.benefit_section_image != blank or product.metafields.custom.glb_file_url != blank %}
+        <div class="benifit-main-image">
+          {% if product.metafields.custom.glb_file_url != blank %}
+            <model-viewer src="{{ product.metafields.custom.glb_file_url }}" auto-rotate camera-controls alt="cube" background-color="#455A64"></model-viewer>
+          {% else %}
+            <img loading="lazy" src="{{ product.metafields.custom.benefit_section_image | file_url }}">
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if product.metafields.custom.benefits_content_1 != blank or product.metafields.custom.benefits_content_2 != blank or product.metafields.custom.benefits_content_3 != blank or product.metafields.custom.benefits_content_4 != blank or product.metafields.custom.benefits_content_5 != blank or product.metafields.custom.benefits_content_6 != blank %}
+        <div class="product-benifits" height="800px" width="400px">
+          {% for block in section.blocks %}
+            {% if block.settings.icon_select != blank and block.settings.product-title != blank %}
+              <div class="product-benifit-list">
+                {% style %}
+                  #block--id{{ block.id }} svg {
+                        color: {{ block.settings.button_bgcolor }};
+                        fill: {{ block.settings.button_bgcolor }};
+                    }
+                {% endstyle %}
+                  <div class="main-benifits">
+                     {% if block.settings.icon_select %}
+                        <div class="product-benifit-wrapper">
+                           <div class="product-benifit-icons">
+                            <div class="svg-icon-img" id="block--id{{ block.id }}">
+                             <i class="fak fa-{{ block.settings.icon_select }}"></i>
+                            </div>
+                           </div>
+                        </div>
+                      {% endif %}
+                      {% if block.settings.product-title != blank %}
+                         <div class="product-benifit-title">
+                           <h3>{{ block.settings.product-title }}</h3>
+                         </div>
+                      {% endif %}
+                  </div> 
+                
+                  {% if block.settings.meta_content != blank %}
+                   <div class="product-benifit-description">
+                     <p> {{ block.settings.meta_content }} </p>
+                   </div>
+                  {% endif %}
+               </div>
+              {% endif %}
+              {% endfor %}
+             </div>
+      {% endif %}
+  </div>
+</div>
+</div>
+{% endif %}
+{% schema %}
+  {
+    "name": "Benefit Section",
+    "settings": [
+    ],
+    "blocks": [
+     {
+       "name": "Product Benefits",
+       "type": "benefits",
+       "settings": [
+         {
+          "type": "color",
+          "id": "button_bgcolor",
+          "label": "SVG background",
+          "default": "#ae1f24"
+         },
+         {
+            "type": "select",
+            "id": "icon_select",
+            "label": "Select icon",
+            "options": [
+              {
+                  "value":"eggs",
+                  "label":"eggs"
+              },
+              {
+                  "value":"non-gmo",
+                  "label":"non-gmo"
+              },
+              {
+                  "value":"checkmark",
+                  "label":"checkmark"
+              },
+              {
+                  "value":"chemicalandfillerfree",
+                  "label":"chemicalandfillerfree"
+              },
+              {
+                  "value":"10musclepathways",
+                  "label":"10musclepathways"
+              },
+              {
+                  "value":"dairy-free",
+                  "label":"dairy-free"
+              },
+              {
+                  "value":"free-shipping",
+                  "label":"free-shipping"
+              },
+              {
+                  "value":"canada-flag",
+                  "label":"canada-flag"
+              },
+              {
+                  "value":"5pn-logo-black-noregmark-tiny",
+                  "label":"5pn-logo-black-noregmark-tiny"
+              },
+              {
+                  "value":"carbohydratefree",
+                  "label":"carbohydratefree"
+              },
+              {
+                  "value":"balanced",
+                  "label":"balanced"
+              },
+              {
+                  "value":"energy",
+                  "label":"energy"
+              },
+              {
+                  "value":"mood",
+                  "label":"mood"
+              },
+              {
+                  "value":"x-gunplay",
+                  "label":"x-gunplay"
+              },
+              {
+                  "value":"capsule",
+                  "label":"capsule"
+              },
+              {
+                  "value":"norefrigerationneeded",
+                  "label":"norefrigerationneeded"
+              },
+              {
+                  "value":"powder",
+                  "label":"powder"
+              },
+              {
+                  "value":"plate",
+                  "label":"plate"
+              },
+              {
+                  "value":"pain",
+                  "label":"pain"
+              },
+              {
+                  "value":"nowhey",
+                  "label":"nowhey"
+              },
+              {
+                  "value":"5pn-logo-black-wregmark",
+                  "label":"5pn-logo-black-wregmark"
+              },
+              {
+                  "value":"immunehealth",
+                  "label":"immunehealth"
+              },
+              {
+                  "value":"blood",
+                  "label":"blood"
+              },
+              {
+                  "value":"prostatesupport",
+                  "label":"prostatesupport"
+              },
+              {
+                  "value":"kidneysupport",
+                  "label":"kidneysupport"
+              },
+              {
+                  "value":"where-to-buy",
+                  "label":"where-to-buy"
+              },
+              {
+                  "value":"metabolism",
+                  "label":"metabolism"
+              },
+              {
+                  "value":"tea",
+                  "label":"tea"
+              },
+              {
+                  "value":"share-fb",
+                  "label":"share-fb"
+              },
+              {
+                  "value":"amazon-logo",
+                  "label":"amazon-logo"
+              },
+              {
+                  "value":"cgmp-logo",
+                  "label":"cgmp-logo"
+              },
+              {
+                  "value":"microwavable",
+                  "label":"microwavable"
+              },
+              {
+                  "value":"thermogenic",
+                  "label":"thermogenic"
+              },
+              {
+                  "value":"customer-service",
+                  "label":"customer-service"
+              },
+              {
+                  "value":"caffeine",
+                  "label":"caffeine"
+              },
+              {
+                  "value":"mental",
+                  "label":"mental"
+              },
+              {
+                  "value":"followus-twitter",
+                  "label":"followus-twitter"
+              },
+              {
+                  "value":"veganfriendly",
+                  "label":"veganfriendly"
+              },
+              {
+                  "value":"uk-flag",
+                  "label":"uk-flag"
+              },
+              {
+                  "value":"stomach",
+                  "label":"stomach"
+              },
+              {
+                  "value":"jointsupport",
+                  "label":"jointsupport"
+              },
+              {
+                  "value":"zeroloading",
+                  "label":"zeroloading"
+              },
+              {
+                  "value":"usa-flag",
+                  "label":"usa-flag"
+              },
+              {
+                  "value":"productreview",
+                  "label":"productreview"
+              },
+              {
+                  "value":"increaseoxygenation",
+                  "label":"increaseoxygenation"
+              },
+              {
+                  "value":"fatburner",
+                  "label":"fatburner"
+              },
+              {
+                  "value":"followus-fb",
+                  "label":"followus-fb"
+              },
+              {
+                  "value":"training",
+                  "label":"training"
+              },
+              {
+                  "value":"pump",
+                  "label":"pump"
+              },
+              {
+                  "value":"weightloss",
+                  "label":"weightloss"
+              },
+              {
+                  "value":"increasednutrients",
+                  "label":"increasednutrients"
+              },
+              {
+                  "value":"keto",
+                  "label":"keto"
+              },
+              {
+                  "value":"5pn-logo-black-wregmark-detailed",
+                  "label":"5pn-logo-black-wregmark-detailed"
+              },
+              {
+                  "value":"share-twitter",
+                  "label":"share-twitter"
+              },
+              {
+                  "value":"decreasetime",
+                  "label":"decreasetime"
+              },
+              {
+                  "value":"eu-flag",
+                  "label":"eu-flag"
+              },
+              {
+                  "value":"bcaa",
+                  "label":"bcaa"
+              },
+              {
+                  "value":"support",
+                  "label":"support"
+              },
+              {
+                  "value":"fatigue",
+                  "label":"fatigue"
+              },
+              {
+                  "value":"sucralosefree",
+                  "label":"sucralosefree"
+              },
+              {
+                  "value":"loyaltyprogram",
+                  "label":"loyaltyprogram"
+              },
+              {
+                  "value":"endurance",
+                  "label":"endurance"
+              },
+              {
+                  "value":"focus",
+                  "label":"focus"
+              },
+              {
+                  "value":"lowsugar",
+                  "label":"lowsugar"
+              },
+              {
+                  "value":"my-account",
+                  "label":"my-account"
+              },
+              {
+                  "value":"stimulant",
+                  "label":"stimulant"
+              },
+              {
+                  "value":"food",
+                  "label":"food"
+              },
+              {
+                  "value":"testlevels",
+                  "label":"testlevels"
+              },
+              {
+                  "value":"heartsupport",
+                  "label":"heartsupport"
+              },
+              {
+                  "value":"liversupport",
+                  "label":"liversupport"
+              },
+              {
+                  "value":"military-veterans",
+                  "label":"military-veterans"
+              },
+              {
+                  "value":"stackable",
+                  "label":"stackable"
+              },
+              {
+                  "value":"birthday",
+                  "label":"birthday"
+              },
+              {
+                  "value":"vascularity",
+                  "label":"vascularity"
+              },
+              {
+                  "value":"free-returns",
+                  "label":"free-returns"
+              },
+              {
+                  "value":"t-shirt",
+                  "label":"t-shirt"
+              },
+              {
+                  "value":"x-grunge",
+                  "label":"x-grunge"
+              },
+              {
+                  "value":"fast",
+                  "label":"fast"
+              },
+              {
+                  "value":"blender",
+                  "label":"blender"
+              },
+              {
+                  "value":"protein",
+                  "label":"protein"
+              },
+              {
+                  "value":"killitpoints",
+                  "label":"killitpoints"
+              },
+              {
+                  "value":"suppressappetite",
+                  "label":"suppressappetite"
+              },
+              {
+                  "value":"time",
+                  "label":"time"
+              },
+              {
+                  "value":"stimfree",
+                  "label":"stimfree"
+              },
+              {
+                  "value":"liquidbasedproduct",
+                  "label":"liquidbasedproduct"
+              },
+              {
+                  "value":"increasegrowthhormone",
+                  "label":"increasegrowthhormone"
+              },
+              {
+                  "value":"antioxidant",
+                  "label":"antioxidant"
+              },
+              {
+                  "value":"musclebuilder",
+                  "label":"musclebuilder"
+              },
+              {
+                  "value":"calendar",
+                  "label":"calendar"
+              },
+              {
+                  "value":"sleep",
+                  "label":"sleep"
+              },
+              {
+                  "value":"electrolytes",
+                  "label":"electrolytes"
+              },
+              {
+                  "value":"registeraccount",
+                  "label":"registeraccount"
+              },
+              {
+                  "value":"naturallyflavored",
+                  "label":"naturallyflavored"
+              },
+              {
+                  "value":"first-responders",
+                  "label":"first-responders"
+              },
+              {
+                  "value":"tastesgreat",
+                  "label":"tastesgreat"
+              },
+              {
+                  "value":"carbohydrate",
+                  "label":"carbohydrate"
+              },
+              {
+                  "value":"followus-ig",
+                  "label":"followus-ig"
+              }
+            ],
+            "default": "musclebuilder"
+          },
+         {
+           "type": "text",
+           "id": "product-title",
+           "label": "Title"
+         },
+         {
+           "type": "text",
+           "id": "meta_content",
+           "label": "MetaField selection",
+           "info" : "Please add the product metafield of the 'Benefits content 1' to 'Benefits content 6' To add the metafield "
+         }
+       ]
+     }
+   ],
+    "presets": [
+    {
+      "name": "Benefit",
+      "settings": {
+      },
+      	"blocks": [
+        {
+          "type": "benefits"
+        },
+        {
+          "type": "benefits"
+        },
+        {
+          "type": "benefits"
+        },
+        {
+          "type": "benefits"
+        },
+        {
+          "type": "benefits"
+        },
+        {
+          "type": "benefits"
+        }
+      ]
+    }
+  ],
+    "enabled_on": {
+    "templates": ["product"]
+   }
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+

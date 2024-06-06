@@ -1,0 +1,71 @@
+{
+  "sections": {
+    "1698344870b35e5e85": {
+      "type": "apps",
+      "blocks": {
+        "7f5a68b4-0c9e-420c-9548-eeca2bfdf3b3": {
+          "type": "shopify:\/\/apps\/quizify-product-quiz-builder\/blocks\/quizify_preview\/a183a207-633e-46c0-841f-299e90a9605b",
+          "settings": {
+            "quizify_shortcode": 1
+          }
+        }
+      },
+      "block_order": [
+        "7f5a68b4-0c9e-420c-9548-eeca2bfdf3b3"
+      ],
+      "settings": {}
+    },
+    "956b7ced-8a3a-49af-b388-ecbdbcf6e2b0": {
+      "type": "custom-html",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div id=\"quizify-popup-pages-data\" class=\"quizify-popup-pages-data\" data-quiz-store=\"7899\" data-popup-pages-data=\"q_specific_collection_pre-workout-with-quiz\"><\/div>"
+      }
+    },
+    "main": {
+      "type": "default-collection",
+      "settings": {
+        "show_collection_info": true,
+        "show_collection_image": false,
+        "apply_overlay": true,
+        "show_color_swatch": false,
+        "show_vendor": false,
+        "collection_image_size": "normal",
+        "show_sort_by": false,
+        "show_layout_switch": false,
+        "toolbar_position": "bottom",
+        "filter_position": "sidebar",
+        "filter_mode": "hidden",
+        "show_filter_color_swatch": false,
+        "filter_menu": "",
+        "grid_items_per_page": 32,
+        "grid_mobile_items_per_row": "2",
+        "grid_desktop_items_per_row": 3
+      }
+    },
+    "collection-footer": {
+      "type": "collection-footer",
+      "settings": {
+        "show_section": false,
+        "text_color": "#ffffff",
+        "apply_overlay": false,
+        "title": "Our story",
+        "content": "<p>Add your own custom content to explain your processes...<\/p>"
+      }
+    },
+    "collection-below": {
+      "type": "collection-below",
+      "disabled": true,
+      "settings": {}
+    }
+  },
+  "order": [
+    "1698344870b35e5e85",
+    "956b7ced-8a3a-49af-b388-ecbdbcf6e2b0",
+    "main",
+    "collection-footer",
+    "collection-below"
+  ]
+}

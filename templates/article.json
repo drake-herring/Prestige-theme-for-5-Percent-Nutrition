@@ -1,0 +1,62 @@
+{
+  "sections": {
+    "main": {
+      "type": "article-template",
+      "settings": {
+        "show_article_image": true,
+        "show_date": true,
+        "show_category": true,
+        "show_author": true,
+        "show_share_buttons": false
+      }
+    },
+    "shop-now": {
+      "type": "shop-now",
+      "blocks": {
+        "quote": {
+          "type": "quote",
+          "settings": {
+            "content": "<p>You can use this element to add a quote, content...<\/p>",
+            "author": ""
+          }
+        }
+      },
+      "block_order": [
+        "quote"
+      ],
+      "settings": {
+        "show_section": false,
+        "title": "Best Sellers",
+        "collection": "best-sellers",
+        "grid_items_count": 9,
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false
+      }
+    },
+    "blog-ac-signup": {
+      "type": "newsletter-blogs",
+      "disabled": true,
+      "settings": {}
+    },
+    "165407736064e49d5e": {
+      "type": "newsletter-sitewide",
+      "settings": {
+        "enable_bar": true,
+        "section_size": "small",
+        "text_color": "#ffffff",
+        "button_color": "#000000",
+        "subheading": "Subscribe below to be notified when new articles drop!",
+        "title": "WANT TO SEE MORE?",
+        "content": "",
+        "graphic_aligment": "black"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "shop-now",
+    "blog-ac-signup",
+    "165407736064e49d5e"
+  ]
+}

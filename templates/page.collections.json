@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "list-collections-template",
+      "settings": {
+        "collections_to_show": "selected"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

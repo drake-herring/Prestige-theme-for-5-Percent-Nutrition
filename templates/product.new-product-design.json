@@ -1,0 +1,487 @@
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "settings": {}
+    },
+    "shogun-above": {
+      "type": "shogun-above",
+      "settings": {}
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "7ce1eeb2-4c09-4b72-9f4b-6a808c8dd5a4": {
+          "type": "title",
+          "settings": {}
+        },
+        "2341cb1e-e7dc-4dfd-ba26-606510ed8783": {
+          "type": "yotpo",
+          "settings": {}
+        },
+        "ca2892b6-53f1-4ae1-8fd7-e5e5e3f63ab8": {
+          "type": "description",
+          "settings": {
+            "short_desc": true
+          }
+        },
+        "5966d377-d68b-455c-9e83-e6f18760bdd3": {
+          "type": "price",
+          "settings": {}
+        },
+        "eafddd16-84b9-4fba-9197-1b16a9b7c389": {
+          "type": "meta_information",
+          "settings": {}
+        },
+        "32921b11-a593-4a61-81b4-6edf2890db15": {
+          "type": "addtocart",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "7ce1eeb2-4c09-4b72-9f4b-6a808c8dd5a4",
+        "2341cb1e-e7dc-4dfd-ba26-606510ed8783",
+        "ca2892b6-53f1-4ae1-8fd7-e5e5e3f63ab8",
+        "5966d377-d68b-455c-9e83-e6f18760bdd3",
+        "eafddd16-84b9-4fba-9197-1b16a9b7c389",
+        "32921b11-a593-4a61-81b4-6edf2890db15"
+      ],
+      "settings": {
+        "show_share_buttons": false,
+        "show_vendor": false,
+        "show_color_swatch": true,
+        "show_color_carousel": false,
+        "show_size_swatch": true,
+        "show_quantity_selector": true,
+        "show_inventory_quantity": false,
+        "inventory_quantity_threshold": 3,
+        "show_price_in_button": false,
+        "show_payment_button": false,
+        "image_size": "medium",
+        "stack_images": true,
+        "show_thumbnails": true,
+        "enable_image_zoom": false,
+        "tab_page_1_handle": "",
+        "tab_page_2_handle": "",
+        "reviews_enabled": false,
+        "featured_image_size": "large"
+      }
+    },
+    "2c8de5a3-3cc6-4e96-ab1d-7cbf6d69eb27": {
+      "type": "meta-gallery",
+      "blocks": {
+        "09876b1d-9eb0-4b13-9551-34b975bdc90b": {
+          "type": "size-chart",
+          "settings": {
+            "tagtext": "men's apparel,tank top,stringer",
+            "size_chart": "shopify:\/\/shop_images\/B09ZFB4NHL-sizechart_stringertank.jpg"
+          }
+        },
+        "fbf6bfae-3a0d-412c-bfba-1a5de640b9d8": {
+          "type": "size-chart",
+          "settings": {
+            "tagtext": "women's apparel,shorts",
+            "size_chart": "shopify:\/\/shop_images\/442134893-sizechart_womensshorts.jpg"
+          }
+        },
+        "a27bf215-fa9e-42e2-8263-07b47b5ecb82": {
+          "type": "size-chart",
+          "settings": {
+            "tagtext": "unisex apparel,longsleeve, hoodie",
+            "size_chart": "shopify:\/\/shop_images\/SizeChart_LongsleeveHoodie.jpg"
+          }
+        },
+        "390a05cf-7d3f-4345-9de0-ea1c8a27cfcc": {
+          "type": "size-chart",
+          "settings": {
+            "tagtext": "women's apparel,cropped,t-shirt",
+            "size_chart": "shopify:\/\/shop_images\/442134878-sizechart_womenscroptee.jpg"
+          }
+        },
+        "12c8485a-227b-485e-b231-6fbeff37c8c8": {
+          "type": "size-chart",
+          "settings": {
+            "tagtext": "women's apparel,racerback tank",
+            "size_chart": "shopify:\/\/shop_images\/442134891-sizechart_womensracerbacktank.jpg"
+          }
+        },
+        "44a13d28-dc56-49eb-a8c3-0398db17e96e": {
+          "type": "size-chart",
+          "settings": {
+            "tagtext": "women's apparel,leggings",
+            "size_chart": "shopify:\/\/shop_images\/442134884-sizechart_womensleggings.jpg"
+          }
+        },
+        "15b24387-b8b8-43d9-b19a-69fd919aa070": {
+          "type": "size-chart",
+          "settings": {
+            "tagtext": "women's apparel.cropped,hoodie",
+            "size_chart": "shopify:\/\/shop_images\/442134870-sizechart_womenscrophoodie.jpg"
+          }
+        },
+        "0f9c06be-c454-4592-8679-0d76a0bdce0b": {
+          "type": "size-chart",
+          "settings": {
+            "tagtext": "women's apparel,cropped,tank top",
+            "size_chart": "shopify:\/\/shop_images\/B0B3GTNDF9-sizechart_womenscroptop.jpg"
+          }
+        },
+        "9f38e291-0303-431d-a7e3-b5eb3a89b866": {
+          "type": "size-chart",
+          "settings": {
+            "tagtext": "men's apparel,stringer,hoodie",
+            "size_chart": "shopify:\/\/shop_images\/442134860-sizechart_stringerhoodie.jpg"
+          }
+        },
+        "a6b8c445-6215-4c76-b32e-7e5d9527272a": {
+          "type": "size-chart",
+          "settings": {
+            "tagtext": "unisex apparel,tank top",
+            "size_chart": "shopify:\/\/shop_images\/Unisex-Cotton-Tank.jpg"
+          }
+        },
+        "2bebb33c-e300-44da-8c7a-7007a5cfa285": {
+          "type": "size-chart",
+          "settings": {
+            "tagtext": "men's apparel,tank top,ribbed",
+            "size_chart": "shopify:\/\/shop_images\/442134839-sizechart_mensribbedtank.jpg"
+          }
+        },
+        "af5e5e70-3c15-4b8c-a206-bf0b2b06da58": {
+          "type": "size-chart",
+          "settings": {
+            "tagtext": "men's apparel,tank top,basketball",
+            "size_chart": "shopify:\/\/shop_images\/442134791-sizechart_basketballjersey.jpg"
+          }
+        },
+        "87029ceb-a79b-4a08-9799-5e2ee16432a9": {
+          "type": "size-chart",
+          "settings": {
+            "tagtext": "men's apparel,tank top",
+            "size_chart": "shopify:\/\/shop_images\/442134853-sizechart_menstank.jpg"
+          }
+        },
+        "a855899e-18aa-4cc2-8640-b80f60673185": {
+          "type": "size-chart",
+          "settings": {
+            "tagtext": "men's apparel,joggers",
+            "size_chart": "shopify:\/\/shop_images\/442134823-sizechart_fleecejogger.jpg"
+          }
+        },
+        "bfa08ac0-abc4-4a30-8d57-db90402f5961": {
+          "type": "size-chart",
+          "settings": {
+            "tagtext": "men's apparel,shorts,basketball",
+            "size_chart": "shopify:\/\/shop_images\/B0B3KCSVBJ-sizechart_basketballshorts.jpg"
+          }
+        },
+        "a35811a6-d08d-43e8-88e9-dfefcbbd22cd": {
+          "type": "size-chart",
+          "settings": {
+            "tagtext": "men's apparel,shorts",
+            "size_chart": "shopify:\/\/shop_images\/B0B3F74XT5-sizechart_mensshorts.jpg"
+          }
+        },
+        "35803fe7-82f9-4218-a797-871b252dad25": {
+          "type": "size-chart",
+          "settings": {
+            "tagtext": "unisex apparel,hoodie,zip-up",
+            "size_chart": "shopify:\/\/shop_images\/442134826-sizechart_fullziphoodie.jpg"
+          }
+        },
+        "a2be7e2f-f687-48a1-8dd3-8c85d69ec6bc": {
+          "type": "size-chart",
+          "settings": {
+            "tagtext": "unisex apparel,hoodie,military",
+            "size_chart": "shopify:\/\/shop_images\/Unisex-Military-Pullover-Hoodie.jpg"
+          }
+        },
+        "a985d7b4-76f3-46ce-9fb1-e35899188b30": {
+          "type": "size-chart",
+          "settings": {
+            "tagtext": "unisex apparel,hoodie,rp",
+            "size_chart": "shopify:\/\/shop_images\/Unisex-RP-Pullover-Hoodie-copy.jpg"
+          }
+        },
+        "de9b0613-c94d-4453-9609-dcb656c4039d": {
+          "type": "size-chart",
+          "settings": {
+            "tagtext": "unisex apparel,hoodie",
+            "size_chart": "shopify:\/\/shop_images\/442134831-sizechart_hoodie.jpg"
+          }
+        },
+        "31d55206-f7b7-41f4-9711-ee68fd44e6cd": {
+          "type": "size-chart",
+          "settings": {
+            "tagtext": "unisex apparel,t-shirt",
+            "size_chart": "shopify:\/\/shop_images\/442134865-sizechart_unisexcottontee.jpg"
+          }
+        },
+        "4f428564-cb59-4127-9164-d017b7940c07": {
+          "type": "size-chart",
+          "settings": {
+            "tagtext": "women's apparel,sports bra",
+            "size_chart": "shopify:\/\/shop_images\/SizeChart_WomensSportsBra.jpg"
+          }
+        },
+        "3df9051d-978b-40ac-8bfe-26ccdfb23637": {
+          "type": "size-chart",
+          "settings": {
+            "tagtext": "unisex apparel,longsleeve",
+            "size_chart": "shopify:\/\/shop_images\/SizeChart_Longsleeve.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "09876b1d-9eb0-4b13-9551-34b975bdc90b",
+        "fbf6bfae-3a0d-412c-bfba-1a5de640b9d8",
+        "a27bf215-fa9e-42e2-8263-07b47b5ecb82",
+        "390a05cf-7d3f-4345-9de0-ea1c8a27cfcc",
+        "12c8485a-227b-485e-b231-6fbeff37c8c8",
+        "44a13d28-dc56-49eb-a8c3-0398db17e96e",
+        "15b24387-b8b8-43d9-b19a-69fd919aa070",
+        "0f9c06be-c454-4592-8679-0d76a0bdce0b",
+        "9f38e291-0303-431d-a7e3-b5eb3a89b866",
+        "a6b8c445-6215-4c76-b32e-7e5d9527272a",
+        "2bebb33c-e300-44da-8c7a-7007a5cfa285",
+        "af5e5e70-3c15-4b8c-a206-bf0b2b06da58",
+        "87029ceb-a79b-4a08-9799-5e2ee16432a9",
+        "a855899e-18aa-4cc2-8640-b80f60673185",
+        "bfa08ac0-abc4-4a30-8d57-db90402f5961",
+        "a35811a6-d08d-43e8-88e9-dfefcbbd22cd",
+        "35803fe7-82f9-4218-a797-871b252dad25",
+        "a2be7e2f-f687-48a1-8dd3-8c85d69ec6bc",
+        "a985d7b4-76f3-46ce-9fb1-e35899188b30",
+        "de9b0613-c94d-4453-9609-dcb656c4039d",
+        "31d55206-f7b7-41f4-9711-ee68fd44e6cd",
+        "4f428564-cb59-4127-9164-d017b7940c07",
+        "3df9051d-978b-40ac-8bfe-26ccdfb23637"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "image_pos": "left"
+      }
+    },
+    "bar-section": {
+      "type": "bar-section",
+      "settings": {
+        "heading": "Progress bar",
+        "heading_color": "#e2e2e2",
+        "background": "linear-gradient(180deg, rgba(251, 51, 166, 0.45), rgba(127, 72, 176, 1) 50%, rgba(48, 145, 211, 1) 100%)",
+        "color": "#fffdfd"
+      }
+    },
+    "related-metafield-products": {
+      "type": "related-metafield-products",
+      "settings": {
+        "show_section": false,
+        "title": "Related Products",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false
+      }
+    },
+    "main-product-coreline-references": {
+      "type": "main-product-coreline-references",
+      "settings": {
+        "text_color": "#000000",
+        "background_color": "#f7f7f7"
+      }
+    },
+    "main-sezzel-widget": {
+      "type": "main-sezzle-widget",
+      "settings": {
+        "show-sezzle-widget": false,
+        "color": "inherit",
+        "font-size": 14,
+        "font-family": "inherit",
+        "product-page-alignment": "auto",
+        "cart-page-alignment": "auto"
+      }
+    },
+    "shogun-below": {
+      "type": "shogun-below",
+      "settings": {}
+    },
+    "a5b05fb5-76d1-4f63-89b5-fce237fd9a20": {
+      "type": "custom-html",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div class=\"container frequently_bought_together_app\"><\/div>"
+      }
+    },
+    "668cce3b-f9a9-4d1f-b248-3f49cc083b05": {
+      "type": "product-navigation",
+      "blocks": {
+        "a6460229-1079-4e50-8350-20a47ab18056": {
+          "type": "tab",
+          "settings": {
+            "hide_mobile": false,
+            "title": "Description",
+            "tab_url": "#descriptionSection",
+            "content_position": "product_description"
+          }
+        },
+        "0da5761e-720f-4152-a3b7-15795fa14cd3": {
+          "type": "tab",
+          "settings": {
+            "hide_mobile": false,
+            "title": "Supplements",
+            "tab_url": "#supplementFactsSection",
+            "content_position": "supplements"
+          }
+        },
+        "da889e21-4ad3-4bc1-ac64-bbecedaf0e1b": {
+          "type": "tab",
+          "settings": {
+            "hide_mobile": false,
+            "title": "Vimeo",
+            "tab_url": "#vimeo-iframe",
+            "content_position": "vimeo-iframe"
+          }
+        },
+        "e2a89ac5-7c59-4f2b-be87-6cfa5d3ff194": {
+          "type": "tab",
+          "settings": {
+            "hide_mobile": false,
+            "title": "Product benefits",
+            "tab_url": "#benefits-section",
+            "content_position": "product-benefits"
+          }
+        },
+        "dd22fe71-a832-45b3-8a10-fb6464a6f8ac": {
+          "type": "review",
+          "settings": {
+            "title": "Review",
+            "review_type": "slider",
+            "tab_url": "#reviewSection",
+            "content_position": "reviews_homepage"
+          }
+        },
+        "a1e85fe2-1bd6-43f6-9a5e-f98b766ae7b1": {
+          "type": "tab",
+          "settings": {
+            "hide_mobile": false,
+            "title": "5% Nation",
+            "tab_url": "#5NationSection",
+            "content_position": "5percent-nation"
+          }
+        },
+        "df99a8f9-a033-4b63-83b2-694e76c4ec16": {
+          "type": "tab",
+          "settings": {
+            "hide_mobile": false,
+            "title": "FAQs",
+            "tab_url": "#faqSection",
+            "content_position": "product-faq"
+          }
+        }
+      },
+      "block_order": [
+        "a6460229-1079-4e50-8350-20a47ab18056",
+        "0da5761e-720f-4152-a3b7-15795fa14cd3",
+        "da889e21-4ad3-4bc1-ac64-bbecedaf0e1b",
+        "e2a89ac5-7c59-4f2b-be87-6cfa5d3ff194",
+        "dd22fe71-a832-45b3-8a10-fb6464a6f8ac",
+        "a1e85fe2-1bd6-43f6-9a5e-f98b766ae7b1",
+        "df99a8f9-a033-4b63-83b2-694e76c4ec16"
+      ],
+      "settings": {
+        "show_addtocart": true
+      }
+    },
+    "main-product-product_references": {
+      "type": "main-product-product_references",
+      "settings": {
+        "text_color": "#000000",
+        "background_color": "#f7f7f7"
+      }
+    },
+    "942b7fe7-093c-4177-86d0-9ba1acf733ee": {
+      "type": "product-benefit-section",
+      "blocks": {
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-0": {
+          "type": "benefits",
+          "settings": {
+            "button_bgcolor": "#ae1f24",
+            "icon_select": "blender",
+            "product-title": "{{ product.metafields.custom.benefits_title_1.value }}",
+            "meta_content": "{{ product.metafields.custom.benefits_content_1.value }}"
+          }
+        },
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-1": {
+          "type": "benefits",
+          "settings": {
+            "button_bgcolor": "#323232",
+            "icon_select": "protein",
+            "product-title": "{{ product.metafields.custom.benefits_title_2.value }}",
+            "meta_content": "{{ product.metafields.custom.benefits_content_2.value }}"
+          }
+        },
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-2": {
+          "type": "benefits",
+          "settings": {
+            "button_bgcolor": "#1fae34",
+            "icon_select": "stimfree",
+            "product-title": "{{ product.metafields.custom.benefits_title_3.value }}",
+            "meta_content": "{{ product.metafields.custom.benefits_content_3.value }}"
+          }
+        },
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-3": {
+          "type": "benefits",
+          "settings": {
+            "button_bgcolor": "#1552ed",
+            "icon_select": "fast",
+            "product-title": "{{ product.metafields.custom.benefits_title_4.value }}",
+            "meta_content": "{{ product.metafields.custom.benefits_content_4.value }}"
+          }
+        },
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-4": {
+          "type": "benefits",
+          "settings": {
+            "button_bgcolor": "#e3a22b",
+            "icon_select": "followus-ig",
+            "product-title": "{{ product.metafields.custom.benefits_title_5.value }}",
+            "meta_content": "{{ product.metafields.custom.benefits_content_5.value }}"
+          }
+        },
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-5": {
+          "type": "benefits",
+          "settings": {
+            "button_bgcolor": "#1fae34",
+            "icon_select": "non-gmo",
+            "product-title": "{{ product.metafields.custom.benefits_title_6.value }}",
+            "meta_content": "{{ product.metafields.custom.benefits_content_6.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-0",
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-1",
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-2",
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-3",
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-4",
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-5"
+      ],
+      "disabled": true,
+      "settings": {}
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "shogun-above",
+    "main",
+    "2c8de5a3-3cc6-4e96-ab1d-7cbf6d69eb27",
+    "bar-section",
+    "related-metafield-products",
+    "main-product-coreline-references",
+    "main-sezzel-widget",
+    "shogun-below",
+    "a5b05fb5-76d1-4f63-89b5-fce237fd9a20",
+    "668cce3b-f9a9-4d1f-b248-3f49cc083b05",
+    "main-product-product_references",
+    "942b7fe7-093c-4177-86d0-9ba1acf733ee"
+  ]
+}

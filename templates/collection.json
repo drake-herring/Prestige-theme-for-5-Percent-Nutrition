@@ -1,0 +1,82 @@
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "settings": {}
+    },
+    "shogun-above": {
+      "type": "shogun-above",
+      "settings": {}
+    },
+    "collection-upper": {
+      "type": "collection-upper",
+      "settings": {}
+    },
+    "main": {
+      "type": "collection-template",
+      "settings": {
+        "show_collection_info": true,
+        "show_collection_image": false,
+        "apply_overlay": true,
+        "show_color_swatch": false,
+        "show_vendor": false,
+        "title_position": "below",
+        "collection_image_size": "normal",
+        "show_sort_by": false,
+        "show_layout_switch": false,
+        "toolbar_position": "bottom",
+        "filter_position": "sidebar",
+        "filter_mode": "hidden",
+        "show_filter_color_swatch": true,
+        "filter_menu": "",
+        "grid_items_per_page": 20,
+        "grid_mobile_items_per_row": "2",
+        "grid_desktop_items_per_row": 4
+      }
+    },
+    "collection-below": {
+      "type": "collection-below",
+      "settings": {}
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "disabled": true,
+      "settings": {
+        "show_section": false,
+        "title": "You Recently Viewed",
+        "show_product_info": false,
+        "show_vendor": false,
+        "show_color_swatch": false
+      }
+    },
+    "collection-footer": {
+      "type": "collection-footer",
+      "settings": {
+        "show_section": false,
+        "text_color": "#ffffff",
+        "apply_overlay": true,
+        "title": "Our story",
+        "content": "<p>Add your own custom content to explain your processes...<\/p>"
+      }
+    },
+    "shogun-below": {
+      "type": "shogun-below",
+      "settings": {}
+    },
+    "16983515063ec590b4": {
+      "type": "apps",
+      "settings": {}
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "shogun-above",
+    "collection-upper",
+    "main",
+    "collection-below",
+    "recently-viewed-products",
+    "collection-footer",
+    "shogun-below",
+    "16983515063ec590b4"
+  ]
+}

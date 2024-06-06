@@ -1,0 +1,92 @@
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "settings": {}
+    },
+    "shogun-above": {
+      "type": "shogun-above",
+      "settings": {}
+    },
+    "collection-upper": {
+      "type": "collection-upper",
+      "settings": {}
+    },
+    "main": {
+      "type": "collection-template",
+      "disabled": true,
+      "settings": {
+        "show_collection_info": true,
+        "show_collection_image": false,
+        "apply_overlay": true,
+        "show_color_swatch": false,
+        "show_vendor": false,
+        "title_position": "below",
+        "collection_image_size": "normal",
+        "show_sort_by": false,
+        "show_layout_switch": false,
+        "toolbar_position": "top",
+        "filter_position": "sidebar",
+        "filter_mode": "hidden",
+        "show_filter_color_swatch": false,
+        "filter_menu": "",
+        "grid_items_per_page": 20,
+        "grid_mobile_items_per_row": "2",
+        "grid_desktop_items_per_row": 4
+      }
+    },
+    "16857222688c10e08b": {
+      "type": "apps",
+      "blocks": {
+        "788a2a43-369e-4e86-aacd-43b449c00ca7": {
+          "type": "shopify:\/\/apps\/smart-search-bar-filters\/blocks\/app-block\/d8f24ada-02b1-458a-bbeb-5bf16d5c921e",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "788a2a43-369e-4e86-aacd-43b449c00ca7"
+      ],
+      "settings": {}
+    },
+    "collection-below": {
+      "type": "collection-below",
+      "settings": {}
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "disabled": true,
+      "settings": {
+        "show_section": true,
+        "title": "You Recently Viewed",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false
+      }
+    },
+    "collection-footer": {
+      "type": "collection-footer",
+      "settings": {
+        "show_section": false,
+        "text_color": "#ffffff",
+        "apply_overlay": true,
+        "title": "Our story",
+        "content": "<p>Add your own custom content to explain your processes...<\/p>"
+      }
+    },
+    "shogun-below": {
+      "type": "shogun-below",
+      "settings": {}
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "shogun-above",
+    "collection-upper",
+    "main",
+    "16857222688c10e08b",
+    "collection-below",
+    "recently-viewed-products",
+    "collection-footer",
+    "shogun-below"
+  ]
+}

@@ -1,0 +1,173 @@
+{% assign athlet_products = page.metafields.custom.athlet_products %}
+{% assign products = collections[athlet_products].products | limit:4 %}
+
+
+<div class="Container atheles_header_bg">
+	<div id="shopify-section-athlete-bio" class="shopify-section shopify-section--bordered">
+		<section class="Section">
+			<div class="FeatureText {% if page.metafields.meta.ath_image != blank %}FeatureText--withImage FeatureText--imageLeft{% endif %}">
+				{%- if page.metafields.meta.ath_image != blank -%}
+					<div class="FeatureText__ImageWrapper">
+						{%- include 'image-size', sizes: '400,600,700,800,900,1000,1200', image: page.metafields.meta.ath_image -%}
+
+						<div class="AspectRatio athelete-image" style="max-width: 800px; --aspect-ratio: 1.1111111111111112">
+							{%- assign image_url = page.metafields.meta.ath_image | img_url: '1x1' | replace: '_1x1.', '_800x.' -%}
+							<img loading="lazy" class="Image--lazyLoad Image--slideLeft" data-src="{{ page.metafields.meta.ath_image }}" data-expand="-200" data-widths="[400,600,700,800]" data-sizes="auto" alt="{{ page_title }}">
+
+							<noscript>
+								<img loading="lazy" src="{{ page.metafields.meta.ath_image | img_url: '800x' }}" alt="{{ page_title }}">
+							</noscript>
+						</div>
+					</div>
+				{%- endif -%}
+
+				<div class="FeatureText__ContentWrapper">
+					<div class="FeatureText__Content">
+						<header class="SectionHeader">
+							<h1 class="atheles_text text-uppercase product-h2 t-lef SectionHeader__Heading Heading u-h1">{% if page.metafields.meta.ath_title != blank %}{{ page.metafields.meta.ath_title }}{%else if%}{{ page_title }}{%endif%}</h1>
+					 		{%- if page.metafields.meta.ath_subhead != blank -%}
+								<h3 class="atheles_text atheles_text SectionHeader__SubHeading Heading u-h6">{{ page.metafields.meta.ath_subhead | escape }}</h3>
+							{%- endif -%}
+							<ul class="athlete-basic-info atheles_text">
+								{% if page.metafields.meta.ath_height != blank %}
+									<li>Height: {{page.metafields.meta.ath_height}}</li>
+								{% endif %}
+								{% if page.metafields.meta.ath_weight != blank %}
+									<li>Weight: {{page.metafields.meta.ath_weight}}</li>
+								{% endif %}
+								{% if page.metafields.meta.ath_dob != blank %}<li>Date of Birth: {{page.metafields.meta.ath_dob}}</li>
+								{% endif %}
+								{% if page.metafields.meta.ath_residence != blank %}<li>Residence: {{page.metafields.meta.ath_residence}}</li>
+								{% endif %}
+							</ul>
+							{%- if page.metafields.meta.ath_headertext != blank -%}
+								<div class="SectionHeader__Description SectionHeader__Description--athlete" style="margin-top:16px; margin-bottom: 0px;">
+									{{ page.metafields.meta.ath_headertext }}
+								</div>
+							{%- endif -%}
+							<br/>
+							<div class="atheles_text">{% include 'social-media-athlete-bio'%}</div>
+						</header>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+<div class="Container atheles_sec_top">
+	<h2 class="SectionHeader__Heading Heading u-h1 product-page-title full-underline">{{ section.settings.title1 }}</h2>
+	<br/>
+	{{ page.content }}
+</div>
+
+{% if page.metafields.custom.athlet_products != blank %}
+<div class="Container atheles_sec_top">
+	<h2 class="SectionHeader__Heading Heading u-h1 product-page-title full-underline">
+      {{ section.settings.title3 }}
+    </h2>
+    <br/>
+    {% if page.metafields.custom.athlet_short_description != blank %}<div class="at-description">{{ page.metafields.custom.athlet_short_description }}</div>{% endif %}
+    <div class="favourite-wrapper">
+      {% if page.metafields.custom.athlet_products != blank %}
+        {%- comment %}<locksmith:bf42>{% endcomment -%}
+          {%- assign locksmith_0b45_forloop__size = 0 %}{% for product in products %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_0b45_forloop__size = locksmith_0b45_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_0b45_forloop__index = nil -%}
+        {%- comment %}</locksmith:bf42>{% endcomment -%}
+        {% for product in products %}
+          {%- comment %}<locksmith:d83e>{% endcomment -%}
+            {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_0b45_forloop__index == nil %}{% assign locksmith_0b45_forloop__index = 1 %}{% assign locksmith_0b45_forloop__index0 = 0 %}{% else %}{% assign locksmith_0b45_forloop__index = locksmith_0b45_forloop__index | plus: 1 %}{% assign locksmith_0b45_forloop__index0 = locksmith_0b45_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_0b45_forloop__index == 1 %}{% assign locksmith_0b45_forloop__first = true %}{% else %}{% assign locksmith_0b45_forloop__first = false %}{% endif %}{% if locksmith_0b45_forloop__index == locksmith_0b45_forloop__size %}{% assign locksmith_0b45_forloop__last = true %}{% else %}{% assign locksmith_0b45_forloop__last = false %}{% endif %}{% assign locksmith_0b45_forloop__rindex = locksmith_0b45_forloop__size | minus: locksmith_0b45_forloop__index | minus: 1 %}{% assign locksmith_0b45_forloop__rindex0 = locksmith_0b45_forloop__size | minus: locksmith_0b45_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+          {%- comment %}</locksmith:d83e>{% endcomment -%}
+          {% unless locksmith_0b45_forloop__index > section.settings.grid_desktop_items_per_row %}
+            <div class="favourite-product">
+                <div class="at-image-wrapper">
+                  <a href="{{ product.url }}"><img loading="lazy" src="{{ product.featured_image | image_url }}"></a>
+                       <div class="product-details">  
+                          <div class="yotpo bottomLine"
+                          data-appkey="Z9jfTDCkDiMPGstYrUBX1MB2QyT6vNrJ6LAqLsDN"
+                          data-domain="{{shop.permanent_domain | escape }}"
+                          data-product-id="{{ product.id }}"
+                          data-product-models="{{ product.id }}"
+                          data-name="{{ product.title | escape }}"
+                          data-url="{{ shop.url }}{{ product.url }}"
+                          data-image-url="{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}"
+                          data-description="{{ product.description | escape }}"
+                          data-bread-crumbs="{% for tag in product.tags %}{{ tag | escape }};{% endfor %}">
+                          </div>
+                          <div class="at-title">
+                              <h2 class="ProductItem__Title Heading related-product-heading">{{ product.title }}</h2>
+                          </div>
+                        </div>
+                </div>      
+            </div>
+          {% endunless %}
+        {% endfor %}
+      {% endif %}
+    </div>
+</div>
+{% endif %}
+
+{%- if page.metafields.meta.ath_gallery != blank -%}
+	<div class="Container atheles_sec_top">
+		<h2 class="SectionHeader__Heading Heading u-h1 product-page-title full-underline ">{{ section.settings.title2 }}</h2>
+			<div class="yotpo yotpo-pictures-widget" data-gallery-id="{{ page.metafields.meta.ath_gallery }}"></div>
+	</div>
+{% endif %}
+<br>&nbsp;
+
+
+
+{% schema %}
+  {
+    "name": "Athlete Bio",
+    "settings": [
+      {
+      "type": "text",
+      "id": "title1",
+      "label": "Heading Experience",
+      "default": "EXPERIENCE"
+    },
+    {
+      "type": "text",
+      "id": "title2",
+      "label": "Heading Instagram",
+      "default": "INSTAGRAM"
+    },
+    {
+      "type": "text",
+      "id": "title3",
+      "label": "Favourite product",
+      "default": "FAVOURITE PRODUCTS"
+    },
+     {
+      "type": "select",
+      "id": "grid_mobile_items_per_row",
+      "label": "Products per row (mobile)",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "2"
+    },
+      {
+      "type": "range",
+      "min": 2,
+      "max": 4,
+      "id": "grid_desktop_items_per_row",
+      "label": "Products per row (desktop)",
+      "default": 4
+    }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

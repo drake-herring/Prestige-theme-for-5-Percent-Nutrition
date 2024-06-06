@@ -1,0 +1,119 @@
+{
+  "sections": {
+    "1662527779d4825d18": {
+      "type": "main-banner-section",
+      "settings": {
+        "banner_image": "shopify:\/\/shop_images\/BlogHeader_ProductBreakdown.jpg",
+        "apply_overlay": true
+      }
+    },
+    "main": {
+      "type": "blog-template",
+      "settings": {
+        "blog_heading": "",
+        "blogmenu": "blog-category",
+        "featured_first_image": false,
+        "show_title": false,
+        "sidebar": false,
+        "show_rss": false,
+        "show_tags": false,
+        "show_featured_article": false,
+        "show_category": true,
+        "show_yotpo": false
+      }
+    },
+    "166236891086ca52f7": {
+      "type": "featured-collections",
+      "disabled": true,
+      "blocks": {
+        "1662368910b5bd9f40-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "supplements",
+            "title": "",
+            "grid_items_count": 3,
+            "button_text": "View all products"
+          }
+        },
+        "ee6dbece-c247-4383-b6fd-e3b059c3416c": {
+          "type": "collection",
+          "settings": {
+            "collection": "apparel",
+            "title": "",
+            "grid_items_count": 3,
+            "button_text": "View all products"
+          }
+        },
+        "d7c64693-2b99-44ae-852d-c57cf1ffae69": {
+          "type": "collection",
+          "settings": {
+            "collection": "gear",
+            "title": "",
+            "grid_items_count": 3,
+            "button_text": "View all products"
+          }
+        }
+      },
+      "block_order": [
+        "1662368910b5bd9f40-0",
+        "ee6dbece-c247-4383-b6fd-e3b059c3416c",
+        "d7c64693-2b99-44ae-852d-c57cf1ffae69"
+      ],
+      "settings": {
+        "title": "Featured Products",
+        "layout_mode": "grid",
+        "show_product_info": true,
+        "title_position": "below",
+        "show_vendor": false,
+        "show_color_swatch": false,
+        "grid_mobile_items_per_row": "2",
+        "grid_desktop_items_per_row": 3
+      }
+    },
+    "1663248501c6b440a8": {
+      "type": "newsletter-sitewide",
+      "settings": {
+        "enable_bar": true,
+        "section_size": "small",
+        "text_color": "#ffffff",
+        "button_color": "#000000",
+        "subheading": "",
+        "title": "WANT TO SEE MORE?",
+        "content": "<p>Signup to get notices for all new posts!<\/p>",
+        "graphic_aligment": "white"
+      }
+    },
+    "shop-now": {
+      "type": "shop-now",
+      "disabled": true,
+      "blocks": {
+        "quote": {
+          "type": "quote",
+          "settings": {
+            "content": "<p>You can use this element to add a quote, content...<\/p>",
+            "author": ""
+          }
+        }
+      },
+      "block_order": [
+        "quote"
+      ],
+      "settings": {
+        "show_section": false,
+        "title": "Best Sellers",
+        "collection": "best-sellers",
+        "grid_items_count": 9,
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false
+      }
+    }
+  },
+  "order": [
+    "1662527779d4825d18",
+    "main",
+    "166236891086ca52f7",
+    "1663248501c6b440a8",
+    "shop-now"
+  ]
+}

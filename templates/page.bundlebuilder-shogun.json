@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "bundlebuilder-shogun",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

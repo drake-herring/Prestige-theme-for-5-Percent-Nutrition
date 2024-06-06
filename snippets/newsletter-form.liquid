@@ -1,0 +1,14 @@
+{%- form 'customer' , id: 'newsletter', class: '_form _form_1 _inline-form' , action: 'https://5percentnutrition.activehosted.com/proc.php'-%} 
+  {%- if form.posted_successfully? -%}
+    <p class="Form__Alert Alert Alert--success">{{ 'newsletter.success' | t }}</p>
+  {%- else -%}
+    {%- if form.errors -%}
+      <p class="Form__Alert Alert Alert--error">{{ form.errors.messages['email'] }}</p>
+    {%- endif -%}
+    <div class="Newsletter__Inner">
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      <input type="email" name="contact[email]" class="Form__Input" aria-label="{{ 'newsletter.input' | t }}" placeholder="{{ 'newsletter.placeholder.input' | t }}" required>
+      <button type="submit" class="Form__Submit Button Button--primary">{{ 'newsletter.submit' | t }}</button>
+    </div>
+  {%- endif -%}
+{%- endform -%}

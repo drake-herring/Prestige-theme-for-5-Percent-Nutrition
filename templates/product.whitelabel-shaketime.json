@@ -1,0 +1,52 @@
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "settings": {}
+    },
+    "shogun-above": {
+      "type": "shogun-above",
+      "settings": {}
+    },
+    "main": {
+      "type": "product-whitelabel-shaketime",
+      "settings": {
+        "show_share_buttons": false,
+        "show_vendor": false,
+        "description_below_add_to_cart": false,
+        "show_color_swatch": true,
+        "show_color_carousel": false,
+        "show_size_swatch": true,
+        "show_quantity_selector": true,
+        "show_inventory_quantity": false,
+        "inventory_quantity_threshold": 3,
+        "show_price_in_button": false,
+        "show_payment_button": false,
+        "image_size": "medium",
+        "stack_images": true,
+        "show_thumbnails": true,
+        "enable_image_zoom": false,
+        "tab_page_1_handle": "",
+        "tab_page_2_handle": "",
+        "reviews_enabled": false,
+        "featured_image_size": "large",
+        "show-sezzle-widget": true,
+        "color": "inherit",
+        "font-size": 14,
+        "font-family": "inherit",
+        "product-page-alignment": "auto",
+        "cart-page-alignment": "auto"
+      }
+    },
+    "shogun-below": {
+      "type": "shogun-below",
+      "settings": {}
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "shogun-above",
+    "main",
+    "shogun-below"
+  ]
+}

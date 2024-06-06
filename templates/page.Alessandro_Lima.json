@@ -1,0 +1,47 @@
+{
+  "sections": {
+    "page-rich-text-image": {
+      "type": "page-rich-text-image",
+      "settings": {
+        "subheading": "",
+        "title": "Alessandro Lima",
+        "image": "shopify:\/\/shop_images\/200.png",
+        "image_position": "left",
+        "content": "",
+        "height": "5' 9\"",
+        "weight": "197 lbs",
+        "DOB": "January 28, 1979",
+        "residence": "Gardena, California",
+        "facebook_url": "https:\/\/www.facebook.com\/alesssandrolima\/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_transition=0&show_community_review_changes=0&show_follower_visibility_disclosure=0",
+        "instagram_url": "https:\/\/www.instagram.com\/accounts\/login\/?next=\/alessandrolima4\/",
+        "youtube_url": "",
+        "pinterest_url": "",
+        "snapchat_url": "",
+        "twitter_url": "",
+        "tumblr_url": "",
+        "google_plus_url": "",
+        "vimeo_url": "",
+        "linkedin_url": ""
+      }
+    },
+    "main": {
+      "type": "page-Alessandro_Lima",
+      "settings": {}
+    },
+    "page-featured-video": {
+      "type": "page-featured-video",
+      "settings": {
+        "section_size": "large",
+        "text_color": "#ffffff",
+        "subheading": "",
+        "title": "Your video",
+        "video_url": ""
+      }
+    }
+  },
+  "order": [
+    "page-rich-text-image",
+    "main",
+    "page-featured-video"
+  ]
+}

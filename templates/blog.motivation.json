@@ -1,0 +1,78 @@
+{
+  "sections": {
+    "1662464086aa83e4a4": {
+      "type": "main-banner-section",
+      "settings": {
+        "banner_image": "shopify:\/\/shop_images\/BlogHeader_Motivation.jpg",
+        "apply_overlay": true
+      }
+    },
+    "main": {
+      "type": "blog-template",
+      "settings": {
+        "blog_heading": "MOTIVATION",
+        "blogmenu": "blog-category",
+        "featured_first_image": true,
+        "show_title": true,
+        "sidebar": false,
+        "show_rss": false,
+        "show_tags": false,
+        "show_featured_article": false,
+        "show_category": false,
+        "show_yotpo": false
+      }
+    },
+    "shop-now": {
+      "type": "shop-now",
+      "disabled": true,
+      "blocks": {
+        "quote": {
+          "type": "quote",
+          "settings": {
+            "content": "<p>You can use this element to add a quote, content...<\/p>",
+            "author": ""
+          }
+        }
+      },
+      "block_order": [
+        "quote"
+      ],
+      "settings": {
+        "show_section": false,
+        "title": "Best Sellers",
+        "collection": "",
+        "grid_items_count": 3,
+        "show_product_info": false,
+        "show_vendor": false,
+        "show_color_swatch": false
+      }
+    },
+    "1662458984335a12d4": {
+      "type": "blog_tag_cloud",
+      "settings": {
+        "blog": "motivation",
+        "blog_show_tags": true
+      }
+    },
+    "16632484309fbe2a64": {
+      "type": "newsletter-sitewide",
+      "settings": {
+        "enable_bar": false,
+        "section_size": "normal",
+        "text_color": "#ffffff",
+        "button_color": "#000000",
+        "subheading": "",
+        "title": "WANT TO SEE MORE?",
+        "content": "",
+        "graphic_aligment": "black"
+      }
+    }
+  },
+  "order": [
+    "1662464086aa83e4a4",
+    "main",
+    "shop-now",
+    "1662458984335a12d4",
+    "16632484309fbe2a64"
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "settings": {}
+    },
+    "shogun-above": {
+      "type": "shogun-above",
+      "settings": {}
+    },
+    "main": {
+      "type": "new-product-coreline-template",
+      "blocks": {
+        "50b05750-9431-49b1-ac12-541538f61518": {
+          "type": "block",
+          "settings": {
+            "font_awesome_icon": "cgmp-logo",
+            "text": "<p>Products manufactured with Good Manufacturing Practices facilities in the United States<\/p>"
+          }
+        },
+        "919edd88-222e-40e9-a5f9-d8a0f441d3c2": {
+          "type": "block",
+          "settings": {
+            "font_awesome_icon": "stackable",
+            "text": "<p>We use only the highest quality ingredients in efficaciously dosed formulas<\/p>"
+          }
+        },
+        "1f657fa0-3295-4469-ad84-465ad8e0259a": {
+          "type": "block",
+          "settings": {
+            "font_awesome_icon": "3rd-party-tested",
+            "text": "<p>We use only the highest quality ingredients in efficaciously dosed formulas<\/p>"
+          }
+        },
+        "60a50fc2-39d3-4988-85d7-009da8deeb2b": {
+          "type": "title",
+          "settings": {}
+        },
+        "732fdb70-dc60-4d1f-a592-05abadd97512": {
+          "type": "description",
+          "settings": {
+            "short_desc": true
+          }
+        },
+        "44391916-4431-4ac6-9743-bb889404f8fa": {
+          "type": "price",
+          "settings": {}
+        },
+        "08cd1010-99f6-4c6d-8eba-e01e9acd47fd": {
+          "type": "yotpo_stars",
+          "settings": {}
+        },
+        "916cf407-04db-453e-bd74-2ee3d3144db4": {
+          "type": "addtocart",
+          "settings": {}
+        },
+        "22f3438d-2a8a-4d36-835b-62b0986c19b5": {
+          "type": "full_description",
+          "settings": {
+            "full_description_hide_mobile": false
+          }
+        },
+        "c054d59a-4cef-4d09-831d-4031c64bbaab": {
+          "type": "benefits",
+          "settings": {
+            "benefits_hide_mobile": false
+          }
+        },
+        "35bbe647-05d8-4152-aa49-d0761999552d": {
+          "type": "fact",
+          "settings": {
+            "fact_hide_mobile": false
+          }
+        },
+        "b62fff55-74e3-4f35-98ea-159ecbcb6782": {
+          "type": "f_together",
+          "settings": {
+            "f_together_hide_mobile": false
+          }
+        },
+        "9998d85c-d535-4449-adf4-24dc4518dd43": {
+          "type": "benefits",
+          "disabled": true,
+          "settings": {
+            "benefits_hide_mobile": false
+          }
+        },
+        "0ee34ead-1ea1-461f-9959-45a319331dab": {
+          "type": "yotpo",
+          "settings": {
+            "review_hide_mobile": false
+          }
+        },
+        "f9780e0b-4f7f-4219-9b5a-440c87078b8f": {
+          "type": "percent-nation",
+          "settings": {
+            "percent_nation_hide_mobile": false
+          }
+        },
+        "3fb68d46-1bca-4125-97eb-4a7ac72d5d04": {
+          "type": "faq",
+          "settings": {
+            "faq_hide_mobile": false
+          }
+        },
+        "a39ba81b-3ca3-43c9-a02c-a43afe167a79": {
+          "type": "product_reference",
+          "settings": {
+            "product_reference_hide_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "50b05750-9431-49b1-ac12-541538f61518",
+        "919edd88-222e-40e9-a5f9-d8a0f441d3c2",
+        "1f657fa0-3295-4469-ad84-465ad8e0259a",
+        "60a50fc2-39d3-4988-85d7-009da8deeb2b",
+        "732fdb70-dc60-4d1f-a592-05abadd97512",
+        "44391916-4431-4ac6-9743-bb889404f8fa",
+        "08cd1010-99f6-4c6d-8eba-e01e9acd47fd",
+        "916cf407-04db-453e-bd74-2ee3d3144db4",
+        "22f3438d-2a8a-4d36-835b-62b0986c19b5",
+        "c054d59a-4cef-4d09-831d-4031c64bbaab",
+        "35bbe647-05d8-4152-aa49-d0761999552d",
+        "b62fff55-74e3-4f35-98ea-159ecbcb6782",
+        "9998d85c-d535-4449-adf4-24dc4518dd43",
+        "0ee34ead-1ea1-461f-9959-45a319331dab",
+        "f9780e0b-4f7f-4219-9b5a-440c87078b8f",
+        "3fb68d46-1bca-4125-97eb-4a7ac72d5d04",
+        "a39ba81b-3ca3-43c9-a02c-a43afe167a79"
+      ],
+      "settings": {
+        "dark-mode-background-image": "{{ product.metafields.custom.dark_mode_background.value }}",
+        "dark-mode-background-color": "#000000",
+        "dark-mode-heading-color": "{{ product.metafields.custom.additional_information_color.value }}",
+        "dark-mode-text-color": "{{ product.metafields.custom.default_font_color.value }}",
+        "review_type": "slider",
+        "show_quantity_selector": true,
+        "show_inventory_quantity": false,
+        "inventory_quantity_threshold": 0,
+        "show_price_in_button": false,
+        "show_payment_button": false,
+        "show_section": false,
+        "title": "Related Products",
+        "show_product_info": true,
+        "show-sezzle-widget": true,
+        "color": "inherit",
+        "font-size": 14,
+        "font-family": "inherit",
+        "product-page-alignment": "auto",
+        "cart-page-alignment": "auto"
+      }
+    },
+    "related-metafield-products": {
+      "type": "related-metafield-products",
+      "disabled": true,
+      "settings": {
+        "show_section": false,
+        "title": "Related Products",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false
+      }
+    },
+    "main-product-coreline-references": {
+      "type": "main-product-coreline-references",
+      "disabled": true,
+      "settings": {
+        "text_color": "#000000",
+        "background_color": "#f7f7f7"
+      }
+    },
+    "main-product-product_references": {
+      "type": "main-product-product_references",
+      "disabled": true,
+      "settings": {
+        "text_color": "#000000",
+        "background_color": "#f7f7f7"
+      }
+    },
+    "main-sezzel-widget": {
+      "type": "main-sezzle-widget",
+      "settings": {
+        "show-sezzle-widget": false,
+        "color": "inherit",
+        "font-size": 14,
+        "font-family": "inherit",
+        "product-page-alignment": "auto",
+        "cart-page-alignment": "auto"
+      }
+    },
+    "shogun-below": {
+      "type": "shogun-below",
+      "settings": {}
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "shogun-above",
+    "main",
+    "related-metafield-products",
+    "main-product-coreline-references",
+    "main-product-product_references",
+    "main-sezzel-widget",
+    "shogun-below"
+  ]
+}

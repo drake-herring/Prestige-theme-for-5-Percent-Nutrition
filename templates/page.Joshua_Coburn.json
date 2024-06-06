@@ -1,0 +1,50 @@
+{
+  "sections": {
+    "page-rich-text-image": {
+      "type": "page-rich-text-image",
+      "settings": {
+        "subheading": "",
+        "title": "Bobby Tomlinson",
+        "image": "shopify:\/\/shop_images\/BobbyTomlinson_Bio-WEB_c655f3cf-84a6-4d75-a857-74c48dd87c77.png",
+        "image_position": "left",
+        "content": "",
+        "height": "5' 7\"",
+        "weight": "Stage - 205 lbs, Offseason - 250 lbs",
+        "DOB": "August 26th, 1994",
+        "residence": "Huntington Beach, California, USA",
+        "facebook_url": "",
+        "instagram_url": "https:\/\/www.instagram.com\/accounts\/login\/?next=\/bobb_thebuilderr\/",
+        "youtube_url": "",
+        "pinterest_url": "",
+        "snapchat_url": "",
+        "twitter_url": "",
+        "tumblr_url": "",
+        "google_plus_url": "",
+        "vimeo_url": "",
+        "linkedin_url": ""
+      }
+    },
+    "main": {
+      "type": "Joshua_Coburn",
+      "settings": {
+        "title1": "EXPERIENCE",
+        "title2": "INSTAGRAM"
+      }
+    },
+    "page-featured-video": {
+      "type": "page-featured-video",
+      "settings": {
+        "section_size": "large",
+        "text_color": "#ffffff",
+        "subheading": "",
+        "title": "Your video",
+        "video_url": ""
+      }
+    }
+  },
+  "order": [
+    "page-rich-text-image",
+    "main",
+    "page-featured-video"
+  ]
+}

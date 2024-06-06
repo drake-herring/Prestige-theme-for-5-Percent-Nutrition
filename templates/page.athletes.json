@@ -1,0 +1,272 @@
+{
+  "sections": {
+    "main": {
+      "type": "Athletes",
+      "blocks": {
+        "b11003f2-f0ba-414c-aea3-600d4db66bb8": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_Amazonka.jpg",
+            "image_alignment": "top center",
+            "country": "shopify:\/\/shop_images\/russia-small_0785e0a9-3b39-4004-bb76-6cc4befbe213.jpg",
+            "content_position": "bottomLeft",
+            "title": "Natalia Amazonka",
+            "button_text": "VIEW PROFILE",
+            "button_link": "shopify:\/\/pages\/nataliya-amazonka",
+            "apply_overlay": false
+          }
+        },
+        "ba0a189e-de9d-4716-bada-66ac8ebbb38a": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_2_a0235a3b-a772-43b6-8c36-74815b15f392.jpg",
+            "image_alignment": "top center",
+            "country": "shopify:\/\/shop_images\/usa-small_5dce95b7-e57a-436f-afd4-db612254078e.jpg",
+            "content_position": "bottomLeft",
+            "title": "Jack Barontini",
+            "button_text": "View profile",
+            "button_link": "shopify:\/\/pages\/jack-barontini",
+            "apply_overlay": false
+          }
+        },
+        "4b72561b-d635-4341-8b7c-03c3561744e1": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_6_9b461b62-c00a-401f-b3e2-ac7e570b636c.jpg",
+            "image_alignment": "top center",
+            "country": "shopify:\/\/shop_images\/usa-small_1.jpg",
+            "content_position": "bottomLeft",
+            "title": "Caleb Green",
+            "button_text": "View profile",
+            "button_link": "shopify:\/\/pages\/caleb-green",
+            "apply_overlay": false
+          }
+        },
+        "b5cac8ae-5467-4485-8569-c898db210d46": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_1080_LucasLakutsin2.jpg",
+            "image_alignment": "center center",
+            "country": "shopify:\/\/shop_images\/usa-small.jpg",
+            "content_position": "bottomLeft",
+            "title": "Lucas Lakutsin",
+            "button_text": "View profile",
+            "button_link": "shopify:\/\/pages\/lucas-lakutsin",
+            "apply_overlay": false
+          }
+        },
+        "3fc142c4-aff3-4b2b-b4e5-3ca5250045ea": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_1080_TristenEscolastico.jpg",
+            "image_alignment": "top center",
+            "country": "shopify:\/\/shop_images\/usa-small_1.jpg",
+            "content_position": "bottomLeft",
+            "title": "Tristen Escolastico",
+            "button_text": "View profile",
+            "button_link": "shopify:\/\/pages\/tristen-escolastico",
+            "apply_overlay": false
+          }
+        },
+        "47946522-70df-4887-89d0-643cae515ab8": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/John_Harris_Slate_205a61a0-681e-41eb-a1d1-888c9c4b73bd.png",
+            "image_alignment": "top center",
+            "country": "shopify:\/\/shop_images\/usa-small_1.jpg",
+            "content_position": "bottomLeft",
+            "title": "John Harris",
+            "button_text": "View profile",
+            "button_link": "shopify:\/\/pages\/john-harris",
+            "apply_overlay": false
+          }
+        },
+        "f83d1bcf-fde9-4a88-a3ee-3aaec25ba76b": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_1080_AlessandroLima_051022-2.jpg",
+            "image_alignment": "top center",
+            "country": "shopify:\/\/shop_images\/usa-small_1.jpg",
+            "content_position": "bottomLeft",
+            "title": "Alessandro Lima",
+            "button_text": "View profile",
+            "button_link": "shopify:\/\/pages\/alessandro-lima",
+            "apply_overlay": false
+          }
+        },
+        "2a2945d6-edaf-4d3b-94b6-5b37fa800d86": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_1080_DillonWilliams-2023.jpg",
+            "image_alignment": "top center",
+            "country": "shopify:\/\/shop_images\/usa-small_1.jpg",
+            "content_position": "bottomLeft",
+            "title": "Dillon Williams",
+            "button_text": "View profile",
+            "button_link": "shopify:\/\/pages\/dillon-williams",
+            "apply_overlay": false
+          }
+        },
+        "3f03b52c-e508-47ec-8d5b-d2a35716b9a9": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DanielCollins_Slate-WEB_973969a3-e056-487a-b65d-e823644d1bbf.jpg",
+            "image_alignment": "top center",
+            "country": "shopify:\/\/shop_images\/usa-small_1.jpg",
+            "content_position": "bottomLeft",
+            "title": "Daniel Collins",
+            "button_text": "View profile",
+            "button_link": "shopify:\/\/pages\/daniel-collins",
+            "apply_overlay": false
+          }
+        },
+        "0305a772-c7c9-48bf-818b-b2c79a2b3384": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/KrisCraig_Slate_1200.jpg",
+            "image_alignment": "top center",
+            "country": "shopify:\/\/shop_images\/usa-small_1.jpg",
+            "content_position": "bottomLeft",
+            "title": "Kris Craig",
+            "button_text": "View profile",
+            "button_link": "shopify:\/\/pages\/kris-craig",
+            "apply_overlay": false
+          }
+        },
+        "3eb3d4f0-73cc-4581-bb0c-fa8a93069606": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/EmmaIsaacson_Slate_1200_d548f7ac-9a00-452a-a91a-41e054584bb8.jpg",
+            "image_alignment": "top center",
+            "country": "shopify:\/\/shop_images\/usa-small_1.jpg",
+            "content_position": "bottomLeft",
+            "title": "Emma Isaacson",
+            "button_text": "View profile",
+            "button_link": "shopify:\/\/pages\/emma-isaacson",
+            "apply_overlay": false
+          }
+        },
+        "d8ccd3e9-6deb-419d-87cf-0cb58507b644": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Chris_Myers_Slate_1080_ace8d1a9-d764-4d24-b901-edd2e186edea.jpg",
+            "image_alignment": "top center",
+            "country": "shopify:\/\/shop_images\/usa-small_1.jpg",
+            "content_position": "bottomLeft",
+            "title": "Chris Myers",
+            "button_text": "View profile",
+            "button_link": "shopify:\/\/pages\/chris-myers",
+            "apply_overlay": false
+          }
+        },
+        "4876a608-cd91-4edd-a47a-7ffee52bd420": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_1080_AlGreen-050122.jpg",
+            "image_alignment": "top center",
+            "country": "shopify:\/\/shop_images\/usa-small_5dce95b7-e57a-436f-afd4-db612254078e.jpg",
+            "content_position": "bottomLeft",
+            "title": "Al Green",
+            "button_text": "View profile",
+            "button_link": "shopify:\/\/pages\/al-green",
+            "apply_overlay": false
+          }
+        },
+        "bea1ede7-48cf-4960-a5f7-77fea0c17e0a": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_1080_Berni.jpg",
+            "image_alignment": "top center",
+            "country": "shopify:\/\/shop_images\/uk-small.jpg",
+            "content_position": "bottomLeft",
+            "title": "Berni Bernadetta",
+            "button_text": "View profile",
+            "button_link": "shopify:\/\/pages\/berni-bernadetta",
+            "apply_overlay": false
+          }
+        },
+        "25e18251-0cc8-41bd-a7b2-08507ff2346a": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_1080_ValeriaMendoza.jpg",
+            "image_alignment": "top center",
+            "country": "shopify:\/\/shop_images\/usa-small_1.jpg",
+            "content_position": "bottomLeft",
+            "title": "Valeria Mendoza",
+            "button_text": "View profile",
+            "button_link": "shopify:\/\/pages\/valeria-mendoza",
+            "apply_overlay": false
+          }
+        },
+        "5ca41a51-4faf-4e3b-a50d-17c09b992863": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Kable_Web_Slate_72087ed0-bc5b-41f4-8f05-429a720797f4.png",
+            "image_alignment": "top center",
+            "country": "shopify:\/\/shop_images\/usa-small_1.jpg",
+            "content_position": "bottomLeft",
+            "title": "Chris \"Kable\" Martinez",
+            "button_text": "View profile",
+            "button_link": "shopify:\/\/pages\/chris-martinez",
+            "apply_overlay": false
+          }
+        },
+        "8138c144-849b-4912-ae3f-96cf1bbfd5d0": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_JordynneGrace.jpg",
+            "image_alignment": "top center",
+            "country": "shopify:\/\/shop_images\/usa-small.jpg",
+            "content_position": "bottomLeft",
+            "title": "Jordynne Grace",
+            "button_text": "View profile",
+            "button_link": "shopify:\/\/pages\/jordynne-grace",
+            "apply_overlay": false
+          }
+        },
+        "50b338e5-d7d5-4933-a114-3947d4905b13": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate.png",
+            "image_alignment": "top center",
+            "content_position": "bottomLeft",
+            "title": "You're Next",
+            "button_text": "JOIN NOW",
+            "button_link": "shopify:\/\/pages\/become-an-athlete",
+            "apply_overlay": false
+          }
+        }
+      },
+      "block_order": [
+        "b11003f2-f0ba-414c-aea3-600d4db66bb8",
+        "ba0a189e-de9d-4716-bada-66ac8ebbb38a",
+        "4b72561b-d635-4341-8b7c-03c3561744e1",
+        "b5cac8ae-5467-4485-8569-c898db210d46",
+        "3fc142c4-aff3-4b2b-b4e5-3ca5250045ea",
+        "47946522-70df-4887-89d0-643cae515ab8",
+        "f83d1bcf-fde9-4a88-a3ee-3aaec25ba76b",
+        "2a2945d6-edaf-4d3b-94b6-5b37fa800d86",
+        "3f03b52c-e508-47ec-8d5b-d2a35716b9a9",
+        "0305a772-c7c9-48bf-818b-b2c79a2b3384",
+        "3eb3d4f0-73cc-4581-bb0c-fa8a93069606",
+        "d8ccd3e9-6deb-419d-87cf-0cb58507b644",
+        "4876a608-cd91-4edd-a47a-7ffee52bd420",
+        "bea1ede7-48cf-4960-a5f7-77fea0c17e0a",
+        "25e18251-0cc8-41bd-a7b2-08507ff2346a",
+        "5ca41a51-4faf-4e3b-a50d-17c09b992863",
+        "8138c144-849b-4912-ae3f-96cf1bbfd5d0",
+        "50b338e5-d7d5-4933-a114-3947d4905b13"
+      ],
+      "settings": {
+        "image_size": "small",
+        "add_spacing": true,
+        "expand_collection": false,
+        "text_color": "#ffffff",
+        "button_color": "#363636"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,30 @@
+<div class="Container atheles_sec_top">
+<h1 class="SectionHeader__Heading Heading u-h1 product-page-title full-underline">{{ section.settings.title1 }}</h1><br/>
+    {{ page.content }}
+</div>
+
+<div class="Container atheles_sec_top">
+<h2 class="SectionHeader__Heading Heading u-h1 product-page-title full-underline ">{{ section.settings.title2 }}</h2>
+<div class="yotpo yotpo-pictures-widget" data-gallery-id="5d9254d501f0952eb5c42ebd"></div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Michael_Sasso",
+    "settings": [
+     {
+      "type": "text",
+      "id": "title1",
+      "label": "Heading Experience",
+      "default": "EXPERIENCE"
+    },
+    {
+      "type": "text",
+      "id": "title2",
+      "label": "Heading Instagram",
+      "default": "INSTAGRAM"
+    }
+    ]
+  }
+{% endschema %}

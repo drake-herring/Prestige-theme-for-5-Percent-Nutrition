@@ -1,0 +1,73 @@
+{
+  "sections": {
+    "main": {
+      "type": "list-collections-template",
+      "blocks": {
+        "1e7b3d1c-fc8a-42f9-8104-ea46fe78d3c5": {
+          "type": "collection",
+          "settings": {
+            "collection": "supplements",
+            "image": "shopify:\/\/shop_images\/Menu-RECOVERY2_907bbcde-c5ab-43e7-b5a5-187c1df95676.jpg",
+            "image_alignment": "center center",
+            "content_position": "bottomLeft",
+            "subheading": "",
+            "title": "Supplements",
+            "button_text": "View products"
+          }
+        },
+        "893d0776-7c80-4823-a749-b2bf03569805": {
+          "type": "collection",
+          "settings": {
+            "collection": "apparel",
+            "image_alignment": "center center",
+            "content_position": "bottomLeft",
+            "subheading": "",
+            "title": "Apparel",
+            "button_text": "View products"
+          }
+        },
+        "a70444b9-90ca-4969-b992-c35db3361aac": {
+          "type": "collection",
+          "settings": {
+            "collection": "gear",
+            "image": "shopify:\/\/shop_images\/Accessories_b096856d-c7e0-4e6b-a428-932c343e423c.png",
+            "image_alignment": "center center",
+            "content_position": "bottomLeft",
+            "subheading": "",
+            "title": "Gear",
+            "button_text": "View products"
+          }
+        },
+        "87fc2137-0010-4a79-ad23-1f0f40bc6385": {
+          "type": "collection",
+          "settings": {
+            "collection": "stacks",
+            "image_alignment": "center center",
+            "content_position": "bottomLeft",
+            "subheading": "",
+            "title": "Stacks",
+            "button_text": "View products"
+          }
+        }
+      },
+      "block_order": [
+        "1e7b3d1c-fc8a-42f9-8104-ea46fe78d3c5",
+        "893d0776-7c80-4823-a749-b2bf03569805",
+        "a70444b9-90ca-4969-b992-c35db3361aac",
+        "87fc2137-0010-4a79-ad23-1f0f40bc6385"
+      ],
+      "settings": {
+        "collections_to_show": "selected",
+        "image_size": "normal",
+        "add_spacing": true,
+        "expand_collection": false,
+        "apply_overlay": true,
+        "text_color": "#ffffff",
+        "button_color": "#363636"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

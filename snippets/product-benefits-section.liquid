@@ -1,0 +1,222 @@
+{% if product.metafields.custom.product_benefit_title != blank or product.metafields.custom.glb_file_url != blank or product.metafields.custom.benefit_section_image != blank %}
+<div class="bg-gray {% if hide_mobile %} hide_mobile {% endif %}" id="benefits-section">
+  <div class="container">
+    <div class="benifit">
+      {% if product.metafields.custom.product_benefit_title != blank %}
+        <div class="benifit-main-title">
+           <h2 class="text-uppercase product-h2">
+             <span class="full-underline full-underline--fivenation t-center">{{ product.metafields.custom.product_benefit_title }}</span>
+            </h2>
+        </div>
+      {% endif %}
+      
+      {% if product.metafields.custom.benefit_section_image != blank or product.metafields.custom.glb_file_url != blank %}
+        <div class="benifit-main-image">
+          {% if product.metafields.custom.glb_file_url != blank %}
+            <model-viewer src="{{ product.metafields.custom.glb_file_url }}" auto-rotate camera-controls alt="cube" background-color="#455A64"></model-viewer>
+          {% else %}
+            <img loading="lazy" src="{{ product.metafields.custom.benefit_section_image | file_url }}">
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if product.metafields.custom.benefits_title_1 != blank or product.metafields.custom.benefits_title_2 != blank or product.metafields.custom.benefits_title_3 != blank or product.metafields.custom.benefits_title_4 != blank or product.metafields.custom.benefits_title_5 != blank or product.metafields.custom.benefits_title_6 != blank %}
+        <div class="product-benifits" height="800px" width="400px">
+        {% if  product.metafields.custom.benefits_title_1 != blank %}
+          <div class="product-benifit-list">
+            <div class="main-benifits">
+              {% if product.metafields.custom.benefits_icon_1 != blank %}
+              <div class="product-benifit-wrapper">
+                <div class="product-benifit-icons">
+                  {% style %}
+                    #metacolor-1 svg {
+                        color: {{ product.metafields.custom.benefits_icon_color_1 }};
+                        fill: {{ product.metafields.custom.benefits_icon_color_1 }};
+                      }
+                  {% endstyle %}
+                  <div class="svg-icon-img" id="metacolor-1">
+                    <i class="fak fa-{{ product.metafields.custom.benefits_icon_1 }}"></i>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              {% if product.metafields.custom.benefits_title_1 != blank %}
+              <div class="product-benifit-title">
+                <h3>{{ product.metafields.custom.benefits_title_1 }}</h3>
+              </div>
+              {% endif %}
+            </div>
+            {% if product.metafields.custom.benefits_content_1 != blank %}
+            <div class="product-benifit-description">
+              <p> {{ product.metafields.custom.benefits_content_1 }} </p>
+            </div>
+            {% endif %}
+          </div>
+        {% endif %}
+        
+        {% if  product.metafields.custom.benefits_title_2 != blank %}
+          <div class="product-benifit-list">
+            <div class="main-benifits">
+              {% if product.metafields.custom.benefits_icon_2 != blank %}
+              <div class="product-benifit-wrapper">
+                <div class="product-benifit-icons">
+                {% style %}
+                  #metacolor-2 svg {
+                        color: {{ product.metafields.custom.benefits_icon_color_2 }};
+                        fill: {{ product.metafields.custom.benefits_icon_color_2 }};
+                    }
+                {% endstyle %}
+                  <div class="svg-icon-img" id="metacolor-2">
+                    <i class="fak fa-{{ product.metafields.custom.benefits_icon_2 }}"></i>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              {% if product.metafields.custom.benefits_title_2 != blank %}
+              <div class="product-benifit-title">
+                <h3>{{ product.metafields.custom.benefits_title_2 }}</h3>
+              </div>
+              {% endif %}
+            </div>
+            {% if product.metafields.custom.benefits_content_2 != blank %}
+            <div class="product-benifit-description">
+              <p> {{ product.metafields.custom.benefits_content_2 }} </p>
+            </div>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if  product.metafields.custom.benefits_title_3 != blank %}
+        <div class="product-benifit-list">
+            <div class="main-benifits">
+              {% if product.metafields.custom.benefits_icon_3 != blank %}
+              <div class="product-benifit-wrapper">
+                <div class="product-benifit-icons">
+                {% style %}
+                  #metacolor-3 svg {
+                        color: {{ product.metafields.custom.benefits_icon_color_3 }};
+                        fill: {{ product.metafields.custom.benefits_icon_color_3 }};
+                    }
+                {% endstyle %}
+                  <div class="svg-icon-img" id="metacolor-3">
+                    <i class="fak fa-{{ product.metafields.custom.benefits_icon_3 }}"></i>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              {% if product.metafields.custom.benefits_title_3 != blank %}
+              <div class="product-benifit-title">
+                <h3>{{ product.metafields.custom.benefits_title_3 }}</h3>
+              </div>
+              {% endif %}
+            </div>
+            {% if product.metafields.custom.benefits_content_3 != blank %}
+            <div class="product-benifit-description">
+              <p> {{ product.metafields.custom.benefits_content_3 }} </p>
+            </div>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if  product.metafields.custom.benefits_title_4 != blank %}
+          <div class="product-benifit-list">
+            <div class="main-benifits">
+              {% if product.metafields.custom.benefits_icon_4 != blank %}
+              <div class="product-benifit-wrapper">
+                <div class="product-benifit-icons">
+                {% style %}
+                  #metacolor-4 svg {
+                        color: {{ product.metafields.custom.benefits_icon_color_4 }};
+                        fill: {{ product.metafields.custom.benefits_icon_color_4 }};
+                    }
+                {% endstyle %}
+                  <div class="svg-icon-img" id="metacolor-4">
+                    <i class="fak fa-{{ product.metafields.custom.benefits_icon_4 }}"></i>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              {% if product.metafields.custom.benefits_title_4 != blank %}
+              <div class="product-benifit-title">
+                <h3>{{ product.metafields.custom.benefits_title_4 }}</h3>
+              </div>
+              {% endif %}
+            </div>
+            {% if product.metafields.custom.benefits_content_4 != blank %}
+            <div class="product-benifit-description">
+              <p> {{ product.metafields.custom.benefits_content_4 }} </p>
+            </div>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if  product.metafields.custom.benefits_title_5 != blank %}
+          <div class="product-benifit-list">
+            <div class="main-benifits">
+              {% if product.metafields.custom.benefits_icon_5 != blank %}
+              <div class="product-benifit-wrapper">
+                <div class="product-benifit-icons">
+                  {% style %}
+                    #metacolor-5 svg {
+                          color: {{ product.metafields.custom.benefits_icon_color_5 }};
+                          fill: {{ product.metafields.custom.benefits_icon_color_5 }};
+                      }
+                  {% endstyle %}
+                  <div class="svg-icon-img" id="metacolor-5">
+                    <i class="fak fa-{{ product.metafields.custom.benefits_icon_5 }}"></i>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              {% if product.metafields.custom.benefits_title_5 != blank %}
+              <div class="product-benifit-title">
+                <h3>{{ product.metafields.custom.benefits_title_5 }}</h3>
+              </div>
+              {% endif %}
+            </div>
+            {% if product.metafields.custom.benefits_content_5 != blank %}
+            <div class="product-benifit-description">
+              <p> {{ product.metafields.custom.benefits_content_5 }} </p>
+            </div>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if  product.metafields.custom.benefits_title_6 != blank %}
+          <div class="product-benifit-list">
+            <div class="main-benifits">
+              {% if product.metafields.custom.benefits_icon_6 != blank %}
+              <div class="product-benifit-wrapper">
+                <div class="product-benifit-icons">
+                {% style %}
+                  #metacolor-6 svg {
+                        color: {{ product.metafields.custom.benefits_icon_color_6 }};
+                        fill: {{ product.metafields.custom.benefits_icon_color_6 }};
+                    }
+                {% endstyle %}
+                  <div class="svg-icon-img" id="metacolor-6">
+                    <i class="fak fa-{{ product.metafields.custom.benefits_icon_6 }}"></i>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              {% if product.metafields.custom.benefits_title_6 != blank %}
+              <div class="product-benifit-title">
+                <h3>{{ product.metafields.custom.benefits_title_6 }}</h3>
+              </div>
+              {% endif %}
+            </div>
+            {% if product.metafields.custom.benefits_content_6 != blank %}
+            <div class="product-benifit-description">
+              <p> {{ product.metafields.custom.benefits_content_6 }} </p>
+            </div>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endif %}

@@ -1,0 +1,95 @@
+<section class="meta-gallery">
+  {% if image_pos == 'left' %}
+    {% if product.metafields.custom.product_gallery_images != blank %}
+      <div class="image-item-wrapper">
+        {% for image in product.metafields.custom.product_gallery_images.value %}
+          <div class="image-item {% if forloop.index == 1 %} first-image {% else %} not-first {% endif %}">
+            <div class="image-wrapper">
+              <img loading="lazy" class="gallery-image" src="{{ image | img_url : 'master' }}">
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endif %}
+  {% if product.description != blank or product.metafields.meta.short_description != blank %}
+    <div class="description-wrapper{% if product.metafields.custom.product_gallery_images == blank %} w-100 {% endif %}">
+      <div class="text-uppercase product-h2"><h2><span class="full-underline full-underline--fivenation heading-desc">{{ heading | default : "DESCRIPTION" }}</span></h2></div>
+      {% if product.description != blank %}
+        <div class="desktop-description">
+          {{ product.description }}
+        </div>
+      {% endif %}
+      {% if product.metafields.meta.short_description != blank or product.description != blank %}
+        <div class="mobile-description">
+          {% unless product.metafields.meta.short_description == blank %}
+            <div class="short-desc">{{ product.metafields.meta.short_description }}</div>
+          {% endunless %}
+          {% if product.description != blank %}
+            <div class="main-desc">{{ product.description }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      <div class="size-chart-content">
+          {% assign result = '' %}
+    
+          {% comment %}
+          {% for block in section.blocks %}
+              {% assign customtag = block.settings.tagtext | split : ',' %}
+              {% for ctag in customtag %}
+                {%  if product.tags contains ctag %}
+                  {% assign result = result | append : '1' %}
+                {% else %}
+                  {% assign result = result | append : '2' %}
+                {% endif %}
+              {% endfor %}
+            
+              {% unless result contains '2' %}
+                <div class="sizechart-heading"><h2>Size Chart</h2></div>
+                <div class="image-wrapper">
+                  <img loading="lazy" src="{{ block.settings.size_chart | img_url : 'master'}}">
+                </div>
+              {% endunless %}
+          {% endfor %}
+          {% endcomment %}
+          {%- assign sizechart_result = true -%}
+          {% for block in section.blocks %}
+              {%- assign customtag = block.settings.tagtext | split : ',' -%}
+                {%- for ctag in customtag -%}
+                  {%  if product.tags contains ctag %}
+                    {% assign result = result | append : ',1' %}
+                  {% else %}
+                    {% assign result = result | append : ',2' %}
+                  {% endif %}
+                {%- endfor -%} 
+              {%- assign resultarr = result | split : ',' -%}                
+              {%- if resultarr contains '2' -%}                
+              {%- else -%}
+                {% if block.settings.size_chart != blank and sizechart_result == true %}
+                  <div class="sizechart-heading"><h2>Size Chart</h2></div>
+                  <div class="image-wrapper">
+                    <img src="{{ block.settings.size_chart | img_url : 'master'}}">
+                  </div>
+                {%- assign sizechart_result = false -%}
+                {% endif %}
+              {%- endif -%}  
+              {%- assign result = "" -%}          
+          {% endfor %}
+        </div>
+      </div>
+  {% endif %}
+  {% if image_pos == 'right' %}
+    {% if product.metafields.custom.product_gallery_images != blank %}
+      <div class="image-item-wrapper">
+      {% for image in product.metafields.custom.product_gallery_images.value %}
+        <div class="image-item {% if forloop.index == 1 %} first-image {% else %} not-first {% endif %}">
+          <div class="image-wrapper">
+            <img class="gallery-image" src="{{ image | img_url : 'master' }}">
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+    {% endif %}
+  {% endif %}
+</section>

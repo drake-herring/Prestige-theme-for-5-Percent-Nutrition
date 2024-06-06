@@ -1,0 +1,1524 @@
+
+<style type="text/css">
+  .customPaymentButton button:hover {
+    border-color: #9f9f9f;
+  }
+  .customPaymentButton button {
+    background-color: #e0b357 !important;
+    border-color: #e0b357;
+  }
+  .customPaymentButton button:hover {
+    background-color: #e0b357 !important;
+  }
+  .Text--subdued {
+    color: #ffffff;
+  }
+  .is-sticky .product-nav-section, .quantity-and-addToCart-container {
+    z-index: 3 !important;
+  }
+  .product-description-heading {
+    font-size: 24px;
+    line-height: 34px;
+    font-family: 'Gunplay-Regular';
+    text-transform: uppercase;
+  }
+  .container.frequently-section {
+    padding: 60px 0;
+  }
+  .frequently-section {
+    padding: 40px 0px 40px 0px;
+  }
+{%- if product.template_suffix == 'core' -%}
+
+    .supplementImage {
+    width: 45%;
+    }
+   .supplement-data-block {
+    width: 55%;
+    }
+    .supplementFLex {
+    gap: 40px;
+    }
+    .supplement-data-container {
+     background: #000;
+    }
+    .supplementProtien {
+      justify-content: space-between;
+    }
+    .supplementfactsIcon {
+    width: 150px;
+    height: 120px;
+    }
+    .zoomImg {
+    background: #000 !important;
+    }
+     .Price--highlight, og-offer og-optout-button, og-offer og-optin-button, og-price.italic.line-through, 
+     .og-offer-incentive, og-text, .benefits-section .benefits-content__heading, 
+     .benefits-section .benefits-content__desc, .whitelabel-new .ProductMeta .yotpo .text-m, 
+     .yotpo-sr-bottom-line-left-panel.yotpo-sr-bottom-line-score, .yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel, 
+     .whitelabel-new og-offer og-price[regular], .box-text p, .product-h2, .product-h4, .accordion-heading:after, .panel {
+      color: {{ section.settings.dark-mode-text-color }} !important;
+     }
+    og-offer og-tooltip svg {
+    fill: {{ section.settings.dark-mode-text-color }} !important;
+    }
+    
+    .ProductForm__Item {
+      color: #000;
+      }
+  
+    og-offer og-select-frequency{
+      border: 1px solid;
+    }
+
+  .frequently-section .cbb-frequently-bought-total-price-regular-price {
+    color: #000 !important;
+    }
+    
+   .product-page-title, .main-product-label, .whitelabel-new .yotpo .yotpo-icon-double-bubble:before, 
+    .whitelabel-new og-offer og-price[subscription], .whitelabel-new .ProductMeta .yotpo .yotpo-stars .yotpo-icon:before, 
+    .desp-sec .shogun-heading-component h1, .breadcrumb a, .breadcrumb span[aria-hidden=true], .supplementfactsIcon {
+      color: {{ section.settings.dark-mode-heading-color }} !important;
+    }
+    .whitelabel-new .ProductForm__AddToCart, .benefits-section {
+      background : {{ section.settings.dark-mode-heading-color }} !important;
+    }
+  .copyButtonWC{
+    background: {{ section.settings.dark-mode-heading-color }} !important;
+  }
+    .product-thumbnail-image--active {
+    border: 1px solid {{ section.settings.dark-mode-heading-color }} !important;
+    }
+    .full-underline:before {
+    background-color: {{ section.settings.dark-mode-heading-color }} !important;
+    }
+    .supplement-data-container, .supplementfactsIcon {
+    border: 3px solid {{ section.settings.dark-mode-heading-color }} !important;
+    }
+    .desp-sec .shogun-heading-component h1 {
+      border-bottom: 3px solid {{ section.settings.dark-mode-heading-color }} !important;
+    }
+
+    .benefits-section {
+      background : {{ section.settings.dark-mode-background-color }} !important;
+    }
+
+    #BIS_trigger {
+      background : {{ section.settings.dark-mode-heading-color }} !important;
+    }
+    
+    .desp-sec, .supplement-section, .FactsSection {
+    background: #585a5c;
+    }
+    .desp-sec:before, .FactsSection:before, .fivenation-section:before {
+    content: "";
+    background: url(https://cdn.shopify.com/s/files/1/0063/4218/0928/files/black-top_1.webp);
+    width: 100%;
+    height: 50px;
+    display: block;
+    top: -70px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    }
+    .desp-sec:after, .FactsSection:after, .fivenation-section:after {
+    content: "";
+    background: url(https://cdn.shopify.com/s/files/1/0063/4218/0928/files/black-bottom.webp);
+    width: 100%;
+    height: 115px;
+    display: block;
+    top: 85px;
+    left: 0;
+    position: relative;
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+
+    .FactsSection:before, .fivenation-section:before {
+    top: -49px;
+    }
+    /*.FactsSection:after,*/
+    .frequently-section:after, .fivenation-section:after {
+    top: 49px;
+    }
+    .frequently-section:after {
+    content: "";
+    background: url(https://cdn.shopify.com/s/files/1/0063/4218/0928/files/black-top.webp?v=1683105752);
+    width: 100%;
+    height: 50px;
+    display: block;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+    .fivenation-section {
+    padding: 0px 0 0;
+    background: #585a5c;
+    }
+    .review-section {
+    padding: 60px 0 80px;
+    background: {{ section.settings.dark-mode-background-color }};
+    }
+    .review-section .yotpo-widget-instance {
+    background-color: #aaaaaa;
+    border-radius: 3px;
+    padding-bottom: 1px;
+    }
+    .delivery-section {
+    background: {{ section.settings.dark-mode-background-color }};
+    padding-top: 80px;
+    padding-bottom: 40px;
+    margin-top: 60px;
+    }
+    .three-blocks {
+     margin: 0 auto;
+    }
+    .fivenation-section .yotpo.yotpo-pictures-widget {
+    padding: 40px 0px;
+    }
+    .product-faq-section {
+    padding: 120px 0 !important;
+    background: {{ section.settings.dark-mode-background-color }};
+    }
+    .panel {
+    background-color: #000;
+    }
+
+    .bottom-line-items .avg-score, .content-title.yotpo-font-bold, .yotpo .yotpo-nav ul .yotpo-nav-tab span, .content-review,
+    .reviews-header .reviews-amount, span.y-label.yotpo-user-title.yotpo-action-hover, span.suggested-topic-text, span.y-label.yotpo-review-date,
+    span.reviews-qa-label, .filters-container-title, span.reviews-amount, span.write-question-review-button-text {
+      color: #fff !important;
+    }
+    .yotpo-sr-vertical-border {
+      border-right: 1px solid white !important;
+    }
+
+    span.carousel-review-date, .carousel-review-title, .carousel-review-body, .carousel-review-author, .yotpo .yotpo-icon-quote-left:before {
+    color: #fff !important;
+    }
+    .QuantitySelector--large .QuantitySelector__Button, .QuantitySelector__CurrentQuantity {
+    color: #000;
+    }
+    .box-img path {
+    fill: #fff;
+    }
+
+
+@media screen and (min-width: 768px) and (max-width: 1160px) {
+  .supplementProtien {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .supplementfactsIcon {
+    height: 134px;
+    margin-bottom: 0;
+  }
+}  
+
+/*   Ipad Landscape  */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .cbb-frequently-bought-container {
+    text-align: center !important;
+  }
+  h2.cbb-frequently-bought-title.translatable.Heading.u-h3 {
+    text-align: center !important;
+  }
+  ul.cbb-frequently-bought-products {
+    width: 100%;
+    text-align: center !important;
+  }
+  ul.cbb-frequently-bought-selector-list li {
+    text-align: start;
+    margin: 0 50px !important;
+  }
+  .frequently_bought_together_app:after {
+    height: 66px;
+    top: 60px;
+    background-size: cover;
+  }
+  .supplementImage, .supplement-data-block {
+    width: 100%;
+    }
+}
+  
+@media screen and (max-width: 767px) {
+    .FactsSection:before, .fivenation-section:before {
+    top: -48px;
+      }
+    .FactsSection:after, .fivenation-section:after {
+    top: 48px;
+    }
+    .FactsSection:after {
+      background-position: bottom;
+    }
+    .frequently-section {
+    padding-bottom: 40px !important
+    }
+    .supplementImage, .supplement-data-block {
+    width: 100%;
+    }
+    .supplementProtien {
+    justify-content: center;
+    }
+}
+   
+ {% endif %}
+ /*extra styles */
+  .image-item-wrapper {
+      width: 100% !important;
+  }
+  .container {
+    max-width:1200px !important;
+  }
+  .container.container--lg {
+    max-width: 100% !important;
+  }
+  .g-read-more {
+    color:#fff !important;
+  }
+  .ajaxified-cart-feedback.success {
+    background: #e0b357 !important;
+}
+.ProductForm__AddToCart {
+border-color: #e0b357 !important;
+}
+  
+</style>
+
+
+{% render 'shogun-products', content: product %}
+
+<div id="pre-order-template">
+
+<div class="FirstMainSection" 
+     style="background-color: {{ section.settings.dark-mode-background-color }};
+            color: {{ section.settings.dark-mode-text-color }};
+            {% if section.settings.dark-mode-background-image %}
+            background-image: url({{ section.settings.dark-mode-background-image | img_url: 'master' }});
+            {% endif %}
+            background-repeat: no-repeat;
+            margin-top: -40px;
+            padding-top: 60px;
+            padding-bottom: 40px;
+            background-size: cover;">
+            
+      <!-- content for the section goes here -->
+          
+{%- capture section_settings -%}
+  {
+  "enableHistoryState": true,
+  "templateSuffix": {{ product.template_suffix | json }},
+  "showInventoryQuantity": {{ section.settings.show_inventory_quantity | json }},
+  "stackProductImages": {{ section.settings.stack_images | json }},
+  "showThumbnails": {{ section.settings.show_thumbnails | json }},
+  "inventoryQuantityThreshold": {{ section.settings.inventory_quantity_threshold }},
+  "showPriceInButton": {{ section.settings.show_price_in_button | json }},
+  "enableImageZoom": {{ section.settings.enable_image_zoom | json }},
+  "showPaymentButton": {{ section.settings.show_payment_button | json }},
+  "useAjaxCart": {% if settings.cart_type == 'drawer' %}true{% else %}false{% endif %}
+  }
+{%- endcapture -%}
+
+{%- include 'breadcrumbs' -%}
+
+<div class="beam-me-up-scotty text-uppercase">
+  <span>
+    <img loading="lazy" style="width: 12px; margin-bottom: 2px;" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDI4NC45MjkgMjg0LjkyOSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjg0LjkyOSAyODQuOTI5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTI4Mi4wODIsMTk1LjI4NUwxNDkuMDI4LDYyLjI0Yy0xLjkwMS0xLjkwMy00LjA4OC0yLjg1Ni02LjU2Mi0yLjg1NnMtNC42NjUsMC45NTMtNi41NjcsMi44NTZMMi44NTYsMTk1LjI4NSAgIEMwLjk1LDE5Ny4xOTEsMCwxOTkuMzc4LDAsMjAxLjg1M2MwLDIuNDc0LDAuOTUzLDQuNjY0LDIuODU2LDYuNTY2bDE0LjI3MiwxNC4yNzFjMS45MDMsMS45MDMsNC4wOTMsMi44NTQsNi41NjcsMi44NTQgICBjMi40NzQsMCw0LjY2NC0wLjk1MSw2LjU2Ny0yLjg1NGwxMTIuMjA0LTExMi4yMDJsMTEyLjIwOCwxMTIuMjA5YzEuOTAyLDEuOTAzLDQuMDkzLDIuODQ4LDYuNTYzLDIuODQ4ICAgYzIuNDc4LDAsNC42NjgtMC45NTEsNi41Ny0yLjg0OGwxNC4yNzQtMTQuMjc3YzEuOTAyLTEuOTAyLDIuODQ3LTQuMDkzLDIuODQ3LTYuNTY2ICAgQzI4NC45MjksMTk5LjM3OCwyODMuOTg0LDE5Ny4xODgsMjgyLjA4MiwxOTUuMjg1eiIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+  </span>
+  <span>back to top</span>
+</div>
+
+<section class="Product Product--{{ section.settings.image_size }} container" data-section-id="{{ section.id }}" data-section-type="product" data-section-settings='{{ section_settings }}'>
+  <div class="FlexboxIeFix flex-wrap Product__Wrapper js-attach-heading whitelabel-new">
+    
+   {%- assign initial_image_id = product.featured_image.id -%}
+    {%- assign initial_image_index = 0 -%}
+    {%- assign image_count = 0 -%}
+
+    {%- capture slideshow_images -%}
+    {%- if product.metafields.meta.video != blank -%}
+    {%- for image in product.images limit: 1 -%}
+    {%- if image.alt == 'featured' or image.alt == 'featured mobile' -%}
+    {%- continue -%}
+    {%- endif -%}
+    {%- if image.id == product.selected_or_first_available_variant.image.id -%}
+    {%- assign initial_image_index = image_count -%}
+    {%- assign initial_image_id = image.id -%}
+    {%- endif -%}
+
+    {%- include 'image-size', sizes: '200,400,600,700,800,900,1000,1200,1400,1600', image: image -%}
+
+    {%- assign is_video = false -%}
+
+    {%- if image.alt contains 'youtube.com/embed' or image.alt contains 'player.vimeo.com' -%}
+    {%- assign is_video = true -%}
+    {%- endif -%}
+
+    <div id="Image{{ image.id }}" class="enlarge Product__SlideItem Product__SlideItem--{% if is_video %}video{% else %}image{% endif %} Carousel__Cell {% if initial_image_id == image.id %}is-selected{% endif %}"
+         {% if is_video %}data-action="open-modal" aria-controls="modal-video-{{ image.id }}"{% endif %}
+         {% unless is_video %}data-image-position-ignoring-video="{% increment image_position_without_video %}"{% endunless %}
+         data-image-position="{% increment image_position %}"
+         data-image-id="{{ image.id }}">
+
+      <a href="{{ image | img_url: '1200x' }}" class="image-popup-vertical-fit"> <!-- JS Added 20191106 - added link for better mobile UX -->
+        <div class="AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: image.aspect_ratio }}%; --aspect-ratio: {{ image.aspect_ratio }};">
+          {% assign image_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+
+          <img loading="lazy" class="image-zoom Image--lazyLoad Image--fadeIn"
+               {% if initial_image_id == image.id %}src="{{ image | img_url: '250x' }}"{% endif %}
+               data-src="{{ image_url }}"
+               data-widths="[{{ supported_sizes }}]"
+               data-sizes="auto"
+               data-expand="-100"
+               alt="{{ image.alt | escape }}"
+               data-max-width="{{ image.width }}"
+               data-max-height="{{ image.height }}"
+               data-original-src="{{ image | img_url: 'master' }}"
+               data-zoom="{{ image | img_url: '1024x1024', scale: 2 }}">
+
+          <span class="Image__Loader"></span>
+
+          {%- if is_video -%}
+          <button type="button" class="Video__PlayButton" aria-label="{{ 'home_page.featured_video.play' | t }}">{% include 'icon' with 'play' %}</button>
+          {%- endif -%}
+
+          
+        </div>
+      </a> 
+    </div>
+    {%- assign image_count = image_count | plus: 1 -%}
+    {%- endfor -%}
+
+    <div class="video-container">
+
+      <a class="product-video" href="{{ product.metafields.meta.video }}">
+
+      </a>
+      {% comment %}
+      <img loading="lazy" class="video-image" src="{{ product.images[0] | img_url: '160x' }}"/>
+      {% endcomment %}
+      {% include 'responsive-image' with image: product.images[0], class: 'video-image' %}
+    </div>
+
+    {%- for image in product.images offset: 1 -%}
+    {%- if image.alt == 'featured' or image.alt == 'featured mobile' -%}
+    {%- continue -%}
+    {%- endif -%}
+    {%- if image.id == product.selected_or_first_available_variant.image.id -%}
+    {%- assign initial_image_index = image_count -%}
+    {%- assign initial_image_id = image.id -%}
+    {%- endif -%}
+
+    {%- include 'image-size', sizes: '200,400,600,700,800,900,1000,1200,1400,1600', image: image -%}
+
+    {%- assign is_video = false -%}
+
+    {%- if image.alt contains 'youtube.com/embed' or image.alt contains 'player.vimeo.com' -%}
+    {%- assign is_video = true -%}
+    {%- endif -%}
+
+    <div id="Image{{ image.id }}" class="Product__SlideItem Product__SlideItem--{% if is_video %}video{% else %}image{% endif %} Carousel__Cell {% if initial_image_id == image.id %}is-selected{% endif %}"
+         {% if is_video %}data-action="open-modal" aria-controls="modal-video-{{ image.id }}"{% endif %}
+         {% unless is_video %}data-image-position-ignoring-video="{% increment image_position_without_video %}"{% endunless %}
+         data-image-position="{% increment image_position %}"
+         data-image-id="{{ image.id }}">
+
+      <a href="{{ image | img_url: '1200x' }}" class="image-popup-vertical-fit"> <!-- JS Added 20191106 - added link for better mobile UX -->
+        <div class="AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: image.aspect_ratio }}%; --aspect-ratio: {{ image.aspect_ratio }};">
+          {% assign image_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+
+          <img class="image-zoom Image--lazyLoad Image--fadeIn"
+               {% if initial_image_id == image.id %}src="{{ image | img_url: '250x' }}"{% endif %}
+               data-src="{{ image_url }}"
+               data-widths="[{{ supported_sizes }}]"
+               data-sizes="auto"
+               data-expand="-100"
+               alt="{{ image.alt | escape }}"
+               data-max-width="{{ image.width }}"
+               data-max-height="{{ image.height }}"
+               data-original-src="{{ image | img_url: 'master' }}"
+               data-zoom="{{ image | img_url: '1024x1024', scale: 2 }}">
+
+          <span class="Image__Loader"></span>
+
+          {%- if is_video -%}
+          <button type="button" class="Video__PlayButton" aria-label="{{ 'home_page.featured_video.play' | t }}">{% include 'icon' with 'play' %}</button>
+          {%- endif -%}
+
+
+        </div>
+      </a>
+    </div>
+
+    {%- assign image_count = image_count | plus: 1 -%}
+    {%- endfor -%}
+    {%- else -%}
+    {%- for image in product.images -%}
+    {%- if image.alt == 'featured' or image.alt == 'featured mobile' -%}
+    {%- continue -%}
+    {%- endif -%}
+    {%- if image.id == product.selected_or_first_available_variant.image.id -%}
+    {%- assign initial_image_index = image_count -%}
+    {%- assign initial_image_id = image.id -%}
+    {%- endif -%}
+
+    {%- include 'image-size', sizes: '200,400,600,700,800,900,1000,1200,1400,1600', image: image -%}
+
+    {%- assign is_video = false -%}
+
+    {%- if image.alt contains 'youtube.com/embed' or image.alt contains 'player.vimeo.com' -%}
+    {%- assign is_video = true -%}
+    {%- endif -%}
+
+    <div id="Image{{ image.id }}" class="Product__SlideItem Product__SlideItem--{% if is_video %}video{% else %}image{% endif %} Carousel__Cell {% if initial_image_id == image.id %}is-selected{% endif %}"
+         {% if is_video %}data-action="open-modal" aria-controls="modal-video-{{ image.id }}"{% endif %}
+         {% unless is_video %}data-image-position-ignoring-video="{% increment image_position_without_video %}"{% endunless %}
+         data-image-position="{% increment image_position %}"
+         data-image-id="{{ image.id }}">
+
+      <a href="{{ image | img_url: '1200x' }}" class="image-popup-vertical-fit"> <!-- JS Added 20191106 - added link for better mobile UX -->
+        <div class="AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: image.aspect_ratio }}%; --aspect-ratio: {{ image.aspect_ratio }};">
+          {% assign image_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+
+          <img class="image-zoom Image--lazyLoad Image--fadeIn"
+               {% if initial_image_id == image.id %}src="{{ image | img_url: '250x' }}"{% endif %}
+               data-src="{{ image_url }}"
+               data-widths="[{{ supported_sizes }}]"
+               data-sizes="auto"
+               data-expand="-100"
+               alt="{{ image.alt | escape }}"
+               data-max-width="{{ image.width }}"
+               data-max-height="{{ image.height }}"
+               data-original-src="{{ image | img_url: 'master' }}"
+               data-zoom="{{ image | img_url: '1024x1024', scale: 2 }}">
+
+          <span class="Image__Loader"></span>
+
+          {%- if is_video -%}
+          <button type="button" class="Video__PlayButton" aria-label="{{ 'home_page.featured_video.play' | t }}">{% include 'icon' with 'play' %}</button>
+          {%- endif -%}
+
+
+        </div>
+      </a>
+    </div>
+
+    {%- assign image_count = image_count | plus: 1 -%}
+    {%- endfor -%}
+    {%- endif -%}
+    {%- endcapture -%}
+
+    
+  <!-- Product__Desp Start -->
+
+    <div class="Product__Descp">
+      <div class="product-details">
+          {%- include 'product-meta-new', show_description: true,blocks:section.blocks -%}
+          
+          {% comment %}{%- if section.settings.description_below_add_to_cart -%}
+          <div class="ProductMeta__Description Rte">
+            {{ product.description }}
+          </div>
+          {%- endif -%}{% endcomment %}
+
+        </div>
+
+        
+        <div class="product-thumbnail-images whitelabel-thumb owl-carousel owl-theme hide-mob hide-tab" data-template-suffix="{{ product.template_suffix }}">
+        {% assign maxThumbnails = 10 %}
+        {% for image in product.images %}
+          {% if forloop.index <= maxThumbnails %}
+            {% if forloop.index == 2 %}
+              {% if product.metafields.meta.video != blank %}
+                <div class="item">
+                    <div class="product-thumbnail-image videoContainer">
+                      <a class="product-video" href="{{ product.metafields.meta.video}}"></a>
+                      <img loading="lazy" src="{{ product.images[0].src | img_url: 'master' }}" alt="{{ product.images[0].alt | escape }}" class="product-thumbnail-image__img" data-main-image="{{ product.images[0].src | img_url: 'master' }}">
+                      {% comment %}{% include 'responsive-image' with image:  product.images[0], class='video-image' %}{% endcomment %}
+                    </div>
+                </div>
+              {% endif %}
+            {% endif %}
+            <div class="item">
+              <div class="product-thumbnail-image{% if forloop.first %} product-thumbnail-image--active{% endif %}">
+                <img loading="lazy" src="{{ image.src | img_url: 'master' }}" alt="{{ image.alt | escape }}" class="product-thumbnail-image__img" data-main-image="{{ image.src | img_url: 'master' }}">
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div> 
+  </div>
+      
+  <!-- Product__Desp End -->
+  
+    <!-- Product__Gallery Start-->
+
+        <!-- For Desktop Version Only -->
+     <div class="middle-sec hide-mob hide-tab">
+        <div class="product-images">
+          <div class="product-main-image">
+           <div class="zoom-container">
+              <span class="zoom" id="ex1">
+                <img loading="lazy" src="{{ product.featured_image.src | img_url: 'master' }}" alt="{{ product.featured_image.alt | escape }}" class="product-main-image__img">
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+    <div class="mobile-product-section">
+  <div id="mobile-product-slider" class="owl-carousel {% if product.metafields.meta.video_mobile != blank or product.metafields.meta.video != blank %}videoAvailable{% endif %}">
+    {% assign maxThumbnails = 10 %}
+    {% for image in product.images %}
+      {% if forloop.index <= maxThumbnails %}
+         {% if forloop.index == 2 %}
+          {% if product.metafields.meta.video_mobile != blank or product.metafields.meta.video != blank %}
+            <div class="product-mob-slide-image product-mob-video-thumbnail">
+              <a class="product-video" href="{% if product.metafields.meta.video_mobile != blank %}{{ product.metafields.meta.video_mobile}}{% elsif product.metafields.meta.video != blank %}{{ product.metafields.meta.video}}{% endif %}"></a>
+              <img loading="lazy" src="{{ product.images[0].src | img_url: 'master' }}" alt="{{ product.images[0].alt | escape }}" class="product-slide-images" data-main-image="{{ product.images[0].src | img_url: 'master' }}">
+            </div>
+          {% endif %}
+        {% endif %}
+        <div class="product-mob-slide-image">
+          <img loading="lazy" src="{{ image.src | img_url: 'master' }}" alt="{{ image.alt | escape }}" class="product-slide-images" data-main-image="{{ image.src | img_url: 'master' }}">
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+    <div class="mid-sec hide-mob">
+  <div id="tablet-product-slider" class="owl-carousel {% if product.metafields.meta.video_mobile != blank or product.metafields.meta.video != blank %}videoAvailable{% endif %}">
+    {% assign maxThumbnails = 10 %}
+    {% for image in product.images %}
+      {% if forloop.index <= maxThumbnails %}
+         {% if forloop.index == 2 %}
+          {% if product.metafields.meta.video_mobile != blank or product.metafields.meta.video != blank %}
+            <div class="product-tablet-slide-image product-mob-video-thumbnail">
+              <a class="product-video" href="{% if product.metafields.meta.video_mobile != blank %}{{ product.metafields.meta.video_mobile}}{% elsif product.metafields.meta.video != blank %}{{ product.metafields.meta.video}}{% endif %}"></a>
+              <img src="{{ product.images[0].src | img_url: 'master' }}" alt="{{ product.images[0].alt | escape }}" class="product-slide-images" data-main-image="{{ product.images[0].src | img_url: 'master' }}">
+            </div>
+          {% endif %}
+        {% endif %}
+        <div class="product-mob-slide-image">
+          <img src="{{ image.src | img_url: 'master' }}" alt="{{ image.alt | escape }}" class="product-slide-images" data-main-image="{{ image.src | img_url: 'master' }}">
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+    
+
+    <div class="mid-sec hide-tab">
+      {%- if product.images.size > 0 -%}
+    <div class="Product__Gallery {% if section.settings.stack_images %}Product__Gallery--stack{% endif %} {% if section.settings.show_thumbnails and image_count > 1 %}Product__Gallery--withThumbnails{% else %}{% endif %}">
+      <span id="ProductGallery" class="Anchor"></span>
+
+      <div class="Product__SlideshowNav Product__SlideshowNav--thumbnails">
+        {%- capture slideshow_nav -%}
+        {%- if image_count > 1 -%}
+
+        {% if product.metafields.meta.video != blank %}
+        {%- for image in product.images limit: 1 -%}
+        {%- if image.alt == 'featured' or image.alt == 'featured mobile' -%}
+        {%- continue -%}
+        {%- endif -%}
+
+        {%- assign is_video = false -%}
+
+        {%- if image.alt contains 'youtube.com/embed' or image.alt contains 'player.vimeo.com' -%}
+        {%- assign is_video = true -%}
+        {%- endif -%}
+
+        {%- if section.settings.stack_images -%}
+        <a href="#Image{{ image.id }}" data-image-id="{{ image.id }}" class="Product__SlideshowNavImage {% if is_video %}Product__SlideshowNavImage--video{% endif %} AspectRatio {% if forloop.first %}{% endif %}" style="--aspect-ratio: {{ image.aspect_ratio }}">
+   
+          {% include 'responsive-image' with image: image %}
+
+          {%- if is_video -%}
+          <button type="button" class="Product__SlideshowNavPlay" data-action="play-video" aria-label="{{ 'home_page.featured_video.play' | t }}">{% include 'icon' with 'play' %}</button>
+          {%- endif -%}
+        </a>
+        {%- else -%}
+        <span data-image-id="{{ image.id }}" class="Product__SlideshowNavImage {% if is_video %}Product__SlideshowNavImage--video{% endif %} AspectRatio {% if forloop.first %}is-selected{% endif %}" style="--aspect-ratio: {{ image.aspect_ratio }}">
+          
+          {% include 'responsive-image' with image: image %}
+
+          {%- if is_video -%}
+          <button type="button" class="Product__SlideshowNavPlay" data-action="play-video" aria-label="{{ 'home_page.featured_video.play' | t }}">{% include 'icon' with 'play' %}</button>
+          {%- endif -%}
+        </span>
+        {%- endif -%}
+        {%- endfor -%}
+
+        <div class="Product__SlideshowNavImage video-container">
+
+          <a class="product-video" href="{{ product.metafields.meta.video}}">
+
+          </a>
+<!--           <img class="video-image" src="{{ product.images[0] | img_url: '160x' }}"/> -->
+          {% include 'responsive-image' with image:  product.images[0], class='video-image' %}
+        </div>
+
+        {%- for image in product.images offset: 1 -%}
+        {%- if image.alt == 'featured' or image.alt == 'featured mobile' -%}
+        {%- continue -%}
+        {%- endif -%}
+
+        {%- assign is_video = false -%}
+
+        {%- if image.alt contains 'youtube.com/embed' or image.alt contains 'player.vimeo.com' -%}
+        {%- assign is_video = true -%}
+        {%- endif -%}
+
+        {%- if section.settings.stack_images -%}
+        <a href="#Image{{ image.id }}" data-image-id="{{ image.id }}" class="Product__SlideshowNavImage {% if is_video %}Product__SlideshowNavImage--video{% endif %} AspectRatio {% if forloop.first %}{% endif %}" style="--aspect-ratio: {{ image.aspect_ratio }}">
+<!--           <img loading="lazy" src="{{ image | img_url: '80x' }}"> -->
+          {% include 'responsive-image' with image:  image %}
+
+          {%- if is_video -%}
+          <button type="button" class="Product__SlideshowNavPlay" data-action="play-video" aria-label="{{ 'home_page.featured_video.play' | t }}">{% include 'icon' with 'play' %}</button>
+          {%- endif -%}
+        </a>
+        {%- else -%}
+        <span data-image-id="{{ image.id }}" class="Product__SlideshowNavImage {% if is_video %}Product__SlideshowNavImage--video{% endif %} AspectRatio {% if forloop.first %}is-selected{% endif %}" style="--aspect-ratio: {{ image.aspect_ratio }}">
+<!--           <img src="{{ image | img_url: '80x' }}"> -->
+          {% include 'responsive-image' with image:  image %}
+          
+
+          {%- if is_video -%}
+          <button type="button" class="Product__SlideshowNavPlay" data-action="play-video" aria-label="{{ 'home_page.featured_video.play' | t }}">{% include 'icon' with 'play' %}</button>
+          {%- endif -%}
+        </span>
+        {%- endif -%}
+        {%- endfor -%}
+        {%- else -%}
+        {%- for image in product.images -%}
+        {%- if image.alt == 'featured' or image.alt == 'featured mobile' -%}
+        {%- continue -%}
+        {%- endif -%}
+
+        {%- assign is_video = false -%}
+
+        {%- if image.alt contains 'youtube.com/embed' or image.alt contains 'player.vimeo.com' -%}
+        {%- assign is_video = true -%}
+        {%- endif -%}
+
+        {%- if section.settings.stack_images -%}
+        <a href="#Image{{ image.id }}" data-image-id="{{ image.id }}" class="Product__SlideshowNavImage {% if is_video %}Product__SlideshowNavImage--video{% endif %} AspectRatio {% if forloop.first %}{% endif %}" style="--aspect-ratio: {{ image.aspect_ratio }}">
+<!--           <img src="{{ image | img_url: '80x' }}"> -->
+          {% include 'responsive-image' with image: image %}
+
+          {%- if is_video -%}
+          <button type="button" class="Product__SlideshowNavPlay" data-action="play-video" aria-label="{{ 'home_page.featured_video.play' | t }}">{% include 'icon' with 'play' %}</button>
+          {%- endif -%}
+        </a>
+        {%- else -%}
+        <span data-image-id="{{ image.id }}" class="Product__SlideshowNavImage {% if is_video %}Product__SlideshowNavImage--video{% endif %} AspectRatio {% if forloop.first %}is-selected{% endif %}" style="--aspect-ratio: {{ image.aspect_ratio }}">
+<!--           <img src="{{ image | img_url: '80x' }}"> -->
+          {% include 'responsive-image' with image: image %}
+
+          {%- if is_video -%}
+          <button type="button" class="Product__SlideshowNavPlay" data-action="play-video" aria-label="{{ 'home_page.featured_video.play' | t }}">{% include 'icon' with 'play' %}</button>
+          {%- endif -%}
+        </span>
+        {%- endif -%}
+        {%- endfor -%}
+        {%- endif -%}  
+        {%- endif -%}
+        {%- endcapture -%}
+
+        {%- if section.settings.stack_images -%}
+        <div class="67">
+          <div class="">
+            <div class="js-thumbnail-gallery-slider thumbnail-gallery-slider Product__SlideshowNavScroller">
+              {{- slideshow_nav -}}
+            </div>
+
+          </div>
+
+
+        </div>
+
+        {%- endif -%}
+      </div>
+
+
+      {%- capture flickity_options -%}
+      {
+      "prevNextButtons": false,
+      "pageDots": {% if image_count > 1 %}true{% else %}false{% endif %},
+      "adaptiveHeight": true,
+      "watchCSS": true,
+      "dragThreshold": 8,
+      "initialIndex": {{ initial_image_index }},
+      "arrowShape": {"x0": 20, "x1": 60, "y1": 40, "x2": 60, "y2": 35, "x3": 25}
+      }
+      {%- endcapture -%}
+      
+      <div class="" style="width: 100%;">
+        <div class="product-gallery-slider js-product-gallery-slider {% if section.settings.enable_image_zoom %}Product__Slideshow--zoomable{% endif %}" data-flickity-config='{{ flickity_options }}'>
+          {{ slideshow_images }}          
+        </div>
+      </div>
+
+
+    </div>
+    {%- endif -%}
+    </div>
+    
+
+  <!-- Product__Gallery End -->
+
+  
+    <!--   Product__InfoWrapper Start-->
+  
+    <div class="Product__InfoWrapper">
+      <div class="Product__Info product-page-info {% if image_count == 0 %}Product__Info--noGallery{% endif %}">
+        <div class="Container">
+         {%- include 'product-meta-rightside', show_description: true,blocks:section.blocks,template_suffix:product.template_suffix -%}
+
+          {% comment %}{%- if product.template_suffix != 'coming-soon' -%}
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'addtocart' %}
+                  {%- include 'product-form' -%}
+              {% endcase %}
+            {% endfor %}
+        {%- endif -%}{% endcomment %}
+
+
+        </div>
+      </div>
+
+    </div>
+
+  <!--   Product__InfoWrapper End -->
+
+    </div>
+     {{- product_popovers -}}
+  {{- frequent_product_popovers -}}
+  {{- product_modals -}}
+  </section>
+</div> 
+
+  
+  {% comment %}{% render 'product-page-nav2' %}{% endcomment %}
+{% for block in section.blocks %}
+  {% case block.type %}
+    {% when 'full_description' %}
+      <div {% if block.settings.full_description_hide_mobile %}class="hidden-phone"{% endif %}>
+      {% render 'product-description-new' %}
+      </div>
+    {% when 'benefits' %}
+      <div {% if block.settings.benefits_hide_mobile %}class="hidden-phone"{% endif %}>
+      {% render 'product-benefits-new' %}
+      </div>
+    {% when 'delivery_options' %}
+      <div {% if block.settings.delivery_options_hide_mobile %}class="hidden-phone"{% endif %}>
+      {% render 'manufactured-delivery' %}
+      </div>
+    {% when 'yotpo' %}
+      <div {% if block.settings.yotpo_hide_mobile %}class="hidden-phone"{% endif %}>
+      {% include 'new-product-rating'%}
+      </div>
+    {% when 'percent-nation' %}
+      <div {% if block.settings.percent_nation_hide_mobile %}class="hidden-phone"{% endif %}>
+      {% render '5percent-nation-coreline'%}
+      </div>
+    {% when 'faq' %}
+      <div {% if block.settings.faq_hide_mobile %}class="hidden-phone"{% endif %}>
+      {% render 'product-faq' %}
+      </div>
+    {% when 'product_reference' %}
+      <div {% if block.settings.product_reference_hide_mobile %}class="hidden-phone"{% endif %}>
+      {% include 'product_references'%}
+      </div>
+    {% when 'fact' %}
+      <div class="FactsSection {% if block.settings.fact_hide_mobile %}hidden-phone{% endif %}">
+        {% render 'supplements-new-darkmode' %}
+        {% render 'vimeo-iframe' %}
+      </div>
+    {% when 'f_together' %}
+      <div class="frequently-section {% if block.settings.f_together_hide_mobile %}hidden-phone{% endif %}">
+        <div class="container frequently_bought_together_app"></div>
+      </div>
+  {% endcase %}
+{% endfor %}
+
+  
+  
+  
+  {% render 'related-metafield-products' %}
+  
+  
+
+{% if shop.domain == '5percentnutrition.com' %}
+    <script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=77ebe370-8d7d-42a1-9db0-cb4eb4dd81e9"></script>
+   {% if section.settings.show-sezzle-widget or request.design_mode %}
+<script type="text/javascript"> document.sezzleConfig = {
+				"configGroups": [{
+					"targetXPath": ".ProductMeta__PriceList/SPAN-0",
+					"urlMatch": "product"
+				},{
+					"targetXPath": ".Cart__Total/SPAN-0",
+					"urlMatch": "cart"
+				}]
+				} </script>
+<script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=77ebe370-8d7d-42a1-9db0-cb4eb4dd81e9"></script>
+{% endif %}
+
+<style>
+	.sezzle-shopify-info-button {
+	{% if request.design_mode and section.settings.show-sezzle-widget == false %}display: none !important{% endif %}
+}
+.sezzle-shopify-info-button .sezzle-button-text {
+	{% unless section.settings.color == "inherit" %}color: {{ section.settings.color }} !important;{% endunless %}
+	{% unless section.settings.font-size == "inherit" %}font-size: {{ section.settings.font-size }}px !important;{% endunless %}
+	{% unless section.settings.font-family == "inherit" %}font-family: {{ section.settings.font-family }} !important;{% endunless %}
+	text-align: {% if window.location.pathname == "/cart" and section.settings.cart-page-alignment != "auto"%} {{ section.settings.cart-page-alignment }} !important;{% elsif section.settings.product-page-alignment != "auto" %} {{ section.settings.product-page-alignment }} !important; {% endif %}
+	{% if request.design_mode %}max-width: unset !important;{% endif %}
+}
+</style>
+
+{% if request.design_mode %}
+<script>
+function disableScroll(event){
+	setTimeout(function() {
+		window.scroll(0,0);
+	},400);
+}
+	this.addEventListener('shopify:section:select', disableScroll);
+	this.addEventListener('shopify:section:load', disableScroll);
+</script>
+{% endif %}
+{% endif %}
+  
+</div>
+
+{% schema %}
+  {
+    "name": "Product page",
+    "class": "shopify-section--bordered",
+    "settings": [ 
+      {
+        "type": "header",
+        "content": "Dark Mode Settings"
+      },
+      {
+      "type": "image_picker",
+      "id": "dark-mode-background-image",
+      "label": "Dark Mode Background Image"
+    },
+    {
+      "type": "color",
+      "id": "dark-mode-background-color",
+      "label": "Dark Mode Background Color",
+      "default": "#000"
+    },
+      {
+      "type": "color",
+      "id": "dark-mode-heading-color",
+      "label": "Dark Mode Heading Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "dark-mode-text-color",
+      "label": "Dark Mode Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Product Review Display Options"
+    },
+      {
+        "type" : "select",
+        "label" : "Review type",
+        "id" : "review_type",
+        "default" : "slider",
+        "options" :[
+          {
+            "value" : "list",
+            "label" : "List"
+          },
+          {
+            "value" : "slider",
+            "label" : "Slider"
+          }
+        ]
+      },
+      
+      {
+      "type": "header",
+      "content": "Page Settings"
+    },
+      
+  {
+    "type": "checkbox",
+    "id": "show_quantity_selector",
+    "label": "Show quantity selector",
+    "default": true
+  },
+  {
+    "type": "checkbox",
+    "id": "show_inventory_quantity",
+    "label": "Show inventory quantity",
+    "info": "Make sure that your inventory is tracked. [Learn more](https://help.shopify.com/manual/products/inventory#set-up-inventory-tracking).",
+    "default": false
+  },
+  {
+    "type": "range",
+    "id": "inventory_quantity_threshold",
+    "label": "Inventory quantity threshold",
+    "info": "Only show inventory quantity if below threshold. Choose 0 to always show.",
+    "min": 0,
+    "max": 50,
+    "step": 1,
+    "default": 0
+  },
+  {
+    "type": "checkbox",
+    "id": "show_price_in_button",
+    "label": "Show price in add to cart button",
+    "default": false
+  },
+  {
+    "type": "checkbox",
+    "id": "show_payment_button",
+    "label": "Show dynamic checkout button",
+    "info": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+    "default": true
+  },
+  
+  {
+      "type": "header",
+      "content": "Related MF Products"
+    },
+ {
+      "type": "paragraph",
+      "content": "Are you looking for hand-picked related products? [Learn more](http://support.maestrooo.com/article/117-product-choosing-hand-picked-related-products)."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_section",
+      "label": "Show section",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Related Products"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_product_info",
+      "label": "Show product info",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "sezzle-widget"
+    },
+	{
+		"id": "show-sezzle-widget",
+		"type": "checkbox",
+		"label": {"en": "Show Sezzle widget"},
+		"default": true
+		},
+		{
+		"id": "color",
+		"type": "select",
+		"label": {"en": "Text Color"},
+		"default": "inherit",
+		"options": [
+			{
+				"value": "inherit",
+				"label": "inherit"
+			},
+			{
+				"value": "black",
+				"label": "black"
+			},
+			{
+				"value": "white",
+				"label": "white"
+			}
+		]
+		},
+		{
+		"id": "font-size",
+		"type": "range",
+		"label": {"en": "Font Size"},
+		"default": 14,
+		"min": 9,
+		"max": 18,
+		"step": 0.5,
+		"unit": {"en": "px"}
+		},
+		{
+		"id": "font-family",
+		"type": "select",
+		"label": {"en": "Font Family"},
+		"default": "inherit",
+		"options": [
+			{
+				"value": "inherit",
+				"label": "inherit"
+			},
+			{
+				"value": "Mono",
+				"label": "Mono"
+			},
+			{
+				"value": "Archivo, sans-serif",
+				"label": "Archivo"
+			},
+			{
+				"value": "Arimo, sans-serif",
+				"label": "Arimo"
+			},
+			{
+				"value": "Asap, sans-serif",
+				"label": "Asap"
+			},
+			{
+				"value": "Assistant, sans-serif",
+				"label": "Assistant"
+			},
+			{
+				"value": "'Avenir Next', sans-serif",
+				"label": "Avenir Next"
+			},
+			{
+				"value": "'Avenir Next Rounded', sans-serif",
+				"label": "Avenir Next Rounded"
+			},
+			{
+				"value": "Cabin, sans-serif",
+				"label": "Cabin"
+			},
+			{
+				"value": "'Century Gothic', sans-serif",
+				"label": "Century Gothic"
+			},
+			{
+				"value": "Chivo, sans-serif",
+				"label": "Chivo"
+			},
+			{
+				"value": "'DIN Neuzeit Grotesk Light', sans-serif",
+				"label": "DIN Neuzeit Grotesk Light"
+			},
+			{
+				"value": "'DIN Next', sans-serif",
+				"label": "DIN Next"
+			},
+			{
+				"value": "'FF Meta', sans-serif",
+				"label": "FF Meta"
+			},
+			{
+				"value": "'FF Tisa Sans', sans-serif",
+				"label": "FF Tisa Sans"
+			},
+			{
+				"value": "'Fira Sans', sans-serif",
+				"label": "Fira Sans"
+			},
+			{
+				"value": "Futura, sans-serif",
+				"label": "Futura"
+			},
+			{
+				"value": "'Geometric 415', sans-serif",
+				"label": "Geometric 415"
+			},
+			{
+				"value": "'Gill Sans Nova', sans-serif",
+				"label": "Gill Sans Nova"
+			},
+			{
+				"value": "'Harmonia Sans', sans-serif",
+				"label": "Harmonia Sans"
+			},
+			{
+				"value": "Helvetica, sans-serif",
+				"label": "Helvetica"
+			},
+			{
+				"value": "'Humanist 521', sans-serif",
+				"label": "Humanist 521"
+			},
+			{
+				"value": "'IBM Plex Sans', sans-serif",
+				"label": "IBM Plex Sans"
+			},
+			{
+				"value": "'ITC Franklin Gothic', sans-serif",
+				"label": "ITC Franklin Gothic"
+			},
+			{
+				"value": "'ITC Johnston Medium', sans-serif",
+				"label": "ITC Johnston Medium"
+			},
+			{
+				"value": "'ITC Stone Humanist Medium', sans-serif",
+				"label": "ITC Stone Humanist Medium"
+			},
+			{
+				"value": "'Joanna Sans Nova', sans-serif",
+				"label": "Joanna Sans Nova"
+			},
+			{
+				"value": "Karla, sans-serif",
+				"label": "Karla"
+			},
+			{
+				"value": "Lato, sans-serif",
+				"label": "Lato"
+			},
+			{
+				"value": "'Libre Franklin, sans-serif",
+				"label": "Libre Franklin"
+			},
+			{
+				"value": "Madera, sans-serif",
+				"label": "Madera"
+			},
+			{
+				"value": "'Monotype News Gothic', sans-serif",
+				"label": "Monotype News Gothic"
+			},
+			{
+				"value": "Montserrat, sans-serif",
+				"label": "Montserrat"
+			},
+			{
+				"value": "Muli, sans-serif",
+				"label": "Muli"
+			},
+			{
+				"value": "'Neue Haas Unica', sans-serif",
+				"label": "Neue Haas Unica"
+			},
+			{
+				"value": "'Neue Plak', sans-serif",
+				"label": "Neue Plak"
+			},
+			{
+				"value": "'Neuzeit Office', sans-serif",
+				"label": "Neuzeit Office"
+			},
+			{
+				"value": "'Neuzeit Office Soft Rounded', sans-serif",
+				"label": "Neuzeit Office Soft Rounded"
+			},
+			{
+				"value": "'Neuzeit S', sans-serif",
+				"label": "Neuzeit S"
+			},
+			{
+				"value": "Nunito, sans-serif",
+				"label": "Nunito"
+			},
+			{
+				"value": "'Nunito Sans', sans-serif",
+				"label": "Nunito Sans"
+			},
+			{
+				"value": "'Open Sans', sans-serif",
+				"label": "Open Sans"
+			},
+			{
+				"value": "Oxygen, sans-serif",
+				"label": "Oxygen"
+			},
+			{
+				"value": "'PT Sans', sans-serif",
+				"label": "PT Sans"
+			},
+			{
+				"value": "Poppins, sans-serif",
+				"label": "Poppins"
+			},
+			{
+				"value": "'Quattrocento Sans', sans-serif",
+				"label": "Quattrocento Sans"
+			},
+			{
+				"value": "Questrial, sans-serif",
+				"label": "Questrial"
+			},
+			{
+				"value": "Quicksand, sans-serif",
+				"label": "Quicksand"
+			},
+			{
+				"value": "'Quire Sans', sans-serif",
+				"label": "Quire Sans"
+			},
+			{
+				"value": "Roboto, sans-serif",
+				"label": "Roboto"
+			},
+			{
+				"value": "Rubik, sans-serif",
+				"label": "Rubik"
+			},
+			{
+				"value": "Slate, sans-serif",
+				"label": "Slate"
+			},
+			{
+				"value": "'Source Sans Pro', sans-serif",
+				"label": "Source Sans Pro"
+			},
+			{
+				"value": "'Swiss 721', sans-serif",
+				"label": "Swiss 721"
+			},
+			{
+				"value": "'Twentieth Century', sans-serif",
+				"label": "Twentieth Century"
+			},
+			{
+				"value": "'Univers Next', sans-serif",
+				"label": "Univers Next"
+			},
+			{
+				"value": "Varela, sans-serif",
+				"label": "Varela"
+			},
+			{
+				"value": "'Varela Round', sans-serif",
+				"label": "Varela Round"
+			},
+			{
+				"value": "'Verdana Pro', sans-serif",
+				"label": "Verdana Pro"
+			},
+			{
+				"value": "Zurich, sans-serif",
+				"label": "Zurich"
+			}
+		]
+		},
+		{
+		"id": "product-page-alignment",
+		"type": "select",
+		"label": {"en": "Product Page Alignment"},
+		"default": "auto",
+		"options": [
+			{
+				"value": "auto",
+				"label": "auto"
+			},
+			{
+				"value": "left",
+				"label": "left"
+			},
+			{
+				"value": "center",
+				"label": "center"
+			},
+			{
+				"value": "right",
+				"label": "right"
+			}
+		]
+		},
+		{
+		"id": "cart-page-alignment",
+		"type": "select",
+		"label": {"en": "Cart Page Alignment"},
+		"default": "auto",
+		"options": [
+			{
+				"value": "auto",
+				"label": "auto"
+			},
+			{
+				"value": "left",
+				"label": "left"
+			},
+			{
+				"value": "center",
+				"label": "center"
+			},
+			{
+				"value": "right",
+				"label": "right"
+			}
+		]
+		}
+  	],
+    "blocks": [
+    {
+      "type": "block",
+      "name": "Image and Text Blocks",
+      "settings": [
+         {
+          "type": "text",
+          "id": "font_awesome_icon",
+          "label": "Font Awesome Icon"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "text"
+        }
+        
+      ]
+  },
+      {
+       "name": "Title",
+       "type": "title"
+     },
+     {
+       "name": "Description",
+       "type": "description",
+       "settings": [
+         {
+           "type": "checkbox",
+           "id": "short_desc",
+           "label": "Short description",
+           "default" : true
+         }
+       ]
+     },
+     {
+       "name": "Price",
+       "type": "price"
+     },
+     {
+       "name": "Yotpo stars",
+       "type": "yotpo_stars"
+     },
+     {
+       "name": "Add to cart Form",
+       "type": "addtocart"
+     },
+      {
+       "name": "Chart",
+       "type": "chart"
+     },
+      {
+       "name": "Full Description",
+       "type": "full_description",
+        "settings":[
+         {
+            "type": "checkbox",
+            "id": "full_description_hide_mobile",
+            "label": "Hide on mobile",
+            "default": false
+          }
+       ]
+     },
+      {
+       "name": "Benefits",
+       "type": "benefits",
+        "settings":[
+         {
+            "type": "checkbox",
+            "id": "benefits_hide_mobile",
+            "label": "Hide on mobile",
+            "default": false
+          }
+       ]
+     },
+      {
+       "name": "Facts",
+       "type": "fact",
+        "settings":[
+         {
+            "type": "checkbox",
+            "id": "fact_hide_mobile",
+            "label": "Hide on mobile",
+            "default": false
+          }
+       ]
+     },
+      {
+       "name": "Delivery Options",
+       "type": "delivery_options",
+        "settings":[
+         {
+            "type": "checkbox",
+            "id": "delivery_options_hide_mobile",
+            "label": "Hide on mobile",
+            "default": false
+          }
+       ]
+     },
+      {
+       "name": "Bought Together",
+       "type": "f_together",
+        "settings":[
+         {
+            "type": "checkbox",
+            "id": "f_together_hide_mobile",
+            "label": "Hide on mobile",
+            "default": false
+          }
+       ]
+     },
+      {
+       "name": "Yotpo Reviews",
+       "type": "yotpo",
+       "settings":[
+         {
+            "type": "checkbox",
+            "id": "review_hide_mobile",
+            "label": "Hide on mobile",
+            "default": false
+          }
+       ]
+     },
+      {
+       "name": "5Percent Nation Gallery",
+       "type": "percent-nation",
+        "settings":[
+         {
+            "type": "checkbox",
+            "id": "percent_nation_hide_mobile",
+            "label": "Hide on mobile",
+            "default": false
+          }
+       ]
+     },
+      {
+       "name": "FAQ",
+       "type": "faq",
+        "settings":[
+         {
+            "type": "checkbox",
+            "id": "faq_hide_mobile",
+            "label": "Hide on mobile",
+            "default": false
+          }
+       ]
+     },
+      {
+       "name": "Product Reference",
+       "type": "product_reference",
+        "settings":[
+         {
+            "type": "checkbox",
+            "id": "product_reference_hide_mobile",
+            "label": "Hide on mobile",
+            "default": false
+          }
+       ]
+     }
+      ]
+    }
+{% endschema %}

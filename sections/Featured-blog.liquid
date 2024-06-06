@@ -1,0 +1,156 @@
+{% style %}
+  .featured-blog-content--{{ section.settings.content_position }} {
+    bottom: {{ section.settings.bottom_position }} !important;
+    left: {{ section.settings.left_position }} !important;
+  }
+  }
+{% endstyle %}
+<section class="featured-blog">
+    {% assign blog = section.settings.blog %}
+<div class="blog-list metafield-content-wrapper {% if section.settings.apply_overlay %}Image--contrast{% endif %}">  
+  
+        {% if section.settings.blog_image %}
+              <div class="featured-blog-img desktop-img">
+                <img loading="lazy" src="{{ section.settings.blog_image | img_url:'master'}}" alt="{{ section.settings.blog_image.alt }}">
+              </div>
+        {% elsif blog.metafields.custom.blog_featured_image != blank %}
+            <div class="featured-blog-img desktop-img">
+              <img loading="lazy" src="{{ blog.metafields.custom.blog_featured_image | img_url:'master'}}" alt="{{ blog.metafields.custom.blog_featured_image.alt | default : 'metafield-image' }}">
+            </div>
+        {% else %}
+             {{ "lifestyle-1" | placeholder_svg_tag  }}
+        {% endif %}
+  
+        {% if section.settings.mobile_image != blank %}
+              <div class="featured-blog-img mobile-img">
+                <img loading="lazy" src="{{ section.settings.mobile_image | img_url:'master'}}" alt="{{ section.settings.blog_image.alt }}">
+              </div>
+        {% elsif section.settings.blog_image != blank %}
+              <div class="featured-blog-img mobile-img">
+                <img loading="lazy" src="{{ section.settings.blog_image | img_url:'master'}}" alt="{{ section.settings.mobile_image.alt }}">
+              </div>
+        {% elsif blog.metafields.custom.blog_featured_image != blank %}
+          <div class="featured-blog-img mobile-img">
+            <img src="{{ blog.metafields.custom.blog_featured_image | img_url:'master'}}" alt="{{ blog.metafields.custom.blog_featured_image.alt | default : 'metafield-image' }}">
+          </div>
+        {% else %}
+           {{ "lifestyle-1" | placeholder_svg_tag  }}
+        {% endif %}
+  
+        <div class="container featured-blog-content--{{ section.settings.content_position }}"> 
+          {% if section.settings.blog_content != blank %}
+            <div class="meta-content-wrapper featured-blog-content--{{ section.settings.content_position }}">
+              <p class="meta-content"> {{ section.settings.blog_content }}</p>
+            </div>
+          {% else %}
+            <div class="meta-content-wrapper featured-blog-content--{{ section.settings.content_position }}">
+              <p class="meta-content"> {{ blog.metafields.custom.blog_description }}</p>
+            </div>
+          {% endif %}
+  
+          {% if section.settings.btn_text != blank %}
+            <div class="btn-wrapper featured-blog-content--{{ section.settings.content_position }}">
+              <a class="CollectionItem__Link Button" href="{{ blog.url }}"> {{ section.settings.btn_text }}</a>
+            </div>   
+          {% endif %}
+        </div>
+</div>
+</section>
+
+{% schema %}
+  {
+    "name": "Featured blog",
+    "settings": [
+       {
+         "type":"image_picker",
+         "id":"blog_image",
+         "label":"Blog image",
+         "info": "If enabled, metafield image will show"
+       },
+       {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile image",
+          "info": "750 x 1100px jpg recommended. If none is set, desktop image will be cropped."
+      },
+      {
+        "type": "blog",
+        "id": "blog",
+        "label": "Blog"
+      },
+      {
+        "type": "richtext",
+        "id": "blog_content",
+        "label": "Blog content"
+      },
+      {
+        "type" : "text",
+        "id" : "btn_text",
+        "label" : "Button text",
+        "default" : "VIEW ALL"
+      },
+      {
+          "type": "checkbox",
+          "id": "apply_overlay",
+          "label": "Apply overlay on image",
+          "info": "This can improve text visibility.",
+          "default": true
+      },
+      {
+          "type": "select",
+          "id": "content_position",
+          "label": "Desktop content position",
+          "options": [
+            {
+              "value": "middleLeft",
+              "label": "Middle left"
+            },
+            {
+              "value": "middleCenter",
+              "label": "Middle center"
+            },
+            {
+              "value": "middleRight",
+              "label": "Middle right"
+            },
+            {
+              "value": "topLeft",
+              "label": "Top left"
+            },
+            {
+              "value": "topCenter",
+              "label": "Top center"
+            },
+            {
+              "value": "topRight",
+              "label": "Top right"
+            },
+            {
+              "value": "bottomLeft",
+              "label": "Bottom left"
+            },
+            {
+              "value": "bottomCenter",
+              "label": "Bottom center"
+            },
+            {
+              "value": "bottomRight",
+              "label": "Bottom right"
+            }
+          ],
+          "default": "bottomLeft"
+        }
+    ], 	
+    "presets": [{
+ 		"name": "featured blog",
+ 		"settings": {},
+ 		"blocks": []
+ 	}]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

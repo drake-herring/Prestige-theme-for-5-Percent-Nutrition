@@ -1,0 +1,58 @@
+{
+  "sections": {
+    "1662526754c85f0ad1": {
+      "type": "main-banner-section",
+      "settings": {
+        "banner_image": "shopify:\/\/shop_images\/Uncensored_2.png",
+        "apply_overlay": false
+      }
+    },
+    "shop-now": {
+      "type": "shop-now",
+      "disabled": true,
+      "settings": {
+        "show_section": false,
+        "title": "Best Sellers",
+        "collection": "best-sellers",
+        "grid_items_count": 9,
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false
+      }
+    },
+    "main": {
+      "type": "blog-template",
+      "settings": {
+        "blog_heading": "",
+        "blogmenu": "blog-category",
+        "featured_first_image": false,
+        "show_title": false,
+        "sidebar": false,
+        "show_rss": false,
+        "show_tags": false,
+        "show_featured_article": false,
+        "show_category": false,
+        "show_yotpo": true
+      }
+    },
+    "16546764999dd64af7": {
+      "type": "newsletter-sitewide",
+      "settings": {
+        "enable_bar": true,
+        "section_size": "small",
+        "text_color": "#ffffff",
+        "button_color": "#000000",
+        "subheading": "",
+        "title": "WANT TO SEE MORE ?",
+        "content": "<p>Signup to get notices for all new posts!<\/p>",
+        "graphic_aligment": "white"
+      }
+    }
+  },
+  "order": [
+    "1662526754c85f0ad1",
+    "shop-now",
+    "main",
+    "16546764999dd64af7"
+  ]
+}

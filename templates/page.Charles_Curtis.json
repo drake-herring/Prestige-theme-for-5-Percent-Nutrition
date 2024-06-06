@@ -1,0 +1,50 @@
+{
+  "sections": {
+    "page-rich-text-image": {
+      "type": "page-rich-text-image",
+      "settings": {
+        "subheading": "IFBB Pro",
+        "title": "Ed Hall",
+        "image": "shopify:\/\/shop_images\/EdHall_Page_1200x1080_73872387-07ec-45d4-95aa-d3a985cfc6f9.png",
+        "image_position": "left",
+        "content": "",
+        "height": "5' 7\"",
+        "weight": "248 lbs",
+        "DOB": "February 26, 1966",
+        "residence": "La Grange, North Carolina",
+        "facebook_url": "",
+        "instagram_url": "https:\/\/www.instagram.com\/accounts\/login\/?next=\/maturedmuscle\/",
+        "youtube_url": "",
+        "pinterest_url": "",
+        "snapchat_url": "",
+        "twitter_url": "",
+        "tumblr_url": "",
+        "google_plus_url": "",
+        "vimeo_url": "",
+        "linkedin_url": ""
+      }
+    },
+    "main": {
+      "type": "Charles_Curtis",
+      "settings": {
+        "title1": "EXPERIENCE",
+        "title2": "INSTAGRAM"
+      }
+    },
+    "page-featured-video": {
+      "type": "page-featured-video",
+      "settings": {
+        "section_size": "large",
+        "text_color": "#ffffff",
+        "subheading": "",
+        "title": "Your video",
+        "video_url": ""
+      }
+    }
+  },
+  "order": [
+    "page-rich-text-image",
+    "main",
+    "page-featured-video"
+  ]
+}

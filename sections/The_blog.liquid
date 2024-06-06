@@ -1,0 +1,79 @@
+<section class="blog_class">
+   <div class=" container">
+      <div class="blog-data">
+         {% if section.settings.blog-content != blank %}
+         <div class="blog-content">
+            {{ section.settings.blog-content }}
+         </div>
+         {% endif %}
+         <div class="blog_title">
+            {% if section.settings.blog-main-title != blank %}
+            <h2>{{ section.settings.blog-main-title }}</h2>
+            {% endif %}
+         </div>
+      </div>
+      {% if section.blocks.size > 0 %}
+      <div class="blog-btns-wrapper">
+         {% for block in section.blocks %}
+         <div class="blog-btn-wrapper {% if canonical_url contains block.settings.btn_url %} active {% endif %}">
+            <a href="{{ block.settings.btn_url }}">{{ block.settings.the-blog-title | upcase }}</a>
+         </div>
+         {% endfor %}
+      </div>
+      {% endif %}
+      {% if blog.metafields.custom.blog_description %}
+        <div class="meta-data">
+           <div class="meta-content-wrapper">
+              <p class="meta-content"> {{ blog.metafields.custom.blog_description }}</p>
+           </div>
+          {% if  blog.url != blank and section.settings.btn_text != blank %}
+           <div class="btn-wrapper">
+              <a class="CollectionItem__Link Button" href="{{ blog.url }}"> {{ section.settings.btn_text }}</a>
+           </div>
+          {% endif %}
+        </div>
+     {% endif %}
+   </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Blog Category ",
+    "settings": [
+      {
+        "type":"richtext",
+        "id":"blog-content",
+        "label":"Category Content"
+      },
+      {
+        "type":"richtext",
+        "id":"blog-main-title",
+        "label":"Category Title "
+      }
+    ],
+    "blocks": [
+ 		{
+ 			"name": "Category",
+ 			"type": "text",
+ 			"settings": [
+ 				{
+ 					"type": "url",
+ 					"id": "btn_url",
+ 					"label": "Category blog link"
+ 				},
+ 				{
+ 					"type": "text",
+ 					"id": "the-blog-title",
+ 					"label": "Category blog title "
+ 				}
+ 			]
+ 		}
+ 	],
+ 	"presets": [{
+ 		"name": "blog-social",
+ 		"settings": {},
+ 		"blocks": []
+ 	}]
+
+  }
+{% endschema %}

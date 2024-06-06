@@ -1,0 +1,34 @@
+{% if product.metafields.custom.product_gallery_images != blank %}
+  <div class="image-item-wrapper">
+    {% for image in product.metafields.custom.product_gallery_images.value %}
+      {% if forloop.first %}
+        <div class="image-item first-image">
+          <div class="image-wrapper">
+            <img loading="lazy" class="gallery-image" src="{{ image | img_url : 'master' }}">
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+{% endif %}
+
+  <div class="short-desc {% if product.metafields.custom.product_gallery_images != blank %}pullUp{% endif %}">
+    {% unless product.metafields.custom.second_heading == blank %}
+      <div class="heading-txt">
+          {{ product.metafields.custom.second_heading }}
+        </div>
+    {% endunless %}
+    
+    {% unless product.metafields.meta.short_description == blank %}
+      <p class="short-meta">{{ product.metafields.meta.short_description }}</p>
+    {% endunless %}
+
+    <div class="product-description-text">
+        {{ product.description }}
+      </div>
+     
+    
+    <div class="g-read-more">+ Read More</div>
+
+  </div>

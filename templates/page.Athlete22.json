@@ -1,0 +1,50 @@
+{
+  "sections": {
+    "page-rich-text-image": {
+      "type": "page-rich-text-image",
+      "settings": {
+        "subheading": "",
+        "title": "Viridiana Sanchez",
+        "image": "shopify:\/\/shop_images\/Viridiana_Bio-WEB_87a56fa2-e2c7-4a11-8787-c7f0bd5f9ff7.png",
+        "image_position": "left",
+        "content": "",
+        "height": "5' 3\"",
+        "weight": "Stage - 125 lbs, Offseason - 135 lbs",
+        "DOB": "November 4, 1986",
+        "residence": "Livermore, CA, USA",
+        "facebook_url": "",
+        "instagram_url": "https:\/\/www.instagram.com\/accounts\/login\/?next=\/vidi04\/",
+        "youtube_url": "",
+        "pinterest_url": "",
+        "snapchat_url": "",
+        "twitter_url": "",
+        "tumblr_url": "",
+        "google_plus_url": "",
+        "vimeo_url": "",
+        "linkedin_url": ""
+      }
+    },
+    "main": {
+      "type": "Athlete22",
+      "settings": {
+        "title1": "EXPERIENCE",
+        "title2": "INSTAGRAM"
+      }
+    },
+    "page-featured-video": {
+      "type": "page-featured-video",
+      "settings": {
+        "section_size": "large",
+        "text_color": "#ffffff",
+        "subheading": "",
+        "title": "Your video",
+        "video_url": ""
+      }
+    }
+  },
+  "order": [
+    "page-rich-text-image",
+    "main",
+    "page-featured-video"
+  ]
+}

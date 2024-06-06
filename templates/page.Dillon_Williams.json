@@ -1,0 +1,47 @@
+{
+  "sections": {
+    "page-rich-text-image": {
+      "type": "page-rich-text-image",
+      "settings": {
+        "subheading": "",
+        "title": "Dillon Williams",
+        "image": "shopify:\/\/shop_images\/SponsoredAthlete_Slate_4ce6c73c-8a8d-4ac5-ba33-15d9fdada3f0.jpg",
+        "image_position": "left",
+        "content": "",
+        "height": "5' 9\"",
+        "weight": "260 lbs",
+        "DOB": "January 28, 1987",
+        "residence": "Dublin, Ohio, USA",
+        "facebook_url": "",
+        "instagram_url": "https:\/\/www.instagram.com\/accounts\/login\/?next=\/pmluke_cage\/",
+        "youtube_url": "",
+        "pinterest_url": "",
+        "snapchat_url": "",
+        "twitter_url": "",
+        "tumblr_url": "",
+        "google_plus_url": "",
+        "vimeo_url": "",
+        "linkedin_url": ""
+      }
+    },
+    "main": {
+      "type": "Dillon_Williams",
+      "settings": {}
+    },
+    "page-featured-video": {
+      "type": "page-featured-video",
+      "settings": {
+        "section_size": "large",
+        "text_color": "#ffffff",
+        "subheading": "",
+        "title": "Your video",
+        "video_url": ""
+      }
+    }
+  },
+  "order": [
+    "page-rich-text-image",
+    "main",
+    "page-featured-video"
+  ]
+}

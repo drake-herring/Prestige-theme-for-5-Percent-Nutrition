@@ -1,0 +1,51 @@
+{% assign image_count = product.metafields.custom.product_gallery_images | split : ',' | size | modulo : 3 %}
+{% if image_count == 0 %}
+  <section class="mobile-meta-gallery">
+    <div class="image-item-wrapper hes-gallery" data-wrap="true" data-img-count="false">
+      {% for image in product.metafields.custom.product_gallery_images.value %}
+<!--         <img loading="lazy" style="margin: 0 auto;{% comment %} height: 0px;{% endcomment %} width : 30%;" class="gallery-image Image--lazyLoad Image--fadeIn" src="{{ image | img_url : 'master' }}"> -->
+       <a href="{{ image | img_url : 'master' }}" class="lightbox">
+        <div class="image-item">
+          <div class="image-wrapper">
+            {% comment %}   {%- include 'image-size', sizes: '200,400,600,700,800,900,1000,1200', image: image -%}  {% endcomment %}
+                    {%- comment -%}
+            This snippet helps to easily create a list of supported sizes based on the max size of a given image. You must pass to this snippet
+            an "image" parameter, and a "sizes" string (with sizes separated by commas).
+            
+            As an output, this snippet will emit a "supported_sizes" variable that contains only the sizes that match.
+            {%- endcomment -%}
+            {% assign sizes = '200,400,600,700,800,900,1000,1200' %}
+            {%- assign desired_sizes = sizes | split: ',' -%}
+            {%- assign supported_sizes = '' -%}
+            
+            {%- for size in desired_sizes -%}
+              {%- assign size_as_int = size | times: 1 -%}
+            
+              {%- if image.width < size_as_int -%}
+                {%- break -%}
+              {%- endif -%}
+            
+              {%- assign supported_sizes = supported_sizes | append: size | append: ',' -%}
+            {%- endfor -%}
+            
+            {%- comment -%}
+            If we have no single size which matches, we at least set the maximum width of the image, so that there at least
+            something that is displayed on the screen.
+            {%- endcomment -%}
+            
+            {%- if supported_sizes == blank -%}
+              {%- assign supported_sizes = image.width -%}
+            {%- endif -%}
+            
+            {%- assign supported_sizes = supported_sizes | split: ',' | compact | join: ',' -%}
+            {%- assign image_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+              <img loading="lazy" src="{{ image | img_url : 'master' }}" height="120px" width="69px" class="Image--lazyLoad Image--fadeIn {{ class }}" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ image.alt | escape }}" data-image-id="{{ image.id }}" style="{{ style }}">
+              <span class="Image__Loader" data-disabled="true"></span>
+          </div>
+        </div>
+       </a>
+      {% endfor %}
+    </div>
+  </section>
+{% endif %} 

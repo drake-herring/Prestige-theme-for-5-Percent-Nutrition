@@ -1,0 +1,34 @@
+{% include 'shogun-products', content: page %}
+
+  <header class="PageHeader">
+    <div class="SectionHeader SectionHeader--center">
+    <h1 style="color:#fff;" class="text-uppercase product-h2 js-reviews-heading t-lef SectionHeader__Heading Heading u-h1">{{ page.title }}</h1>
+    </div>
+  </header>
+
+<div class="Container"><br/>
+
+  {{ page.content }}
+
+{% for link in linklists[settings.blog_linklist].links %}
+  {%- comment %}<locksmith:9aad>{% endcomment -%}
+    {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[settings.blog_linklist], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+  {%- comment %}</locksmith:9aad>{% endcomment -%}
+  {% assign blog_handle = link.object.handle %}
+  {% for article in link.object.articles %}
+    {% include 'article-loop' with article %}
+  {% endfor %}
+{% endfor %}
+  
+
+
+</div>
+
+
+{% schema %}
+  {
+    "name": "Blog Listing",
+    "settings": []
+  }
+{% endschema %}
+

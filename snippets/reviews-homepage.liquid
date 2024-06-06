@@ -1,0 +1,28 @@
+{% if review_type == 'slider' %}
+  <div id="reviewSection" class="container reviews-homepage-1 {% if hide_mobile %} hide_mobile {% endif %}">
+    {% if pdpshow %}
+        <h2 class="Heading text-uppercase product-h2 t-center">
+          <span class="full-underline full-underline--fivenation t-center">Customer Reviews</span>
+        </h2> 
+    {% endif %}
+  {% if template.name contains 'product' %}
+    <div class="yotpo yotpo-reviews-carousel"  data-background-color="transparent"  data-mode="top_rated"  data-type="per_product"  data-count="9"  data-show-bottomline="1"  data-autoplay-enabled="1"  data-autoplay-speed="3000"  data-show-navigation="1" data-product-id="{{ product.id }}">&nbsp;</div>
+  <script type="text/javascript">(function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/Z9jfTDCkDiMPGstYrUBX1MB2QyT6vNrJ6LAqLsDN/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})(); </script>
+  </div>
+    {% else %}
+  <div class="yotpo yotpo-reviews-carousel"  data-background-color="transparent"  data-mode="top_rated"  data-type="site"  data-count="9"  data-show-bottomline="1"  data-autoplay-enabled="1"  data-autoplay-speed="3000"  data-show-navigation="1">&nbsp;</div>
+  <script type="text/javascript">(function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/Z9jfTDCkDiMPGstYrUBX1MB2QyT6vNrJ6LAqLsDN/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})(); </script>
+<!--     <div class="yotpo yotpo-reviews-carousel"  data-background-color="transparent"  data-mode="top_rated"  data-type="site"  data-count="9"  data-show-bottomline="1"  data-autoplay-enabled="1"  data-autoplay-speed="3000"  data-show-navigation="1">&nbsp;</div> -->
+  </div>
+  {% endif %}
+{% else %}
+  <div id="reviewSection" class="container reviews-homepage-1 {% if hide_mobile %} hide_mobile {% endif %}">
+    {% if pdpshow %}
+        <h2 class="Heading text-uppercase product-h2 t-center">
+          <span class="full-underline full-underline--fivenation t-center">Customer Reviews</span>
+        </h2> 
+    {% endif %}
+    <div class="yotpo yotpo-main-widget" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" data-description="{{ product.description | escape }}"></div>
+    <script type="text/javascript">(function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/Z9jfTDCkDiMPGstYrUBX1MB2QyT6vNrJ6LAqLsDN/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})(); </script>
+  </div>
+{% endif %}

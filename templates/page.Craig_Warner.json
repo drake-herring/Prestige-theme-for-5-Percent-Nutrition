@@ -1,0 +1,50 @@
+{
+  "sections": {
+    "page-rich-text-image": {
+      "type": "page-rich-text-image",
+      "settings": {
+        "subheading": "",
+        "title": "Illia \"Golem\" Yefimchyk",
+        "image": "shopify:\/\/shop_images\/SponsoredAthlete_Page_Illia_Golem_0c5b10f0-b3be-433d-9da6-459116c9dcdd.png",
+        "image_position": "left",
+        "content": "",
+        "height": "6' 1\"",
+        "weight": "350 lbs",
+        "DOB": "April 23, 1988",
+        "residence": "Prague, Czech Republic",
+        "facebook_url": "https:\/\/www.facebook.com\/illia.yefimchyk",
+        "instagram_url": "https:\/\/www.instagram.com\/accounts\/login\/?next=\/illiagolem\/",
+        "youtube_url": "https:\/\/www.youtube.com\/channel\/UCNlKHPP7SbQ3SkDvCFFjSsw",
+        "pinterest_url": "",
+        "snapchat_url": "",
+        "twitter_url": "",
+        "tumblr_url": "",
+        "google_plus_url": "",
+        "vimeo_url": "",
+        "linkedin_url": ""
+      }
+    },
+    "main": {
+      "type": "Craig_Warner",
+      "settings": {
+        "title1": "EXPERIENCE",
+        "title2": "INSTAGRAM"
+      }
+    },
+    "page-featured-video": {
+      "type": "page-featured-video",
+      "settings": {
+        "section_size": "large",
+        "text_color": "#ffffff",
+        "subheading": "",
+        "title": "Your video",
+        "video_url": ""
+      }
+    }
+  },
+  "order": [
+    "page-rich-text-image",
+    "main",
+    "page-featured-video"
+  ]
+}

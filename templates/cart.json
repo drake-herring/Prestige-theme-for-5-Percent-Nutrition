@@ -1,0 +1,40 @@
+{
+  "sections": {
+    "main": {
+      "type": "cart-template",
+      "settings": {
+        "show_shipping_estimator": false,
+        "shipping_estimator_default_country": "United States",
+        "cart_custom_banner": "https:\/\/cdn.shopify.com\/s\/files\/1\/0063\/4218\/0928\/files\/Free-Shipping-Cart-Block.png",
+        "cart_custom_link": "\/valentines",
+        "cart_custom_message": "FREE SHIPPING WITH ORDERS $99+"
+      }
+    },
+    "recently-viewed-products-cart": {
+      "type": "recently-viewed-products-cart",
+      "settings": {
+        "show_section": true,
+        "title": "You Recently Viewed",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false
+      }
+    },
+    "1654083491ce195d79": {
+      "type": "sezzle-widget",
+      "settings": {
+        "show-sezzle-widget": true,
+        "color": "inherit",
+        "font-size": 14,
+        "font-family": "inherit",
+        "product-page-alignment": "auto",
+        "cart-page-alignment": "auto"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "recently-viewed-products-cart",
+    "1654083491ce195d79"
+  ]
+}

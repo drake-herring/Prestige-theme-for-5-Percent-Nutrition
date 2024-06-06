@@ -1,0 +1,50 @@
+{
+  "sections": {
+    "page-rich-text-image": {
+      "type": "page-rich-text-image",
+      "settings": {
+        "subheading": "",
+        "title": "Pedro Barron",
+        "image": "shopify:\/\/shop_images\/SH_ATH_PBarron_fca38662-52ba-41e4-b204-0be529acfb6a.png",
+        "image_position": "left",
+        "content": "",
+        "height": "5'3\"",
+        "weight": "220 lbs off Season<br> 198 lbs competition",
+        "DOB": "October 20th",
+        "residence": "Venice, California",
+        "facebook_url": "",
+        "instagram_url": "https:\/\/www.instagram.com\/accounts\/login\/?next=\/pedrobarron_ifbbpro\/",
+        "youtube_url": "",
+        "pinterest_url": "",
+        "snapchat_url": "",
+        "twitter_url": "",
+        "tumblr_url": "",
+        "google_plus_url": "",
+        "vimeo_url": "",
+        "linkedin_url": ""
+      }
+    },
+    "main": {
+      "type": "Pedro_Barron",
+      "settings": {
+        "title1": "EXPERIENCE",
+        "title2": "INSTAGRAM"
+      }
+    },
+    "page-featured-video": {
+      "type": "page-featured-video",
+      "settings": {
+        "section_size": "large",
+        "text_color": "#ffffff",
+        "subheading": "",
+        "title": "Your video",
+        "video_url": ""
+      }
+    }
+  },
+  "order": [
+    "page-rich-text-image",
+    "main",
+    "page-featured-video"
+  ]
+}

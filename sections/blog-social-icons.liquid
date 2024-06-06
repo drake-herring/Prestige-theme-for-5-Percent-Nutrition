@@ -1,0 +1,43 @@
+<section class="social-icons">
+  <div class="container">
+    <div class="social-icons-wrapper">
+     {% for block in section.blocks%}
+        <div class="social-image">
+          <a href="{{ block.settings.social_link}}">
+            <img loading="lazy" src="{{ block.settings.social_image | img_url:'original'}}" alt="{{ block.settings.social_image.alt }}">
+          </a>
+        </div>
+     {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+ 	"name": "blog-social-icons",
+ 	"settings": [],
+ 	"blocks": [
+ 		{
+ 			"name": "Social",
+ 			"type": "text",
+ 			"settings": [
+ 				{
+ 					"type": "url",
+ 					"id": "social_link",
+ 					"label": "Social link"
+ 				},
+ 				{
+ 					"type": "image_picker",
+ 					"id": "social_image",
+ 					"label": "Social image"
+ 				}
+ 			]
+ 		}
+ 	],
+ 	"presets": [{
+ 		"name": "blog-social",
+ 		"settings": {},
+ 		"blocks": []
+ 	}]
+
+ }
+{% endschema %}

@@ -1,0 +1,474 @@
+{
+  "sections": {
+    "16542368356b5b30a1": {
+      "type": "slideshow-us",
+      "blocks": {
+        "b29f4419-e62a-4e02-a984-2fd92fb7c075": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/apparel-hero-banner.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/APPAREL-BANNER-MOBILE.jpg",
+            "apply_overlay": false,
+            "content_position": "bottomRight",
+            "left_position": "0",
+            "bottom_position": "20%",
+            "left_position_mobile": "0px",
+            "bottom_position_mobile": "0%",
+            "content_position_mobile": "bottomCenter",
+            "subheading": "",
+            "title": "",
+            "button_1_text": "VIEW ALL",
+            "button_1_link": "shopify:\/\/collections\/apparel",
+            "button_2_text": "",
+            "button_2_link": "",
+            "buttton_1_text_color": "#ffffff",
+            "buttton_1_bg_color": "#ae1f24",
+            "buttton_2_text_color": "#ffffff",
+            "buttton_2_bg_color": "#ae1f24"
+          }
+        },
+        "b96ca5a7-8b44-4c33-9da4-899331960a97": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Homepage-Banner-ADYM-Desktop.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Homepage-Banner-ADYM-Mobile.jpg",
+            "apply_overlay": false,
+            "content_position": "bottomCenter",
+            "left_position": "32%",
+            "bottom_position": "-10%",
+            "left_position_mobile": "0px",
+            "bottom_position_mobile": "0px",
+            "content_position_mobile": "bottomCenter",
+            "subheading": "",
+            "title": "",
+            "button_1_text": "SHOP NOW",
+            "button_1_link": "shopify:\/\/collections\/all-day-you-may",
+            "button_2_text": "",
+            "button_2_link": "",
+            "buttton_1_text_color": "#ffffff",
+            "buttton_1_bg_color": "#ae1f24",
+            "buttton_2_text_color": "#ffffff",
+            "buttton_2_bg_color": "#ae1f24"
+          }
+        },
+        "e6a2e509-06e9-4b23-b807-cb49c6d59667": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LifestyleBanner_PreWorkouts.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/LifestyleBanner_PreWorkouts_Mobile.jpg",
+            "apply_overlay": false,
+            "content_position": "bottomLeft",
+            "left_position": "0px",
+            "bottom_position": "5%",
+            "left_position_mobile": "0px",
+            "bottom_position_mobile": "0px",
+            "content_position_mobile": "topCenter",
+            "subheading": "",
+            "title": "PRE-WORKOUT",
+            "button_1_text": "SHOP NOW",
+            "button_1_link": "shopify:\/\/collections\/pre-workouts",
+            "button_2_text": "",
+            "button_2_link": "",
+            "buttton_1_text_color": "#ffffff",
+            "buttton_1_bg_color": "#ae1f24",
+            "buttton_2_text_color": "#ffffff",
+            "buttton_2_bg_color": "#ae1f24"
+          }
+        },
+        "fb553a68-bd55-4451-9083-0ef1f8a33db9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LifestyleBanner_Core.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/LifestyleBanner_Core_Mobile.jpg",
+            "apply_overlay": false,
+            "content_position": "bottomRight",
+            "left_position": "",
+            "bottom_position": "40%",
+            "left_position_mobile": "0px",
+            "bottom_position_mobile": "0px",
+            "content_position_mobile": "topCenter",
+            "subheading": "",
+            "title": "CORE LINE",
+            "button_1_text": "SHOP NOW",
+            "button_1_link": "shopify:\/\/collections\/core-line",
+            "button_2_text": "",
+            "button_2_link": "",
+            "buttton_1_text_color": "#ffffff",
+            "buttton_1_bg_color": "#ae1f24",
+            "buttton_2_text_color": "#ffffff",
+            "buttton_2_bg_color": "#ae1f24"
+          }
+        }
+      },
+      "block_order": [
+        "b29f4419-e62a-4e02-a984-2fd92fb7c075",
+        "b96ca5a7-8b44-4c33-9da4-899331960a97",
+        "e6a2e509-06e9-4b23-b807-cb49c6d59667",
+        "fb553a68-bd55-4451-9083-0ef1f8a33db9"
+      ],
+      "settings": {
+        "show_fullscreen": false,
+        "show_arrow": false,
+        "autoplay": true,
+        "cycle_speed": 4,
+        "dots_color": "#ffffff"
+      }
+    },
+    "1654236839e123105c": {
+      "type": "slideshow-CA",
+      "blocks": {
+        "d605b7f3-d099-44c9-ae1e-190fa9c15a40": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/canada.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/mobile--Canada_x800_1.jpg",
+            "apply_overlay": false,
+            "content_position": "bottomCenter",
+            "left_position": "12%",
+            "bottom_position": "5%",
+            "left_position_mobile": "0px",
+            "bottom_position_mobile": "5%",
+            "content_position_mobile": "bottomRight",
+            "subheading": "To the CA STOREFRONT",
+            "title": "WELCOME",
+            "button_1_text": "SHOP NOW!",
+            "button_1_link": "shopify:\/\/collections\/ca-supplements",
+            "button_2_text": "",
+            "button_2_link": "",
+            "buttton_1_text_color": "#ffffff",
+            "buttton_1_bg_color": "#ae1f24",
+            "buttton_2_text_color": "#ffffff",
+            "buttton_2_bg_color": "#ae1f24"
+          }
+        },
+        "d83964dd-cba2-4e2a-b0d9-68801e0dd4a0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/apparel-hero-banner.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/APPAREL-BANNER-MOBILE.jpg",
+            "apply_overlay": false,
+            "content_position": "bottomRight",
+            "left_position": "0px",
+            "bottom_position": "30%",
+            "left_position_mobile": "0px",
+            "bottom_position_mobile": "10%",
+            "content_position_mobile": "bottomCenter",
+            "subheading": "",
+            "title": "",
+            "button_1_text": "View All",
+            "button_1_link": "shopify:\/\/collections\/apparel",
+            "button_2_text": "",
+            "button_2_link": "",
+            "buttton_1_text_color": "#ffffff",
+            "buttton_1_bg_color": "#ae1f24",
+            "buttton_2_text_color": "#ffffff",
+            "buttton_2_bg_color": "#ae1f24"
+          }
+        },
+        "1654236839234ce4d5-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/apparel-hero-banner.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/APPAREL-BANNER-MOBILE.jpg",
+            "apply_overlay": false,
+            "content_position": "bottomRight",
+            "left_position": "0",
+            "bottom_position": "20%",
+            "left_position_mobile": "0px",
+            "bottom_position_mobile": "8%",
+            "content_position_mobile": "bottomRight",
+            "subheading": "",
+            "title": "",
+            "button_1_text": "SHOP NOW!",
+            "button_1_link": "shopify:\/\/collections\/apparel",
+            "button_2_text": "",
+            "button_2_link": "",
+            "buttton_1_text_color": "#ffffff",
+            "buttton_1_bg_color": "#ae1f24",
+            "buttton_2_text_color": "#ffffff",
+            "buttton_2_bg_color": "#ae1f24"
+          }
+        }
+      },
+      "block_order": [
+        "d605b7f3-d099-44c9-ae1e-190fa9c15a40",
+        "d83964dd-cba2-4e2a-b0d9-68801e0dd4a0",
+        "1654236839234ce4d5-0"
+      ],
+      "settings": {
+        "show_fullscreen": false,
+        "show_arrow": false,
+        "autoplay": true,
+        "cycle_speed": 4,
+        "dots_color": "#ffffff"
+      }
+    },
+    "1654236811fb05028b": {
+      "type": "slideshow-UK-EU",
+      "blocks": {
+        "dc2535d2-4ddb-4f65-8854-0bb5efe35995": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/uk_b95bc4d1-da58-418b-98c7-709a1180c80f.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/EU-UK.jpg",
+            "apply_overlay": false,
+            "content_position": "bottomLeft",
+            "left_position": "45%",
+            "bottom_position": "5%",
+            "left_position_mobile": "0px",
+            "bottom_position_mobile": "5%",
+            "content_position_mobile": "bottomRight",
+            "subheading": "To the UK & EU STOREFRONT",
+            "title": "WELCOME",
+            "button_1_text": "SHOP NOW!",
+            "button_1_link": "shopify:\/\/collections\/uk-eu-supplements",
+            "button_2_text": "",
+            "button_2_link": "shopify:\/\/collections\/apparel",
+            "buttton_1_text_color": "#ffffff",
+            "buttton_1_bg_color": "#ae1f24",
+            "buttton_2_text_color": "#ffffff",
+            "buttton_2_bg_color": "#ae1f24"
+          }
+        },
+        "11d97260-a329-4fb1-a7b4-5548bdd4abda": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LifestyleBanner_PreWorkouts.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/LifestyleBanner_PreWorkouts_Mobile.jpg",
+            "apply_overlay": false,
+            "content_position": "bottomLeft",
+            "left_position": "0px",
+            "bottom_position": "5%",
+            "left_position_mobile": "0px",
+            "bottom_position_mobile": "0px",
+            "content_position_mobile": "topCenter",
+            "subheading": "",
+            "title": "PRE-WORKOUT",
+            "button_1_text": "SHOP NOW",
+            "button_1_link": "shopify:\/\/collections\/pre-workouts",
+            "button_2_text": "",
+            "button_2_link": "",
+            "buttton_1_text_color": "#ffffff",
+            "buttton_1_bg_color": "#ae1f24",
+            "buttton_2_text_color": "#ffffff",
+            "buttton_2_bg_color": "#ae1f24"
+          }
+        },
+        "c3beec2d-e386-4a89-b6ce-e9fb6b317ef9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/apparel-hero-banner.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/APPAREL-BANNER-MOBILE.jpg",
+            "apply_overlay": false,
+            "content_position": "bottomRight",
+            "left_position": "0px",
+            "bottom_position": "20%",
+            "left_position_mobile": "0px",
+            "bottom_position_mobile": "8%",
+            "content_position_mobile": "bottomRight",
+            "subheading": "",
+            "title": "",
+            "button_1_text": "VIEW ALL!",
+            "button_1_link": "shopify:\/\/collections\/all-apparel-gear-products",
+            "button_2_text": "",
+            "button_2_link": "",
+            "buttton_1_text_color": "#ffffff",
+            "buttton_1_bg_color": "#ae1f24",
+            "buttton_2_text_color": "#ffffff",
+            "buttton_2_bg_color": "#ae1f24"
+          }
+        },
+        "1654236811ca758006-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LifestyleBanner_Core.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/LifestyleBanner_Core_Mobile.jpg",
+            "apply_overlay": false,
+            "content_position": "bottomRight",
+            "left_position": "",
+            "bottom_position": "40%",
+            "left_position_mobile": "0px",
+            "bottom_position_mobile": "",
+            "content_position_mobile": "topCenter",
+            "subheading": "",
+            "title": "CORE LINE",
+            "button_1_text": "Buy Now",
+            "button_1_link": "shopify:\/\/collections\/core-line",
+            "button_2_text": "",
+            "button_2_link": "",
+            "buttton_1_text_color": "#000000",
+            "buttton_1_bg_color": "#e3a22b",
+            "buttton_2_text_color": "#ffffff",
+            "buttton_2_bg_color": "#ae1f24"
+          }
+        }
+      },
+      "block_order": [
+        "dc2535d2-4ddb-4f65-8854-0bb5efe35995",
+        "11d97260-a329-4fb1-a7b4-5548bdd4abda",
+        "c3beec2d-e386-4a89-b6ce-e9fb6b317ef9",
+        "1654236811ca758006-1"
+      ],
+      "settings": {
+        "show_fullscreen": false,
+        "show_arrow": false,
+        "autoplay": true,
+        "cycle_speed": 4,
+        "dots_color": "#ffffff"
+      }
+    },
+    "16541731755409f6d1": {
+      "type": "featured-collections",
+      "blocks": {
+        "16541731758c8b7401-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "best-sellers-supplements",
+            "title": "BEST SELLERS",
+            "grid_items_count": 12,
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "16541731758c8b7401-0"
+      ],
+      "settings": {
+        "title": "",
+        "layout_mode": "carousel",
+        "show_product_info": true,
+        "title_position": "below",
+        "show_vendor": false,
+        "show_color_swatch": false,
+        "grid_mobile_items_per_row": "2",
+        "grid_desktop_items_per_row": 3
+      }
+    },
+    "1654174911eaeb53cd": {
+      "type": "featured-collections",
+      "blocks": {
+        "165417491180bd9fe5-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "daily-deals-apparel-and-accessories",
+            "title": "APPAREL CLOSEOUTS",
+            "grid_items_count": 13,
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "165417491180bd9fe5-0"
+      ],
+      "settings": {
+        "title": "",
+        "layout_mode": "carousel",
+        "show_product_info": true,
+        "title_position": "below",
+        "show_vendor": false,
+        "show_color_swatch": true,
+        "grid_mobile_items_per_row": "2",
+        "grid_desktop_items_per_row": 3
+      }
+    },
+    "165417492483d38bfa": {
+      "type": "collection-list",
+      "blocks": {
+        "16541749242ceaab16-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "supplements",
+            "image": "shopify:\/\/shop_images\/HomeNavigation_Supplements.webp",
+            "image_alignment": "top center",
+            "content_position": "bottomCenter",
+            "subheading": "",
+            "title": "SUPPLEMENTS",
+            "button_text": "SHOP SUPPLEMENTS",
+            "button_link": "",
+            "apply_overlay": false
+          }
+        },
+        "16541749242ceaab16-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "apparel",
+            "image": "shopify:\/\/shop_images\/HomeNavigation_Apparel_2ad6bc6c-abd7-4e4e-86da-fbfc6b152db2.jpg",
+            "image_alignment": "top center",
+            "content_position": "bottomCenter",
+            "subheading": "",
+            "title": "APPAREL",
+            "button_text": "SHOP APPAREL",
+            "button_link": "",
+            "apply_overlay": false
+          }
+        },
+        "16541749242ceaab16-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "gear",
+            "image": "shopify:\/\/shop_images\/HomeNavigation-Gear_bff8cd32-796d-4b9d-bc93-371532c55c59.jpg",
+            "image_alignment": "top center",
+            "content_position": "bottomCenter",
+            "subheading": "",
+            "title": "GEAR",
+            "button_text": "SHOP GEAR",
+            "button_link": "shopify:\/\/collections\/gear",
+            "apply_overlay": false
+          }
+        },
+        "f6b030b9-5a99-4a46-9533-31741f827671": {
+          "type": "collection",
+          "settings": {
+            "collection": "best-sellers-stacks",
+            "image": "shopify:\/\/shop_images\/HomeNavigation_DailyDeals_9e0edee8-453e-474c-82e3-5d07220aa342.jpg",
+            "image_alignment": "center center",
+            "content_position": "bottomCenter",
+            "subheading": "",
+            "title": "STACK N’ SAVE",
+            "button_text": "SHOP STACKS",
+            "button_link": "shopify:\/\/collections\/best-sellers-stacks",
+            "apply_overlay": false
+          }
+        }
+      },
+      "block_order": [
+        "16541749242ceaab16-0",
+        "16541749242ceaab16-1",
+        "16541749242ceaab16-2",
+        "f6b030b9-5a99-4a46-9533-31741f827671"
+      ],
+      "settings": {
+        "image_size": "normal",
+        "add_spacing": true,
+        "expand_collection": false,
+        "title_color": "#4a4a4a",
+        "text_color": "#ae1f24",
+        "button_color": "#ffffff"
+      }
+    },
+    "cfd8c862-1e35-4e54-9e71-b98a7a703d4d": {
+      "type": "newsletter-sitewide",
+      "settings": {
+        "enable_bar": true,
+        "section_size": "normal",
+        "image": "shopify:\/\/shop_images\/Core-Lineup-Web-FadeUp-Background.jpg",
+        "text_color": "#ffffff",
+        "button_color": "#ae1f24",
+        "subheading": "",
+        "title": "STAY CONNECTED",
+        "content": "<p>Receive the latest blog articles, product news, and special offers!<\/p>",
+        "graphic_aligment": "flat"
+      }
+    }
+  },
+  "order": [
+    "16542368356b5b30a1",
+    "1654236839e123105c",
+    "1654236811fb05028b",
+    "16541731755409f6d1",
+    "1654174911eaeb53cd",
+    "165417492483d38bfa",
+    "cfd8c862-1e35-4e54-9e71-b98a7a703d4d"
+  ]
+}

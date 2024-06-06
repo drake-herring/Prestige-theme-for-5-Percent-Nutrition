@@ -1,0 +1,27 @@
+{% render 'shogun-products', content: page %}
+<style>
+.Container {
+  padding: unset;
+    margin: unset;
+    max-width: unset;
+}
+</style>
+  <header class="PageHeader">
+    <div class="SectionHeader SectionHeader--center">
+    <h1 style="color:#fff;" class="text-uppercase product-h2 js-reviews-heading t-lef SectionHeader__Heading Heading u-h1">{{ page.title }}</h1>
+    </div>
+  </header>
+
+<div class="Container">
+
+   {{ page.content }}
+  
+</div>
+
+{% schema %}
+  {
+    "name": "LandingPage",
+    "settings": []
+  }
+{% endschema %}
+

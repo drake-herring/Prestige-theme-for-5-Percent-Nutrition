@@ -1,0 +1,25 @@
+<div class="delivery-section">
+  <div class="container">
+    {% if section.blocks %}
+      <div class="three-blocks">
+        {% for block in section.blocks %}
+          {% if block.type == 'block' %}
+            <div class="block-box">
+              {% if block.settings.font_awesome_icon %}
+                <div class="box-img">
+                  <i class="fak fa-{{ block.settings.font_awesome_icon }} fa-7x"></i>
+                </div>
+              {% endif %}
+  
+              {% if block.settings.text %}
+                <div class="box-text">
+                  {{ block.settings.text }}
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</div>

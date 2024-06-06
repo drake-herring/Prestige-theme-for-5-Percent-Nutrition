@@ -1,0 +1,50 @@
+{
+  "sections": {
+    "page-rich-text-image": {
+      "type": "page-rich-text-image",
+      "settings": {
+        "subheading": "",
+        "title": "Mihai Ionita",
+        "image": "shopify:\/\/shop_images\/SponsoredAthlete_Mihai-Ionita_a9d975e6-4bfe-4397-8614-a497ce31e413.png",
+        "image_position": "left",
+        "content": "",
+        "height": "6'",
+        "weight": "209 lbs",
+        "DOB": "August 15, 1993",
+        "residence": "Dunstable, UK",
+        "facebook_url": "",
+        "instagram_url": "https:\/\/www.instagram.com\/accounts\/login\/?next=\/mihaitrainer\/",
+        "youtube_url": "https:\/\/www.youtube.com\/mihaitrainer",
+        "pinterest_url": "",
+        "snapchat_url": "",
+        "twitter_url": "",
+        "tumblr_url": "",
+        "google_plus_url": "",
+        "vimeo_url": "",
+        "linkedin_url": ""
+      }
+    },
+    "main": {
+      "type": "Dru_Borden",
+      "settings": {
+        "title1": "EXPERIENCE",
+        "title2": "INSTAGRAM"
+      }
+    },
+    "page-featured-video": {
+      "type": "page-featured-video",
+      "settings": {
+        "section_size": "large",
+        "text_color": "#ffffff",
+        "subheading": "",
+        "title": "Your video",
+        "video_url": ""
+      }
+    }
+  },
+  "order": [
+    "page-rich-text-image",
+    "main",
+    "page-featured-video"
+  ]
+}

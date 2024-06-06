@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "retaillocation",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

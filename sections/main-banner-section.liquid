@@ -1,0 +1,68 @@
+<section class="main-banner">
+    <div class="banner-content-wrapper">
+      {% if section.settings.banner_image %}
+          <div class="{% if section.settings.apply_overlay %}Image--contrast{% endif %} main-banner-image desktop-image">
+                <img loading="lazy" src="{{section.settings.banner_image | img_url:'original'}}" alt="{{ section.settings.banner_image.alt }}">
+          </div>
+      {% endif %}
+      
+      <div class="mobile-image">
+        {% if section.settings.mobile_image == blank %}
+            <div class="main-banner-image">
+                  <img src="{{section.settings.banner_image | img_url:'original'}}" alt="{{ section.settings.banner_image.alt }}">
+            </div>
+        {% else %}
+            {%- assign mobile_image = section.settings.mobile_image%}
+            {%- if mobile_image -%}
+              <div class="{% if section.settings.apply_overlay %}Image--contrast{% endif %} hidden-tablet-and-up"
+                   style="{% unless section.settings.show_fullscreen %}--aspect-ratio: {{ mobile_image.aspect_ratio }};{% endunless %} background-image: url({{ mobile_image | img_url: '1x1', format: 'jpg' }})">
+                  <img loading="lazy" class="Image--lazyLoad"
+                       src="{{ mobile_image | img_url: '1x1' }}"
+                       data-src="{{ mobile_image | img_url: 'x800' }}"
+                       alt="{{ mobile_image.alt | escape }}">
+              </div>
+            {%- endif -%}
+        {% endif %}
+      </div>
+    </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Main Banner",
+    "settings": [
+      {
+        "type":"image_picker",
+        "id":"banner_image",
+        "label":"Desktop image"
+      },
+      {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile image",
+          "info": "750 x 1100px jpg recommended. If none is set, desktop image will be cropped."
+      },
+      {
+          "type": "checkbox",
+          "id": "apply_overlay",
+          "label": "Apply overlay on image",
+          "default": true
+      }
+    ],
+    "presets": [
+     {
+       "name": "main-banner",
+       "settings": {
+        },
+       "blocks": [   
+       ]
+     }
+   ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

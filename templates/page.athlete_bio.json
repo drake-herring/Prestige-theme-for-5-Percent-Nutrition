@@ -1,0 +1,31 @@
+{
+  "sections": {
+    "main": {
+      "type": "page_athlete_bio",
+      "settings": {
+        "title1": "EXPERIENCE",
+        "title2": "INSTAGRAM",
+        "title3": "FAVORITE PRODUCTS",
+        "grid_mobile_items_per_row": "2",
+        "grid_desktop_items_per_row": 4
+      }
+    },
+    "newsletter-sitewide": {
+      "type": "newsletter-sitewide",
+      "settings": {
+        "enable_bar": false,
+        "section_size": "small",
+        "text_color": "#ffffff",
+        "button_color": "#000000",
+        "subheading": "Keep updated",
+        "title": "Newsletter",
+        "content": "<p>A short sentence describing what someone will receive by subscribing<\/p>",
+        "graphic_aligment": "flat"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "newsletter-sitewide"
+  ]
+}

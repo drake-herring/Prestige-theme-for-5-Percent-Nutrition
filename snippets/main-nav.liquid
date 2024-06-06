@@ -1,0 +1,523 @@
+  <button class="Header__Icon Icon-Wrapper Icon-Wrapper--clickable {% unless use_sidebar_menu %}hidden-desk{% endunless %} hamburger-icon-wrapper" aria-expanded="false" data-action="open-drawer" data-drawer-id="sidebar-menu" aria-label="{{ 'header.navigation.open_sidebar' | t }}">
+          <span class="hamburger-icon">{%- include 'icon' with 'nav-desktop' -%}</span>
+          {% comment %} <span class="hidden-phone">{%- include 'icon' with 'nav-desktop' -%}</span> {% endcomment %}
+          {% comment %} <span class="">{%- include 'icon' with 'nav-desktop' -%}</span> {% endcomment %}
+        </button>
+        <button class="Header__Icon Icon-Wrapper Icon-Wrapper--clickable hamburger-icon-wrapper--tablet js-show-tabletNav" aria-expanded="false">
+          <span class="">{%- include 'icon' with 'nav-desktop' -%}</span>
+        </button>
+
+        {%- comment -%}
+        --------------------------------------------------------------------------------------------------------------------
+        DESKTOP NAVIGATION (if not using the sidebar mode)
+        --------------------------------------------------------------------------------------------------------------------
+        {%- endcomment -%}
+
+        {%- unless use_sidebar_menu -%}
+          {%- assign main_menu_handle = section.settings.navigation_menu | default: 'main-menu' -%}
+          {%- assign main_menu = linklists[main_menu_handle] -%}
+
+          {%- assign mega_menu_names = '' -%}
+
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'mega_menu' -%}
+              {%- assign mega_menu_names = mega_menu_names | append: block.settings.navigation_mega_menu | append: ',' -%}
+            {%- endif -%}
+          {%- endfor -%}
+
+          {%- assign mega_menu_names = mega_menu_names | downcase | split: ',' | compact -%}
+
+          <nav class="Header__MainNav header-main-nav js-header-main-nav" aria-label="{{ 'header.navigation.title' | t }}">
+            <ul class="HorizontalList HorizontalList--spacingExtraLoose">
+              {%- comment %}<locksmith:33fa>{% endcomment -%}
+                {%- assign locksmith_f627_forloop__size = 0 %}{%- for link in main_menu.links -%}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: main_menu, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_f627_forloop__size = locksmith_f627_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_f627_forloop__index = nil -%}
+              {%- comment %}</locksmith:33fa>{% endcomment -%}
+              {%- for link in main_menu.links -%}
+
+                {%- comment %}<locksmith:1755>{% endcomment -%}
+                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: main_menu, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_f627_forloop__index == nil %}{% assign locksmith_f627_forloop__index = 1 %}{% assign locksmith_f627_forloop__index0 = 0 %}{% else %}{% assign locksmith_f627_forloop__index = locksmith_f627_forloop__index | plus: 1 %}{% assign locksmith_f627_forloop__index0 = locksmith_f627_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_f627_forloop__index == 1 %}{% assign locksmith_f627_forloop__first = true %}{% else %}{% assign locksmith_f627_forloop__first = false %}{% endif %}{% if locksmith_f627_forloop__index == locksmith_f627_forloop__size %}{% assign locksmith_f627_forloop__last = true %}{% else %}{% assign locksmith_f627_forloop__last = false %}{% endif %}{% assign locksmith_f627_forloop__rindex = locksmith_f627_forloop__size | minus: locksmith_f627_forloop__index | minus: 1 %}{% assign locksmith_f627_forloop__rindex0 = locksmith_f627_forloop__size | minus: locksmith_f627_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+                {%- comment %}</locksmith:1755>{% endcomment -%}
+
+                {% assign loop_index = locksmith_f627_forloop__index %}
+
+                {%- assign downcased_link_title = link.title | downcase -%}
+                {%- assign use_mega_menu = false -%}
+
+                {%- capture menu_item_dropdown -%}
+                  {%- if mega_menu_names contains downcased_link_title -%}
+                    {%- for block in section.blocks -%}
+                      {%- assign downcased_mega_menu_name = block.settings.navigation_mega_menu | downcase -%}
+
+                      {%- if downcased_mega_menu_name != downcased_link_title -%}
+                        {%- continue -%}
+                      {%- endif -%}
+
+                      {%- assign use_mega_menu = true -%}
+                      {%- assign push_image_count = 0 -%}
+
+                      {%- if block.settings.push_1_image -%}
+                        {%- assign push_image_count = push_image_count | plus: 1 -%}
+                      {%- endif -%}
+
+                      {%- if block.settings.push_2_image -%}
+                        {%- assign push_image_count = push_image_count | plus: 1 -%}
+                      {%- endif -%}
+
+                      {%- assign should_space_evenly = false -%}
+
+                      {%- if push_image_count == 0 and link.links.size <= 3 -%}
+                        {%- assign should_space_evenly = true -%}
+                      {%- endif -%}
+
+                      {%- if push_image_count == 1 and link.links.size == 1 -%}
+                        {%- assign should_space_evenly = true -%}
+                      {%- endif -%}
+
+                      {%- if push_image_count == 2 and link.links.size == 1 -%}
+                        {%- assign should_space_evenly = true -%}
+                      {%- endif -%}
+
+                      <div class="MegaMenu {% if push_image_count != 0 and link.links.size == 0 %}MegaMenu--spacingCenter{% elsif should_space_evenly %}MegaMenu--spacingEvenly{% endif %} {% if push_image_count == 0 and link.links.size > 4 %}MegaMenu--grid{% endif %}" aria-hidden="true" {{ block.shopify_attributes }}>
+                        <div class="MegaMenu__Inner">
+                          {%- for sub_link in link.links -%}
+                            {%- comment %}<locksmith:7558>{% endcomment -%}
+                              {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: sub_link, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                            {%- comment %}</locksmith:7558>{% endcomment -%}
+                            <div class="MegaMenu__Item MegaMenu__Item--fit">
+                              <a href="{{ sub_link.url }}" class="MegaMenu__Title Heading Text--subdued u-h7">
+                                {{ sub_link.title | title }}
+                              </a>
+                              {%- if sub_link.links != blank -%}
+                                <ul class="Linklist">
+                                  {%- for sub_sub_link in sub_link.links -%}
+                                    {%- comment %}<locksmith:6613>{% endcomment -%}
+                                      {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: sub_sub_link, subject_parent: sub_link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                                    {%- comment %}</locksmith:6613>{% endcomment -%}
+                                    <li class="Linklist__Item">
+                                      <a href="{{ sub_sub_link.url }}" class="Link Link--secondary">
+                                        {{ sub_sub_link.title | escape }}
+                                      </a>
+                                    </li>
+                                  {%- endfor -%}
+                                </ul>
+                              {%- endif -%}
+                            </div>
+                          {%- endfor -%}
+
+                          {%- if push_image_count > 0 -%}
+                            <div class="MegaMenu__Item" style="{% if push_image_count == 1 %}width: 370px; min-width: 250px;{% else %}width: 660px; min-width: 425px;{% endif %}">
+                              {%- if block.settings.push_1_image -%}
+                                <div class="MegaMenu__Push {% if push_image_count == 2 %}MegaMenu__Push--shrink{% endif %}">
+                                  {%- if block.settings.push_1_url != blank -%}
+                                    <a class="MegaMenu__PushLink" href="{{ block.settings.push_1_url }}">
+                                  {%- endif -%}
+                            
+                                  {%- assign max_width = 370 | at_most: block.settings.push_1_image.width -%}
+
+                                  <div class="MegaMenu__PushImageWrapper AspectRatio" style="background: url({{ block.settings.push_1_image | img_url: '1x1', format: 'jpg' }}); max-width: {{ max_width }}px; --aspect-ratio: {{ block.settings.push_1_image.aspect_ratio }}">
+                                    <img loading="lazy" class="Image--lazyLoad Image--fadeIn"
+                                      data-src="{{ block.settings.push_1_image | img_url: '370x230', scale: 2 }}"
+                                      alt="{{ block.settings.push_1_image.alt | escape }}">
+                                      
+                                      <span class="Image__Loader">
+                                      </span>
+                                  
+                                  </div>
+
+                                  {%- if block.settings.push_1_heading != blank -%}
+                                    <p class="MegaMenu__PushHeading Heading u-h6">
+                                      {{ block.settings.push_1_heading | escape }}
+                                    </p>
+                                  {%- endif -%}
+
+                                  {%- if block.settings.push_1_subheading != blank -%}
+                                    <p class="MegaMenu__PushSubHeading Heading Text--subdued u-h7">
+                                      {{ block.settings.push_1_subheading | escape }}
+                                    </p>
+                                  {%- endif -%}
+
+                                  {%- if block.settings.push_1_url != blank -%}
+                                    </a>
+                                  {%- endif -%}
+                                </div>
+                              {%- endif -%}
+
+                              {%- if block.settings.push_2_image -%}
+                                <div class="MegaMenu__Push {% if push_image_count == 2 %}MegaMenu__Push--shrink{% endif %}">
+                                  {%- if block.settings.push_2_url != blank -%}
+                                    <a class="MegaMenu__PushLink" href="{{ block.settings.push_2_url }}">
+                                  {%- endif -%}
+
+                                  {%- assign max_width = 370 | at_most: block.settings.push_2_image.width -%}
+
+                                  <div class="MegaMenu__PushImageWrapper AspectRatio" style="background: url({{ block.settings.push_2_image | img_url: '1x1', format: 'jpg' }}); max-width: {{ max_width }}px; --aspect-ratio: {{ block.settings.push_2_image.aspect_ratio }}">
+                                    <img loading="lazy" class="Image--lazyLoad Image--fadeIn"
+                                       data-src="{{ block.settings.push_2_image | img_url: '370x230', scale: 2 }}"
+                                       alt="{{ block.settings.push_2_image.alt | escape }}">
+
+                                    <span class="Image__Loader"></span>
+                                  </div>
+
+                                  {%- if block.settings.push_2_heading != blank -%}
+                                    <p class="MegaMenu__PushHeading Heading u-h6">
+                                      {{ block.settings.push_2_heading | escape }}
+                                    </p>
+                                  {%- endif -%}
+
+                                  {%- if block.settings.push_2_subheading != blank -%}
+                                    <p class="MegaMenu__PushSubHeading Heading Text--subdued u-h7">
+                                      {{ block.settings.push_2_subheading | escape }}
+                                    </p>
+                                  {%- endif -%}
+
+                                  {%- if block.settings.push_2_url != blank -%}
+                                    </a>
+                                  {%- endif -%}
+                                </div>
+                              {%- endif -%}
+                            </div>
+                          {%- endif -%}
+                        </div>
+                      </div>
+                    {%- endfor -%}
+
+                  {%- elsif link.links != blank -%}
+                    <div class="DropdownMenu" aria-hidden="true">
+                      {%- for sub_link in link.links limit: 1 -%}
+                        {%- comment %}<locksmith:11a9>{% endcomment -%}
+                          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: sub_link, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                        {%- comment %}</locksmith:11a9>{% endcomment -%}
+                        {%- if sub_link.links != blank -%}
+                          <aside class="red-sidebar">
+                            <ul>
+                              {%- for sub_sub_link in sub_link.links -%}
+                                {%- comment %}<locksmith:df58>{% endcomment -%}
+                                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: sub_sub_link, subject_parent: sub_link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+                                {%- comment %}</locksmith:df58>{% endcomment -%}
+                                <li>
+                                  <a href="{{ sub_sub_link.url }}">
+                                    {{ sub_sub_link.title | escape }}
+                                  </a>                                
+                                </li>
+                              {%- endfor -%}
+                            </ul>
+                          </aside>
+                        {%- endif -%}
+                      {%- endfor-%}
+
+                      {% if loop_index != 4 %}
+                        <ul class="Linklist">
+                          {%- comment %}<locksmith:d6d0>{% endcomment -%}
+                            {%- assign locksmith_d5a2_forloop__size = 0 %}{%- for sub_link in link.links offset: 1 -%}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: sub_link, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_d5a2_forloop__size = locksmith_d5a2_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_d5a2_forloop__index = nil -%}
+                          {%- comment %}</locksmith:d6d0>{% endcomment -%}
+                          {%- for sub_link in link.links offset: 1 -%}
+                            {%- comment %}<locksmith:e6bc>{% endcomment -%}
+                              {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: sub_link, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_d5a2_forloop__index == nil %}{% assign locksmith_d5a2_forloop__index = 1 %}{% assign locksmith_d5a2_forloop__index0 = 0 %}{% else %}{% assign locksmith_d5a2_forloop__index = locksmith_d5a2_forloop__index | plus: 1 %}{% assign locksmith_d5a2_forloop__index0 = locksmith_d5a2_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_d5a2_forloop__index == 1 %}{% assign locksmith_d5a2_forloop__first = true %}{% else %}{% assign locksmith_d5a2_forloop__first = false %}{% endif %}{% if locksmith_d5a2_forloop__index == locksmith_d5a2_forloop__size %}{% assign locksmith_d5a2_forloop__last = true %}{% else %}{% assign locksmith_d5a2_forloop__last = false %}{% endif %}{% assign locksmith_d5a2_forloop__rindex = locksmith_d5a2_forloop__size | minus: locksmith_d5a2_forloop__index | minus: 1 %}{% assign locksmith_d5a2_forloop__rindex0 = locksmith_d5a2_forloop__size | minus: locksmith_d5a2_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+                            {%- comment %}</locksmith:e6bc>{% endcomment -%}
+                            {% comment %} --- "Shop By Goals" menu section --- {% endcomment %}
+                            {%- if loop_index == 1 and sub_link.links != blank and locksmith_d5a2_forloop__index == 2 -%}
+                              <li class="Linklist__Items" {% if sub_link.links != blank %}aria-haspopup="true"{% endif %}>
+                                <h4 class="{%- if sub_link.links == blank -%}custom_h4{%- endif -%}">
+                                  {{ sub_link.title | escape }}
+                                </h4>
+                                <div class="DropdownMenu" aria-hidden="true">
+                                  <ul class="Linklist">
+                                    {%- comment %}<locksmith:c013>{% endcomment -%}
+                                      {%- assign locksmith_0369_forloop__size = 0 %}{%- for sub_sub_link in sub_link.links -%}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: sub_sub_link, subject_parent: sub_link, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_0369_forloop__size = locksmith_0369_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_0369_forloop__index = nil -%}
+                                    {%- comment %}</locksmith:c013>{% endcomment -%}
+                                    {%- for sub_sub_link in sub_link.links -%}
+
+                                      {%- comment %}<locksmith:9d00>{% endcomment -%}
+                                        {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: sub_sub_link, subject_parent: sub_link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_0369_forloop__index == nil %}{% assign locksmith_0369_forloop__index = 1 %}{% assign locksmith_0369_forloop__index0 = 0 %}{% else %}{% assign locksmith_0369_forloop__index = locksmith_0369_forloop__index | plus: 1 %}{% assign locksmith_0369_forloop__index0 = locksmith_0369_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_0369_forloop__index == 1 %}{% assign locksmith_0369_forloop__first = true %}{% else %}{% assign locksmith_0369_forloop__first = false %}{% endif %}{% if locksmith_0369_forloop__index == locksmith_0369_forloop__size %}{% assign locksmith_0369_forloop__last = true %}{% else %}{% assign locksmith_0369_forloop__last = false %}{% endif %}{% assign locksmith_0369_forloop__rindex = locksmith_0369_forloop__size | minus: locksmith_0369_forloop__index | minus: 1 %}{% assign locksmith_0369_forloop__rindex0 = locksmith_0369_forloop__size | minus: locksmith_0369_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+                                      {%- comment %}</locksmith:9d00>{% endcomment -%}
+
+                                      {% comment %}PRC EDITED{% endcomment %}
+                                      {% for block in section.blocks %}
+                                        {% if block.type == "prc_nav_promotion" %}
+                                          
+                                          {% assign sub_sub_link_handle = sub_sub_link.title %}
+                                          {% assign promo_handle = block.settings.title %}
+                                          {% if sub_sub_link_handle == promo_handle %}
+
+                                            {%- assign image_holder = sub_sub_link.title | handleize | append: temp -%}
+                                            <li class="Linklist__Item prc-promo prc-promo--1 prc-width--{{ block.settings.prc_width }}">
+
+                                              <h4 class="custom_h4">
+                                                {{ sub_sub_link.title | escape }}
+                                              </h4>
+
+                                              <div class="nav-details-wrapper">
+                                                <a href="{{ sub_sub_link.url }}" class="Link Link--secondary"></a>
+
+                                                {%- assign temp = forloop.index | plus: 1 -%}
+                                                {%- assign image_holder = sub_sub_link.title | handleize | append: temp -%}
+                                                {%- capture image_holder1 | strip_newlines -%}
+                                                  {%- if block.settings.prc_width == 'fourth' -%}
+                                                    {{ block.settings.image | img_url: '520x620' }}
+                                                  {%- elsif block.settings.prc_width == 'half' -%}
+                                                    {{ block.settings.image | img_url: '1040x620' }}
+                                                  {%- elsif block.settings.prc_width == 'full' -%}
+                                                    {{ block.settings.image | img_url: '2080x620' }}
+                                                  {%- else -%}  
+                                                    {{ block.settings.image | img_url: '520x620' }}
+                                                  {% endif %}
+                                                {%- endcapture -%}
+                                                {%- assign image_holders = image_holder1 -%}                                
+
+                                                <input type="hidden" data-val ="{{image_holder}}" data-link="{{block.settings.image}}"/>
+
+                                                {%- if block.settings.prc_width == 'fourth' -%}
+                                                  {% include 'responsive-image' with image: block.settings.image, max_width:520 %}
+                                                {%- elsif block.settings.prc_width == 'half' -%}
+                                                  {% include 'responsive-image' with image: block.settings.image, max_width:1040 %}
+                                                {%- elsif block.settings.prc_width == 'full' -%}
+                                                  {% include 'responsive-image' with image: block.settings.image, max_width:2080 %}
+                                                {%- else -%}  
+                                                  {% include 'responsive-image' with image: block.settings.image, max_width:520 %}
+                                                {% endif %}
+
+                                                <a href="{{ sub_sub_link.url }}" class="Link Link--secondary Link--shopnow">
+                                                  {% if block.settings.prc_button_text != blank %}
+                                                    {{ block.settings.prc_button_text }}
+                                                  {% else %}
+                                                    {{ sub_sub_link.title }}
+                                                  {% endif %}
+                                                </a>
+                                              </div>
+                                            </li>                      
+                                          {% endif %}
+                                        {% endif %}
+                                      {% endfor %} 
+                                      {% comment %}END PRC EDITED{% endcomment %}
+
+                                    {%- endfor -%}
+                                  </ul>
+                                </div>
+                              </li>
+                            {%- else -%} 
+                              
+                              {% comment %}PRC EDITED{% endcomment %}
+                              {% for block in section.blocks %}
+                                {% if block.type == "prc_nav_promotion" %}
+
+                                  {% assign sub_sub_link_handle = sub_link.title %}
+                                  {% assign promo_handle = block.settings.title %}
+
+                                  {% if sub_sub_link_handle == promo_handle %}
+                                  <li class="Linklist__Item prc-promo prc-promo--2 prc-width--{{ block.settings.prc_width }}" {% if sub_link.links != blank %}aria-haspopup="true"{% endif %}>
+                                    <h4 class="{%- if sub_link.links == blank -%}custom_h4{%- endif -%}">
+                                      {{ sub_link.title | escape }}
+                                    </h4>                                    
+                                    <div class="nav-details-wrapper">
+                                      {%- assign image_holder = sub_link.title | handleize | append: temp -%}
+                                      <a href="{{ sub_link.url }}" class="Link Link--secondary"></a>
+
+                                      {%- assign temp = forloop.index | plus: 1 -%}
+                                      {%- assign image_holder = sub_link.title | handleize | append: temp -%}
+                                      {%- capture image_holder1 | strip_newlines -%}
+                                        {%- if block.settings.prc_width == 'fourth' -%}
+                                          {{ block.settings.image | img_url: '520x620' }}
+                                        {%- elsif block.settings.prc_width == 'half' -%}
+                                          {{ block.settings.image | img_url: '1040x620' }}
+                                        {%- elsif block.settings.prc_width == 'full' -%}
+                                          {{ block.settings.image | img_url: '2080x620' }}
+                                        {%- else -%}  
+                                          {{ block.settings.image | img_url: '520x620' }}
+                                        {% endif %}
+                                      {%- endcapture -%}
+                                      {%- assign image_holders = image_holder1 -%}                                
+
+                                      <input type="hidden" data-val ="{{image_holder}}" data-link="{{block.settings.image}}"/>
+
+                                      {%- if block.settings.prc_width == 'fourth' -%}
+                                        {% include 'responsive-image' with image: block.settings.image, max_width:520 %}
+                                      {%- elsif block.settings.prc_width == 'half' -%}
+                                        {% include 'responsive-image' with image: block.settings.image, max_width:1040 %}
+                                      {%- elsif block.settings.prc_width == 'full' -%}
+                                        {% include 'responsive-image' with image: block.settings.image, max_width:2080 %}
+                                      {%- else -%}  
+                                        {% include 'responsive-image' with image: block.settings.image, max_width:520 %}
+                                      {% endif %}
+
+                                      <a href="{{ sub_link.url }}" class="Link Link--secondary Link--shopnow">
+                                        {% if block.settings.prc_button_text != blank %}
+                                          {{ block.settings.prc_button_text }}
+                                        {% else %}
+                                          {{ sub_link.title }}
+                                        {% endif %}
+                                      </a>   
+                                    </div> 
+                                    </li>              
+                                  {% endif %}
+                                {% endif %}
+                              {% endfor %}
+                              {% comment %}END PRC EDITED{% endcomment %}                                
+                  
+                              {%- if sub_link.links != blank -%}
+                                <li class="Linklist__Item" {% if sub_link.links != blank %}aria-haspopup="true"{% endif %}>
+                                  <h4 class="{%- if sub_link.links == blank -%}custom_h4{%- endif -%}">
+                                    {{ sub_link.title | escape }}
+                                  </h4>                                 
+                                  <div class="DropdownMenu DropdownMenu--recursive" aria-hidden="true">
+                                    <ul class="Linklist Linklist--recursive">
+                                      {%- comment %}<locksmith:4875>{% endcomment -%}
+                                        {%- assign locksmith_47d7_forloop__size = 0 %}{%- for sub_sub_link in sub_link.links -%}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: sub_sub_link, subject_parent: sub_link, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_47d7_forloop__size = locksmith_47d7_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_47d7_forloop__index = nil -%}
+                                      {%- comment %}</locksmith:4875>{% endcomment -%}
+                                      {%- for sub_sub_link in sub_link.links -%}
+                                        {%- comment %}<locksmith:3b1b>{% endcomment -%}
+                                          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: sub_sub_link, subject_parent: sub_link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_47d7_forloop__index == nil %}{% assign locksmith_47d7_forloop__index = 1 %}{% assign locksmith_47d7_forloop__index0 = 0 %}{% else %}{% assign locksmith_47d7_forloop__index = locksmith_47d7_forloop__index | plus: 1 %}{% assign locksmith_47d7_forloop__index0 = locksmith_47d7_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_47d7_forloop__index == 1 %}{% assign locksmith_47d7_forloop__first = true %}{% else %}{% assign locksmith_47d7_forloop__first = false %}{% endif %}{% if locksmith_47d7_forloop__index == locksmith_47d7_forloop__size %}{% assign locksmith_47d7_forloop__last = true %}{% else %}{% assign locksmith_47d7_forloop__last = false %}{% endif %}{% assign locksmith_47d7_forloop__rindex = locksmith_47d7_forloop__size | minus: locksmith_47d7_forloop__index | minus: 1 %}{% assign locksmith_47d7_forloop__rindex0 = locksmith_47d7_forloop__size | minus: locksmith_47d7_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+                                        {%- comment %}</locksmith:3b1b>{% endcomment -%}
+                                        <li class="Linklist__Item Linklist__Item--recursive">
+                                          <a href="{{ sub_sub_link.url }}" class="Link Link--secondary">
+                                            <h4 class="sub_sub_list" style="font-family:'acumin-pro-condensed';">
+                                              {{ sub_sub_link.title | escape }}
+                                            </h4>
+                                          </a>
+                                          {%- assign image_holder = sub_sub_link.title | handleize | append: locksmith_47d7_forloop__index -%}
+                                          {%- capture image_holder1 | strip_newlines -%}
+                                            {{section.settings[image_holder] | img_url: '520x620'}}
+                                          {%- endcapture -%}
+                                          {%- assign image_holders = image_holder1 -%}
+                                          <input type="hidden" data-val ="{{image_holder}}" data-link="{{image_holder1}}"/>
+                                          {% include 'responsive-image' with image:section.settings[image_holder],max_width:520 %}
+                                        </li>
+                                      {%- endfor -%}
+                                    </ul>
+                                  </div>
+                                </li>
+                              {%- endif -%}              
+                            {%- endif -%}
+                          {%- endfor -%}
+                        </ul>
+                      {%- else -%}
+                        <ul class="Linklist">
+                          {%- comment %}<locksmith:7ce9>{% endcomment -%}
+                            {%- assign locksmith_e4a7_forloop__size = 0 %}{%- for sub_link in link.links -%}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: sub_link, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_e4a7_forloop__size = locksmith_e4a7_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_e4a7_forloop__index = nil -%}
+                          {%- comment %}</locksmith:7ce9>{% endcomment -%}
+                          {%- for sub_link in link.links -%}
+                            {%- comment %}<locksmith:027c>{% endcomment -%}
+                              {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: sub_link, subject_parent: link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_e4a7_forloop__index == nil %}{% assign locksmith_e4a7_forloop__index = 1 %}{% assign locksmith_e4a7_forloop__index0 = 0 %}{% else %}{% assign locksmith_e4a7_forloop__index = locksmith_e4a7_forloop__index | plus: 1 %}{% assign locksmith_e4a7_forloop__index0 = locksmith_e4a7_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_e4a7_forloop__index == 1 %}{% assign locksmith_e4a7_forloop__first = true %}{% else %}{% assign locksmith_e4a7_forloop__first = false %}{% endif %}{% if locksmith_e4a7_forloop__index == locksmith_e4a7_forloop__size %}{% assign locksmith_e4a7_forloop__last = true %}{% else %}{% assign locksmith_e4a7_forloop__last = false %}{% endif %}{% assign locksmith_e4a7_forloop__rindex = locksmith_e4a7_forloop__size | minus: locksmith_e4a7_forloop__index | minus: 1 %}{% assign locksmith_e4a7_forloop__rindex0 = locksmith_e4a7_forloop__size | minus: locksmith_e4a7_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+                            {%- comment %}</locksmith:027c>{% endcomment -%}
+                            {% comment %}PRC EDITED{% endcomment %}
+
+                            {% for block in section.blocks %}
+                              {% if block.type == "prc_nav_promotion" %}
+                                {% assign sub_sub_link_handle = sub_link.title %}
+                                {% assign promo_handle = block.settings.title %}
+
+                                {% if sub_sub_link_handle == promo_handle %}
+                                  <li class="Linklist__Item prc-promo prc-promo--3 prc-width--{{ block.settings.prc_width }}" {% if sub_link.links != blank %}aria-haspopup="true"{% endif %}>
+                                    <h4 class="{%- if sub_link.links == blank -%}custom_h4{%- endif -%}">
+                                      {{ sub_link.title | escape }}
+                                    </h4>                                  
+                                    <div class="nav-details-wrapper">
+                                      {%- assign image_holder = sub_link.title | handleize | append: temp -%}
+                                      <a href="{{ sub_link.url }}" class="Link Link--secondary"></a>
+                                      {%- assign temp = forloop.index | plus: 1 -%}
+                                      {%- assign image_holder = sub_link.title | handleize | append: temp -%}
+                                  
+                                      {%- capture image_holder1 | strip_newlines -%}
+                                        {%- if block.settings.prc_width == 'fourth' -%}
+                                          {{ block.settings.image | img_url: '520x620' }}
+                                        {%- elsif block.settings.prc_width == 'half' -%}
+                                          {{ block.settings.image | img_url: '1040x620' }}
+                                        {%- elsif block.settings.prc_width == 'full' -%}
+                                          {{ block.settings.image | img_url: '2080x620' }}
+                                        {%- else -%}  
+                                          {{ block.settings.image | img_url: '520x620' }}
+                                        {% endif %}
+                                      {%- endcapture -%}
+                                      {%- assign image_holders = image_holder1 -%}                                
+
+                                      <input type="hidden" data-val ="{{image_holder}}" data-link="{{block.settings.image}}"/>
+
+                                      {%- if block.settings.prc_width == 'fourth' -%}
+                                        {% include 'responsive-image' with image: block.settings.image, max_width:520 %}
+                                      {%- elsif block.settings.prc_width == 'half' -%}
+                                        {% include 'responsive-image' with image: block.settings.image, max_width:1040 %}
+                                      {%- elsif block.settings.prc_width == 'full' -%}
+                                        {% include 'responsive-image' with image: block.settings.image, max_width:2080 %}
+                                      {%- else -%}  
+                                        {% include 'responsive-image' with image: block.settings.image, max_width:520 %}
+                                      {% endif %}
+
+                                      <a href="{{ sub_link.url }}" class="Link Link--secondary Link--shopnow">
+                                        {% if block.settings.prc_button_text != blank %}
+                                          {{ block.settings.prc_button_text }}
+                                        {% else %}
+                                          {{ sub_link.title }}
+                                        {% endif %}
+                                      </a> 
+                                    </div>
+                                  </li>                                                    
+                                {% endif %}
+                              {% endif %}
+                            {% endfor %} 
+
+                            {% comment %}END PRC EDITED{% endcomment %}
+                            {%- if sub_link.links != blank -%}
+                              <li class="Linklist__Item" {% if sub_link.links != blank %}aria-haspopup="true"{% endif %}>
+                                <h4 class="{%- if sub_link.links == blank -%}custom_h4{%- endif -%}">
+                                  {{ sub_link.title | escape }}
+                                </h4>                               
+                                <div class="DropdownMenu DropdownMenu--recursive" aria-hidden="true">
+                                  <ul class="Linklist Linklist--recursive">
+                                    {%- comment %}<locksmith:9b24>{% endcomment -%}
+                                      {%- assign locksmith_7d65_forloop__size = 0 %}{%- for sub_sub_link in sub_link.links -%}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: sub_sub_link, subject_parent: sub_link, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_7d65_forloop__size = locksmith_7d65_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_7d65_forloop__index = nil -%}
+                                    {%- comment %}</locksmith:9b24>{% endcomment -%}
+                                    {%- for sub_sub_link in sub_link.links -%}
+                                      {%- comment %}<locksmith:114e>{% endcomment -%}
+                                        {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: sub_sub_link, subject_parent: sub_link, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_7d65_forloop__index == nil %}{% assign locksmith_7d65_forloop__index = 1 %}{% assign locksmith_7d65_forloop__index0 = 0 %}{% else %}{% assign locksmith_7d65_forloop__index = locksmith_7d65_forloop__index | plus: 1 %}{% assign locksmith_7d65_forloop__index0 = locksmith_7d65_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_7d65_forloop__index == 1 %}{% assign locksmith_7d65_forloop__first = true %}{% else %}{% assign locksmith_7d65_forloop__first = false %}{% endif %}{% if locksmith_7d65_forloop__index == locksmith_7d65_forloop__size %}{% assign locksmith_7d65_forloop__last = true %}{% else %}{% assign locksmith_7d65_forloop__last = false %}{% endif %}{% assign locksmith_7d65_forloop__rindex = locksmith_7d65_forloop__size | minus: locksmith_7d65_forloop__index | minus: 1 %}{% assign locksmith_7d65_forloop__rindex0 = locksmith_7d65_forloop__size | minus: locksmith_7d65_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+                                      {%- comment %}</locksmith:114e>{% endcomment -%}
+                                      <li class="Linklist__Item Linklist__Item--recursive">
+                                        <h4>
+                                          {{ sub_sub_link.title | escape }}
+                                        </h4>
+                                        <a href="{{ sub_sub_link.url }}" class="Link Link--secondary">
+                                        </a>
+                                        <input type="hidden" data-val ="{{ sub_sub_link.title | handleize }}-{{ locksmith_7d65_forloop__index }}" />
+                                        <img loading="lazy" src="https://www.rprotein.co.uk/wp-content/uploads/2017/04/5percent1-1.jpg"/>
+                                      </li>
+                                    {%- endfor -%}
+                                  </ul>
+                                </div>
+                              </li>                                
+                            {%- endif -%}
+                          {%- endfor -%}
+                        </ul>
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+                {%- endcapture -%}
+                  
+                <li class="HorizontalList__Item {% if link.links == blank and link.active %}is-active{% endif %}" {% if menu_item_dropdown != blank %}aria-haspopup="true"{% endif %} data-navname = "{{- link.title | escape -}}">
+                  <a href="{{ link.url }}" class="Heading u-h6 text-uppercase">
+                    {{- link.title | escape -}}
+                    <span class="Header__LinkSpacer">
+                      {{ link.title | escape }}
+                    </span>
+                  </a>
+                  {{- menu_item_dropdown -}}
+                </li>
+                  
+
+              {%- endfor -%}
+
+              {% comment %}
+              {% comment %}PRC EDITED — MOVE THIS TO THE NAV{% endcomment %}
+              <li class="HorizontalList__Item {% if link.links == blank and link.active %}is-active{% endif %}" data-navname = "BLOG">
+                <a href="/pages/videos/" class="Heading u-h6 text-uppercase"><span style="color:#FFFFFF;">
+                  BLOG
+                  <span class="Header__LinkSpacer">
+                    BLOG
+                  </span>
+                </a>
+              </li>
+              {% endcomment %}
+              <!--END JS ADDED-->
+
+            </ul>
+          </nav>
+
+          {{- currency_conversion_select -}}
+        {%- endunless -%}

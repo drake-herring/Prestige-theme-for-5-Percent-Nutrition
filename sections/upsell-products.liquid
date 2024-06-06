@@ -1,0 +1,43 @@
+
+<div class="upsell">
+    <div class="container">
+        {% for block in section.blocks %}
+              {%- assign product = block.settings.product -%}
+              <div class="upsell-product-title">
+                <h4> {{ product.title }}</h4>
+              </div>
+              <div class="upsell-product-image">
+                {{ product.featured_image | img_tag }}
+              </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "upsell products",
+    "settings": [   
+    ],
+    "blocks": [
+     {
+       "name": "Upsell",
+       "type": "slide",
+       "settings": [
+         {
+           "type": "product",
+           "id": "product",
+           "label": "product1"
+         }
+       ]
+     }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

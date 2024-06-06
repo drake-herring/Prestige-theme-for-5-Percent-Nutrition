@@ -1,0 +1,281 @@
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "settings": {}
+    },
+    "shogun-above": {
+      "type": "shogun-above",
+      "settings": {}
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "27b5bb7f-75e9-4d2b-a1bf-a42db6d0c3cb": {
+          "type": "title",
+          "settings": {}
+        },
+        "f7fc96a8-d96a-45ba-8178-d1ae9ce9da4e": {
+          "type": "yotpo",
+          "settings": {}
+        },
+        "6935ab4d-f84d-4e3f-8e15-ab2bd054d90e": {
+          "type": "description",
+          "settings": {
+            "short_desc": true
+          }
+        },
+        "45ed25a3-8d6d-41cc-8f47-0ea4977c7457": {
+          "type": "price",
+          "settings": {}
+        },
+        "89c80f5e-5929-4928-b2e8-d814cf426227": {
+          "type": "meta_information",
+          "settings": {}
+        },
+        "2332db69-2338-4f65-bdb9-472ffe251a0f": {
+          "type": "addtocart",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "27b5bb7f-75e9-4d2b-a1bf-a42db6d0c3cb",
+        "f7fc96a8-d96a-45ba-8178-d1ae9ce9da4e",
+        "6935ab4d-f84d-4e3f-8e15-ab2bd054d90e",
+        "45ed25a3-8d6d-41cc-8f47-0ea4977c7457",
+        "89c80f5e-5929-4928-b2e8-d814cf426227",
+        "2332db69-2338-4f65-bdb9-472ffe251a0f"
+      ],
+      "settings": {
+        "show_share_buttons": false,
+        "show_vendor": false,
+        "show_color_swatch": true,
+        "show_color_carousel": false,
+        "show_size_swatch": true,
+        "show_quantity_selector": true,
+        "show_inventory_quantity": false,
+        "inventory_quantity_threshold": 3,
+        "show_price_in_button": false,
+        "show_payment_button": false,
+        "image_size": "medium",
+        "stack_images": true,
+        "show_thumbnails": true,
+        "enable_image_zoom": false,
+        "tab_page_1_handle": "",
+        "tab_page_2_handle": "",
+        "reviews_enabled": false,
+        "featured_image_size": "large"
+      }
+    },
+    "bar-section": {
+      "type": "bar-section",
+      "settings": {
+        "heading": "Progress bar",
+        "background": "radial-gradient(rgba(239, 201, 199, 0.59) 20%, rgba(148, 138, 138, 1) 100%)"
+      }
+    },
+    "related-metafield-products": {
+      "type": "related-metafield-products",
+      "settings": {
+        "show_section": false,
+        "title": "Related Products",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false
+      }
+    },
+    "main-product-coreline-references": {
+      "type": "main-product-coreline-references",
+      "settings": {
+        "text_color": "#000000",
+        "background_color": "#f7f7f7"
+      }
+    },
+    "main-product-product_references": {
+      "type": "main-product-product_references",
+      "settings": {
+        "text_color": "#000000",
+        "background_color": "#f7f7f7"
+      }
+    },
+    "668cce3b-f9a9-4d1f-b248-3f49cc083b05": {
+      "type": "product-navigation",
+      "blocks": {
+        "a6460229-1079-4e50-8350-20a47ab18056": {
+          "type": "tab",
+          "settings": {
+            "title": "Description",
+            "tab_url": "#descriptionSection",
+            "content_position": "product_description"
+          }
+        },
+        "a1e85fe2-1bd6-43f6-9a5e-f98b766ae7b1": {
+          "type": "tab",
+          "settings": {
+            "title": "5% Nation",
+            "tab_url": "#5NationSection",
+            "content_position": "5percent-nation"
+          }
+        },
+        "dd22fe71-a832-45b3-8a10-fb6464a6f8ac": {
+          "type": "review",
+          "settings": {
+            "title": "Review",
+            "review_type": "slider",
+            "tab_url": "#reviewSection",
+            "content_position": "reviews_homepage"
+          }
+        },
+        "df99a8f9-a033-4b63-83b2-694e76c4ec16": {
+          "type": "tab",
+          "settings": {
+            "title": "FAQs",
+            "tab_url": "#faqSection",
+            "content_position": "product-faq"
+          }
+        },
+        "0da5761e-720f-4152-a3b7-15795fa14cd3": {
+          "type": "tab",
+          "settings": {
+            "title": "Supplements",
+            "tab_url": "#supplementFactsSection",
+            "content_position": "supplements"
+          }
+        },
+        "e2a89ac5-7c59-4f2b-be87-6cfa5d3ff194": {
+          "type": "tab",
+          "settings": {
+            "title": "Product benefits",
+            "tab_url": "#benefits-section",
+            "content_position": "product-benefits"
+          }
+        },
+        "da889e21-4ad3-4bc1-ac64-bbecedaf0e1b": {
+          "type": "tab",
+          "settings": {
+            "title": "Vimeo",
+            "tab_url": "#vimeo-iframe",
+            "content_position": "vimeo-iframe"
+          }
+        }
+      },
+      "block_order": [
+        "a6460229-1079-4e50-8350-20a47ab18056",
+        "a1e85fe2-1bd6-43f6-9a5e-f98b766ae7b1",
+        "dd22fe71-a832-45b3-8a10-fb6464a6f8ac",
+        "df99a8f9-a033-4b63-83b2-694e76c4ec16",
+        "0da5761e-720f-4152-a3b7-15795fa14cd3",
+        "e2a89ac5-7c59-4f2b-be87-6cfa5d3ff194",
+        "da889e21-4ad3-4bc1-ac64-bbecedaf0e1b"
+      ],
+      "settings": {
+        "show_addtocart": true
+      }
+    },
+    "main-sezzel-widget": {
+      "type": "main-sezzle-widget",
+      "settings": {
+        "show-sezzle-widget": false,
+        "color": "inherit",
+        "font-size": 14,
+        "font-family": "inherit",
+        "product-page-alignment": "auto",
+        "cart-page-alignment": "auto"
+      }
+    },
+    "shogun-below": {
+      "type": "shogun-below",
+      "settings": {}
+    },
+    "ee8c1f32-c685-46df-a4e4-f0f85c5dfee7": {
+      "type": "custom-html",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div class=\"container frequently_bought_together_app\"><\/div>"
+      }
+    },
+    "942b7fe7-093c-4177-86d0-9ba1acf733ee": {
+      "type": "product-benefit-section",
+      "blocks": {
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-0": {
+          "type": "benefits",
+          "settings": {
+            "button_bgcolor": "#ae1f24",
+            "icon_select": "blender",
+            "product-title": "Title 1",
+            "meta_content": "{{ product.metafields.custom.benefits_content_1.value }}"
+          }
+        },
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-1": {
+          "type": "benefits",
+          "settings": {
+            "button_bgcolor": "#323232",
+            "icon_select": "protein",
+            "product-title": "Title 2",
+            "meta_content": "{{ product.metafields.custom.benefits_content_2.value }}"
+          }
+        },
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-2": {
+          "type": "benefits",
+          "settings": {
+            "button_bgcolor": "#1fae34",
+            "icon_select": "stimfree",
+            "product-title": "Title 3",
+            "meta_content": "{{ product.metafields.custom.benefits_content_3.value }}"
+          }
+        },
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-3": {
+          "type": "benefits",
+          "settings": {
+            "button_bgcolor": "#1552ed",
+            "icon_select": "fast",
+            "product-title": "Title 4",
+            "meta_content": "{{ product.metafields.custom.benefits_content_4.value }}"
+          }
+        },
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-4": {
+          "type": "benefits",
+          "settings": {
+            "button_bgcolor": "#e3a22b",
+            "icon_select": "followus-ig",
+            "product-title": "Title 5",
+            "meta_content": "{{ product.metafields.custom.benefits_content_5.value }}"
+          }
+        },
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-5": {
+          "type": "benefits",
+          "settings": {
+            "button_bgcolor": "#1fae34",
+            "icon_select": "non-gmo",
+            "product-title": "Title 6",
+            "meta_content": "{{ product.metafields.custom.benefits_content_6.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-0",
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-1",
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-2",
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-3",
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-4",
+        "template--15718312640692__942b7fe7-093c-4177-86d0-9ba1acf733ee-16759189261fcf81f0-5"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "shogun-above",
+    "main",
+    "bar-section",
+    "related-metafield-products",
+    "main-product-coreline-references",
+    "main-product-product_references",
+    "668cce3b-f9a9-4d1f-b248-3f49cc083b05",
+    "main-sezzel-widget",
+    "shogun-below",
+    "ee8c1f32-c685-46df-a4e4-f0f85c5dfee7",
+    "942b7fe7-093c-4177-86d0-9ba1acf733ee"
+  ]
+}

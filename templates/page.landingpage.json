@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "main": {
+      "type": "landingpage",
+      "settings": {}
+    },
+    "newsletter-sitewide": {
+      "type": "newsletter-sitewide",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "newsletter-sitewide"
+  ]
+}

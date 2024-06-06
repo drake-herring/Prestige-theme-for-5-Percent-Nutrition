@@ -1,0 +1,97 @@
+<section class="product-description-section js-product-description-section {% if hide_mobile %} hide_mobile {% endif %}" id="descriptionSection">
+  <div class="container">
+    <h4 class="product-description-heading">Description</h4>
+    <div class="product-description-text-container">
+      <!-- JS040119 sizechart popup -->
+      {% unless product.type != 'Apparel'%}
+        {%- capture product.metafields.apparel_sizechart.file.value -%}{%- endcapture -%}
+
+        {%- if product.metafields.apparel_sizechart.file.value != blank -%}
+          {% if product.metafields.apparel_sizechart.file.value == "none" %}
+             <!--nobutton-->
+          {% else %}
+          {%- assign product.metafields.apparel_sizechart.file.value = filter_value | file_img_url -%}
+            <a class="image-popup-vertical-fit sizechart_button" href="{{ product.metafields.apparel_sizechart.file.value | file_img_url }}"><i class="far fa-file-image"></i> Size Chart</a>
+          {% endif %}
+        {% elsif product.tags contains 'hat'%}
+            <a class="image-popup-vertical-fit" href="#Hat-SizeChart">&nbsp;</a>
+            {% elsif product.tags contains "unisex apparel" %}
+      			{% if product.tags contains "tank top" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/UNISEX-COTTON-TANK-TOP.gif"><i class="far fa-file-image"></i> Size Chart</a>
+      			{% elsif product.tags contains "t-shirt" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/UNISEX-COTTON-T-SHIRT.gif"><i class="far fa-file-image"></i> Size Chart</a>
+      			{% elsif product.tags contains "longsleeve" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/UNISEX-LONGSLEEVE.gif"><i class="far fa-file-image"></i> Size Chart</a>
+      			{% elsif product.tags contains "hoodie" and product.tags contains "military" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/UNISEX-MIL-PULLOVER-HOODIE.gif"><i class="far fa-file-image"></i> Size Chart</a>
+      			{% elsif product.tags contains "hoodie" and product.tags contains "zip-up" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/UNISEX-ZIP-UP-HOODIE.gif"><i class="far fa-file-image"></i> Size Chart</a>
+      			{% elsif product.tags contains "hoodie" and product.tags contains "rp" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/UNISEX-RP-PULLOVER-HOODIE.gif"><i class="far fa-file-image"></i> Size Chart</a>
+      			{% elsif product.tags contains "hoodie" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/UNISEX-PULLOVER-HOODIE.gif"><i class="far fa-file-image"></i> Size Chart</a>
+      			{% elsif product.tags contains "tank top" and product.tags contains "rp" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/UNISEX-ZIP-UP-HOODIE.gif"><i class="far fa-file-image"></i> Size Chart</a>
+      			{% endif %}
+            {% elsif product.tags contains "men's apparel" %}
+      			{% if product.tags contains "stringer" and product.tags contains "hoodie" and product.tags contains "2-toned" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/MENS-2-TONE-STRINGER-HOODIE.gif"><i class="far fa-file-image"></i> Size Chart</a>
+      			{% elsif product.tags contains "stringer" and product.tags contains "hoodie" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/MENS-STRINGER-HOODIE.gif"><i class="far fa-file-image"></i> Size Chart</a>
+      			{% elsif product.tags contains "tank top" and product.tags contains "stringer" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/MENS-STRINGER-TANK.gif"><i class="far fa-file-image"></i> Size Chart</a>
+      			{% elsif product.tags contains "tank top" and product.tags contains "ribbed" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/MENS-RIBBED-TANK.gif"><i class="far fa-file-image"></i> Size Chart</a>
+       			{% elsif product.tags contains "tank top" and product.tags contains "basketball" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/SizeChart_BasketballJersey.jpg" id="MensBasketballTank"><i class="far fa-file-image"></i> Size Chart</a>
+     			{% elsif product.tags contains "tank top" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/MENS-COTTON-TANK.gif"><i class="far fa-file-image"></i> Size Chart</a>
+      			{% elsif product.tags contains "joggers" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/MENS-FLEECE-JOGGER.gif.jpg"><i class="far fa-file-image"></i> Size Chart</a>
+      			{% elsif product.tags contains "shorts" and product.tags contains "basketball" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/SizeChart_BasketballShorts.jpg"><i class="far fa-file-image"></i> Size Chart</a>
+      			{% elsif product.tags contains "shorts" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/MENS-SHORTS.gif"><i class="far fa-file-image"></i> Size Chart</a>
+      			{% endif %}
+            {% elsif product.tags contains "women's apparel" %}
+      			{% if product.tags contains "cropped" and product.tags contains "t-shirt" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/WOMENS-CROPPED-T-SHIRT.gif"><i class="far fa-file-image"></i> Size Chart</a>
+      			{% elsif product.tags contains "cropped" and product.tags contains "tank top" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/WOMENS-CROPPED-TANK.gif"><i class="far fa-file-image"></i> Size Chart</a>
+      			{% elsif product.tags contains "cropped" and product.tags contains "hoodie" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/WOMENS-CROPPED-HOODIE.gif"><i class="far fa-file-image"></i> Size Chart</a>
+      			{% elsif product.tags contains "leggings" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/WOMENS-LEGGINGS.gif"><i class="far fa-file-image"></i> Size Chart</a>
+      			{% elsif product.tags contains "sports bra" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/WOMENS-SPORTS-BRA.gif"><i class="far fa-file-image"></i> Size Chart</a>
+      			{% elsif product.tags contains "racerback tank" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/WOMENS-2-TONE-RACERBACK-TANK.gif"><i class="far fa-file-image"></i> Size Chart</a>
+      			{% elsif product.tags contains "shorts" %}
+            	<a class="image-popup-vertical-fit sizechart_button" href="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/SizeChart_WomensGymShorts.gif"><i class="far fa-file-image"></i> Size Chart</a>
+      			{% endif %}
+            {% endif %}
+      {% endunless %}
+      <!-- end sizechart popup -->
+
+      <div class="product-description-text data">
+        {{ product.description }}
+      </div>
+      {% if template.suffix == 'core' %}
+        <div class="gradient"></div>
+      {% endif %}
+    </div>
+    
+    <div class="g-read-more {% if template.suffix == 'core' %}read-more-button{% endif %}">+ Read More</div>
+  </div>
+    {% if product.template_suffix == 'core' %}
+    <div class="CoreProductsDescription">
+        <div class="logoCore">
+          <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/Logo_REV_200x675_3615c056-f31f-4490-8b8a-f77543774136.png">
+        </div>
+        <div class="image">
+          <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/5-Core-Family-12-2021-2000px.png" alt="Core products">
+        </div>
+        <div class="background"></div>
+   </div>
+    {% endif %}
+</section>

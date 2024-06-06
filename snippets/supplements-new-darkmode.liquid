@@ -1,0 +1,91 @@
+{% if product.metafields.supplements != blank %}
+  <a name="supplementFactsSection"></a>
+  <section id="supplementFactsSection" class="supplement-section js-supplement-section supplements-dark">
+
+   <div class="container supplementFLex">
+     <div class="supplementImage">
+        {% if product.metafields.custom.benefit_section_image != blank or product.metafields.custom.glb_file_url != blank %}
+        <div class="benifit-main-image">
+          {% if product.metafields.custom.glb_file_url != blank %}
+            <model-viewer src="{{ product.metafields.custom.glb_file_url }}" auto-rotate camera-controls alt="cube" background-color="#455A64"></model-viewer>
+          {% else %}
+            <img loading="lazy" src="{{ product.metafields.custom.benefit_section_image | file_url }}">
+          {% endif %}
+        </div>
+      {% endif %}
+  
+    </div>
+
+
+     <div class="supplement-data-block">
+           {% if product.metafields.supplements %}
+          <div class="supplement-data-container">
+              <div class="supplement-data-heading full-underline full-underline--supplements">
+                <h2 class="product-h2 product-h2--supplements text-uppercase">Supplement Facts</h2>
+                {% for product_option in product.options_with_values limit: 1 %}
+                  {% comment %} {{ product_option.name }} {% endcomment %}
+                  <span class="variants-supplements-container-dropdown">
+                    <select id="variantsSupplementsDropdown" class="variants-supplements-container js-variants-supplements-container">
+                    {% for value in product_option.values %}
+                        <option data-id=
+                        "{{ product_option.values.id }}" {% if product_option.selected_value == value %}selected{% endif %}>
+                        {{ value }}
+                        </option>
+                    {% endfor %}
+                    </select>
+                  </span>
+                {% endfor %}
+              </div>
+              {% for product_option in product.options_with_values limit: 1 %}
+                <div class="slider-gran">
+                  <ul id="variantsSupplementsDropdownMobile" class="slider-parent variants-supplements-container variants-supplements-container--mobile">
+                    {% for value in product_option.values %}
+                      <li class="variant-name-mobile" data-id=
+                      "{{ product_option.values.id }}" {% if product_option.selected_value == value %}selected{% endif %}>
+                      {{ value }}
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% endfor %}
+              <div class="supplement-info">
+                {% for product_option in product.options_with_values limit: 1 %}
+                  {% for value in product_option.values %}
+                    {% unless product.metafields.supplements[value] == blank %}
+                      {{ product.metafields.supplements[value] }} 
+                    {% endunless %}
+                  {% endfor %}
+                {% endfor %}
+              </div>
+            
+            </div>
+        {% endif %}
+    
+            {% if product.metafields.custom.supplementfactsicons %} 
+          <div class="supplementProtien">
+            {% for i in (1..4) %}
+            {% assign icon_key = 'supplementfactsicon' | append: i %}
+            {% assign heading_key = 'supplementfactsheading' | append: i %}
+            {% assign text_small_key = 'supplementfactstextsmall' | append: i %}
+            {% assign text_key = 'supplementfactstext' | append: i %}
+    
+            <div class="supplementfactsIcon" 
+              {% if product.metafields.custom.supplementfactsicons %}style="background-image: url({{ product.metafields.custom.supplementfactsicons | img_url: 'master' }}); border: 3px solid #fff;"{% endif %}>
+              <div class="supplementfactsheading">
+                <h3>{{ product.metafields.meta[heading_key] }}</h3>
+                <span class="small-txt">{{ product.metafields.custom[text_small_key] }}</span>
+              </div>
+              <div class="supplementfactstext">
+                <p>{{ product.metafields.custom[text_key] }}</p>
+              </div>
+            </div>
+            {% endfor %}
+            </div>
+      {% endif %}   
+         
+       </div>
+     </div>
+  
+  </section>
+{%endif%}
+

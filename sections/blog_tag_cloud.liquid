@@ -1,0 +1,46 @@
+<section class="tag-cloud">
+  <div class="tag-cloud-wrapper">
+    {%- for tag in blog.all_tags -%}
+         {% assign article_count = 0 %}
+        {% for articlee in blog.articles %}
+          {% for articleetag in articlee.tags %}
+            {% if articleetag == tag %}
+              {% assign article_count = article_count | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+        <div class="tag {% if article_count > 3 %} tag-count--4 {% else %} tag-count--{{ article_count }} {% endif %}" data-name="{{ tag }}">
+          <a href="{{ blog.url }}/tagged/{{ tag | handle }}"> <span class="tag-content"> {{ tag }}  ({{ article_count }}) </span> </a>
+        </div>
+    {%- endfor -%}
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Tag Cloud",
+    "settings": [
+     {
+        "type": "blog",
+        "id": "blog",
+        "label": "Blog"
+      },
+       {
+      "type": "checkbox",
+      "id": "blog_show_tags",
+      "label": "Show tags",
+      "default": true
+    }
+    ],
+    "presets":[
+      {
+        "name" : "Tag Cloud"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

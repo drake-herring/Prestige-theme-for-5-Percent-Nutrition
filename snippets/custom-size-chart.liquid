@@ -1,0 +1,37 @@
+  <div class="size-chart-content">
+    {% assign result = '' %}
+  
+    {%- assign sizechart_result = true -%}
+    {% for block in section.blocks %}
+        {%- assign customtag = block.settings.tagtext | split : ',' -%}
+          {%- for ctag in customtag -%}
+            {%  if product.tags contains ctag %}
+              {% assign result = result | append : ',1' %}
+            {% else %}
+              {% assign result = result | append : ',2' %}
+            {% endif %}
+          {%- endfor -%} 
+        {%- assign resultarr = result | split : ',' -%}                
+        {%- if resultarr contains '2' -%}                
+        {%- else -%}
+          {% if block.settings.size_chart != blank and sizechart_result == true %}
+  
+            <div class="image-wrapper">
+              <a class="image-popup-vertical-fit" href="{{ block.settings.size_chart | img_url : 'master' }}">
+                <span class="size-tooltip">
+                  <div class="chart-tool">
+                    <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/size.svg" alt="Size Chart Icon">
+                    <p>Size Chart</p> 
+                  </div>
+                  </span>
+                </a> 
+            </div>
+          {%- assign sizechart_result = false -%}
+          {% endif %}
+        {%- endif -%}  
+        {%- assign result = "" -%}          
+    {% endfor %}
+  </div>
+
+
+    

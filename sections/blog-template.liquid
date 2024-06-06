@@ -1,0 +1,555 @@
+<div id="section-{{ section.id }}" class="Section" data-section-id="{{ section.id }}" data-section-type="article-list">
+  <section class="blog_class blog-top-section linklist">
+     <div class=" container">
+      {% if section.settings.blog_heading != blank %}
+       <div class="blog_title">
+            <h2 class="main-heading">{{ section.settings.blog_heading | upcase }}</h2> 
+       </div>
+      {% endif %}
+       
+      <div class="blog-btns-wrapper">
+        {% for link in linklists[section.settings.blogmenu].links %}
+          {%- comment %}<locksmith:b839>{% endcomment -%}
+            {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.blogmenu], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+          {%- comment %}</locksmith:b839>{% endcomment -%}
+          <div class="blog-btn-wrapper {% if canonical_url contains link.url %} active {% endif %}">
+           <a class="Button btn" href="{{ link.url }}"> {{ link.title }} </a>
+          </div>
+        {% endfor %}
+      </div>
+
+       {% if blog.metafields.custom.blog_description != blank %}
+        <div class="meta-data">
+           <div class="meta-content-wrapper">
+              <p class="meta-content"> {{ blog.metafields.custom.blog_description }}</p>
+           </div>
+  
+          {% comment %}
+           <div class="btn-wrapper">
+              <a class="CollectionItem__Link Button" href="{{ blog.url }}"> {{ section.settings.btn_text }}</a>
+           </div>
+          {% endcomment %}
+        </div>
+       {% endif %}
+     </div>
+  </section>
+</div>
+
+<section class="motivation first-featured-article">
+  {%- if section.settings.featured_first_image -%}
+  <div class="motivation-article {% if is_first_article_featured %}motivation-article--withFeatured{% endif %}">
+              {%- for article in blog.articles -%}
+                {%- if forloop.first -%}
+                    <div class="motivation-wrapper">
+                      <div class="motiv-blog">
+                          <div class="left-motiv-blog">
+                           <img loading="lazy" src="{{ article.image | img_url : 'master' }}" />
+                          </div>
+              
+                          <div class="right-motiv-blog">
+                            <div class="right-content">
+                                  <a class="blog-title" href="{{ blog.url }}">{{ blog.title | upcase }}</a>
+                  
+                                    <h2 class="SectionHeader__Heading Heading u-h1">
+                                      <a href="{{ article.url }}">{{ article.title }}</a>
+                                    </h2>
+                          
+                                    {% if article.excerpt_or_content != blank %}
+                                        <div class="article-content">
+                                          {{ article.excerpt_or_content | truncatewords : 70 }}
+                                        </div>
+                                    {% endif %}
+        
+                                    <div class="SectionHeader__ButtonWrapper">
+                                      <a href="{{ article.url }}" class="ArticleItem__Link Link Link--underline">{{ 'blog.article.read_more' | t }}</a>
+                                    </div>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+  </div>
+                {% endif %}
+             {% endfor %}
+  </div>
+     {% endif %}
+</section>
+
+  <section class="article-grid-wrapper">
+    <div class="overlay">
+      <div class="loader--ripple" aria-hidden="false" data-acsb-hidden="false">
+          <div></div>
+          <div></div>
+      </div>
+    </div> 
+  
+  <div class="tag-list">
+          <div class="container">
+            <div class="search-box">
+              <input  id="target" type="text" placeholder="Enter Keyword" />
+              <input  id="search-btn" type="submit" value="Search" />
+            </div>
+            
+            <div class="predictive-search-content" id="artlist" style="display : none">
+ 
+            </div>
+        
+            <div class="sort-tag-list">
+              <label for="sort-tag">Sort by Tag</label> 
+                <select id="tag-sorting">
+                 <option disabled selected>Sort by tag</option>
+                     {%- for tag in blog.all_tags -%}
+                      <option value="{{ blog.url }}/tagged/{{ tag | handle }}">
+                          {{ tag }}
+                          </option>
+                     {% endfor %}
+                </select>
+            </div>
+
+            <div class="sort-order">
+              <label for="sort-order">Sort by Order</label> 
+              <select id="order-sorting">
+                <option disabled selected>Sort by order</option>
+                <option  value="new-to-old">Newest to Oldest</option>
+                <option value="old-to-new">Oldest to Newest</option>
+                <option value="assending">Alphabetically : A-Z</option>
+                <option value="discending">Alphabetically : Z-A</option>
+              </select>
+            </div>
+
+            <div class="sort-order-list">
+               <div class="assending" style="display:none">
+                 {% assign articles = blog.articles | sort: "title" %}
+
+                  {%- for article in articles -%}
+                    {%- if is_first_article_featured and forloop.first -%}
+                      <div class="Grid__Cell hidden-phone">
+                        <div class="FlexboxIeFix">
+                          <div class="ImageHero ImageHero--small" style="background: url({{ article.image | img_url: '1x1', format: 'jpg' }})">
+                            <div class="ImageHero__ImageWrapper">
+                              <div class="ImageHero__Image Image--lazyLoad Image--zoomOut"
+                                   data-optimumx="1.4"
+                                   data-bgset="{{ article.image | img_url: '750w', crop: 'center' }} 750w, {{ article.image | img_url: '1000x' }} 1000w, {{ article.image | img_url: '1500x' }} 1500w">
+                              </div>
+    
+                              <noscript>
+                                <div class="ImageHero__Image" style="background-image: url({{ article.image | img_url: '1000x' }}) opacity: 0.5; background-color: #000000;"></div>
+                              </noscript>
+                            </div>
+    
+                            <div class="ImageHero__TextContent">
+                            
+                                {%- if section.settings.show_category and article.tags != empty -%}
+                                  <span class="SectionHeader__SubHeading Heading u-h6">{{ article.tags.first }}</span>
+                                {%- endif -%}
+    
+                                <a class="blog-title" href="{{ blog.url }}">{{ blog.title | upcase }}</a>
+                      
+                                <h2 class="SectionHeader__Heading Heading u-h1">
+                                  <a href="{{ article.url }}">{{ article.title }}</a>
+                                </h2>
+                      
+                                {% if article.excerpt_or_content != blank %}
+                                    <div class="article-content">
+                                      {{ article.excerpt_or_content | truncatewords : 70 }}
+                                    </div>
+                                {% endif %}
+    
+                                <div class="SectionHeader__ButtonWrapper">
+                                  <a href="{{ article.url }}" class="ArticleItem__Link Link Link--underline">{{ 'blog.article.read_more' | t }}</a>
+                                </div>
+                             
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    {%- endif -%}
+    
+                    <div class="Grid__Cell {% if is_first_article_featured and forloop.first %}hidden-tablet-and-up{% else %}1/2--tablet 1/3--lap-and-up{% endif %}">
+                      {%- include 'article-item', article: article -%}
+                    </div>
+                  {%- endfor -%}
+               </div>    
+
+               <div class="discending" style="display:none">
+                   {% assign articles = blog.articles | sort: "title" %}
+
+                   {%- for article in articles reversed-%}
+                    {%- if is_first_article_featured and forloop.first -%}
+                      <div class="Grid__Cell hidden-phone">
+                        <div class="FlexboxIeFix">
+                          <div class="ImageHero ImageHero--small" style="background: url({{ article.image | img_url: '1x1', format: 'jpg' }})">
+                            <div class="ImageHero__ImageWrapper">
+                              <div class="ImageHero__Image Image--lazyLoad Image--zoomOut"
+                                   data-optimumx="1.4"
+                                   data-bgset="{{ article.image | img_url: '750w', crop: 'center' }} 750w, {{ article.image | img_url: '1000x' }} 1000w, {{ article.image | img_url: '1500x' }} 1500w">
+                              </div>
+      
+                              <noscript>
+                                <div class="ImageHero__Image" style="background-image: url({{ article.image | img_url: '1000x' }}) opacity: 0.5; background-color: #000000;"></div>
+                              </noscript>
+                            </div>
+      
+                            <div class="ImageHero__TextContent">
+                            
+                                {%- if section.settings.show_category and article.tags != empty -%}
+                                  <span class="SectionHeader__SubHeading Heading u-h6">{{ article.tags.first }}</span>
+                                {%- endif -%}
+      
+                                <a class="blog-title" href="{{ blog.url }}">{{ blog.title | upcase }}</a>
+                      
+                                <h2 class="SectionHeader__Heading Heading u-h1">
+                                  <a href="{{ article.url }}">{{ article.title }}</a>
+                                </h2>
+                      
+                                {% if article.excerpt_or_content != blank %}
+                                    <div class="article-content">
+                                      {{ article.excerpt_or_content | truncatewords : 70 }}
+                                    </div>
+                                {% endif %}
+      
+                                <div class="SectionHeader__ButtonWrapper">
+                                  <a href="{{ article.url }}" class="ArticleItem__Link Link Link--underline">{{ 'blog.article.read_more' | t }}</a>
+                                </div>
+                             
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    {%- endif -%}
+      
+                    <div class="Grid__Cell {% if is_first_article_featured and forloop.first %}hidden-tablet-and-up{% else %}1/2--tablet 1/3--lap-and-up{% endif %}">
+                      {%- include 'article-item', article: article -%}
+                    </div>
+                  {%- endfor -%}
+               </div>
+              
+               <div class="new-to-old" style="display:none">
+                 {%- for article in blog.articles -%}
+                    {%- if is_first_article_featured and forloop.first -%}
+                  <div class="Grid__Cell hidden-phone">
+                    <div class="FlexboxIeFix">
+                      <div class="ImageHero ImageHero--small" style="background: url({{ article.image | img_url: '1x1', format: 'jpg' }})">
+                        <div class="ImageHero__ImageWrapper">
+                          <div class="ImageHero__Image Image--lazyLoad Image--zoomOut"
+                               data-optimumx="1.4"
+                               data-bgset="{{ article.image | img_url: '750w', crop: 'center' }} 750w, {{ article.image | img_url: '1000x' }} 1000w, {{ article.image | img_url: '1500x' }} 1500w">
+                          </div>
+
+                          <noscript>
+                            <div class="ImageHero__Image" style="background-image: url({{ article.image | img_url: '1000x' }}) opacity: 0.5; background-color: #000000;"></div>
+                          </noscript>
+                        </div>
+
+                        <div class="ImageHero__TextContent">
+                        
+                            {%- if section.settings.show_category and article.tags != empty -%}
+                              <span class="SectionHeader__SubHeading Heading u-h6">{{ article.tags.first }}</span>
+                            {%- endif -%}
+
+                            <a class="blog-title" href="{{ blog.url }}">{{ blog.title | upcase }}</a>
+                  
+                            <h2 class="SectionHeader__Heading Heading u-h1">
+                              <a href="{{ article.url }}">{{ article.title }}</a>
+                            </h2>
+                  
+                            {% if article.excerpt_or_content != blank %}
+                                <div class="article-content">
+                                  {{ article.excerpt_or_content | truncatewords : 70 }}
+                                </div>
+                            {% endif %}
+
+                            <div class="SectionHeader__ButtonWrapper">
+                              <a href="{{ article.url }}" class="ArticleItem__Link Link Link--underline">{{ 'blog.article.read_more' | t }}</a>
+                            </div>
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {%- endif -%}
+
+                <div class="Grid__Cell {% if is_first_article_featured and forloop.first %}hidden-tablet-and-up{% else %}1/2--tablet 1/3--lap-and-up{% endif %}">
+                  {%- include 'article-item', article: article -%}
+                </div>
+              {%- endfor -%}
+              </div>
+              
+               <div class="old-to-new" style="display:none">
+                {% comment %}
+                  {% paginate blog.articles by 12 %}
+                      {% for article in blog.articles reversed  %}
+                         {{ article.title }}
+                      {% endfor %}
+                  {% endpaginate %}
+                {% endcomment %}
+
+                {%- for article in blog.articles reversed -%}
+                  {%- if is_first_article_featured and forloop.first -%}
+                    <div class="Grid__Cell hidden-phone">
+                      <div class="FlexboxIeFix">
+                        <div class="ImageHero ImageHero--small" style="background: url({{ article.image | img_url: '1x1', format: 'jpg' }})">
+                          <div class="ImageHero__ImageWrapper">
+                            <div class="ImageHero__Image Image--lazyLoad Image--zoomOut"
+                                 data-optimumx="1.4"
+                                 data-bgset="{{ article.image | img_url: '750w', crop: 'center' }} 750w, {{ article.image | img_url: '1000x' }} 1000w, {{ article.image | img_url: '1500x' }} 1500w">
+                            </div>
+                
+                            <noscript>
+                              <div class="ImageHero__Image" style="background-image: url({{ article.image | img_url: '1000x' }}) opacity: 0.5; background-color: #000000;"></div>
+                            </noscript>
+                          </div>
+                
+                          <div class="ImageHero__TextContent">
+                          
+                              {%- if section.settings.show_category and article.tags != empty -%}
+                                <span class="SectionHeader__SubHeading Heading u-h6">{{ article.tags.first }}</span>
+                              {%- endif -%}
+                
+                              <a class="blog-title" href="{{ blog.url }}">{{ blog.title | upcase }}</a>
+                    
+                              <h2 class="SectionHeader__Heading Heading u-h1">
+                                <a href="{{ article.url }}">{{ article.title }}</a>
+                              </h2>
+                    
+                              {% if article.excerpt_or_content != blank %}
+                                  <div class="article-content">
+                                    {{ article.excerpt_or_content | truncatewords : 70 }}
+                                  </div>
+                              {% endif %}
+                
+                              <div class="SectionHeader__ButtonWrapper">
+                                <a href="{{ article.url }}" class="ArticleItem__Link Link Link--underline">{{ 'blog.article.read_more' | t }}</a>
+                              </div>
+                           
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  {%- endif -%}
+                
+                  <div class="Grid__Cell {% if is_first_article_featured and forloop.first %}hidden-tablet-and-up{% else %}1/2--tablet 1/3--lap-and-up{% endif %}">
+                    {%- include 'article-item', article: article -%}
+                  </div>
+                {%- endfor -%}
+                
+              </div>
+            
+          </div>
+        
+
+  
+            {%- if blog.articles_count == 0 -%}
+              <div class="EmptyState">
+                <div class="Container {% if template == 'blog' %} p-0 {% endif %}">
+                  <h1 class="EmptyState__Title Heading u-h5">{{ 'blog.general.no_articles' | t: blog_title: blog.title }}</h1>
+                  <a href="/" class="EmptyState__Action Button Button--primary">{{ 'blog.general.empty_button' | t }}</a>
+                </div>
+              </div>
+            {%- else -%}
+              <div class="Blog">
+                <div class="Container {% if template contains 'blog' %} p-0 {% endif %}">
+                  <header class="PageHeader">
+                    <div class="SectionHeader SectionHeader--center">
+                      {% if section.settings.show_title %}
+                        <h1 class="SectionHeader__Heading Heading u-h1">
+                          <span>{{- blog.title -}}</span>
+                          {%- if section.settings.show_rss -%}
+                            <a href="{{ blog.url }}.atom" target="_blank" class="Blog__RssLink Link Link--secondary">{% include 'icon' with 'rss' %}</a>
+                          {%- endif -%}
+                        </h1>
+                      {% endif %}
+                      {%- if section.settings.show_tags and blog.all_tags.size > 0 -%}
+                        <ul class="Blog__TagList HorizontalList HorizontalList--spacingExtraLoose" style="display: none;">
+                          <li class="HorizontalList__Item">
+                            <a href="/blogs/{{ blog.handle }}" class="Heading Link Link--primary Text--subdued u-h8 {% if current_tags == blank %}is-active{% endif %}" style="color:rgba(0,0,0,0.5);">{{ 'blog.general.all_tag' | t }} tags:</a>
+                          </li>
+          
+                          {%- for tag in blog.all_tags -%}
+                            <li class="HorizontalList__Item">
+                              <a href="/blogs/{{ blog.handle }}/tagged/{{ tag | handle }}" class="Heading Link Link--primary Text--subdued u-h8 {% if current_tags contains tag %}is-active{% endif %}">{{ tag }}</a>
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      {%- endif -%}
+                    </div>
+                  </header>
+          
+                  {%- if section.settings.show_featured_article and current_tags == blank -%}
+                    {%- assign articles_per_page = 13 -%}
+                  {%- else -%}
+                    {%- assign articles_per_page = 12 -%}
+                  {%- endif -%}
+          
+                  {%- paginate blog.articles by articles_per_page -%}
+                    {% assign is_first_article_featured = false %}
+          
+                    {%- if section.settings.show_featured_article and current_tags == blank and blog.articles.first.image -%}
+                      {%- assign is_first_article_featured = true -%}
+                    {%- endif -%}
+          
+                    <div class="ArticleListWrapper" id="ArticleList">
+                      <div class="ArticleList {% if is_first_article_featured %}ArticleList--withFeatured{% endif %}">
+                        {%- for article in blog.articles -%}
+                          {%- if is_first_article_featured and forloop.first -%}
+                            {% continue %} 
+                          {%- endif -%}
+          
+                          <div class="Grid__Cell {% if is_first_article_featured and forloop.first %}hidden-tablet-and-up{% else %}1/2--tablet 1/3--lap-and-up{% endif %}">
+                            {%- include 'article-item', article: article -%}
+                          </div>
+                        {%- endfor -%}
+                      </div>
+                    
+                      {% if section.settings.sidebar %}
+                        <div class="sidebar_new sidebar-blog-template">
+                          <div class="content">
+                            <h1 class="full-underline u-h2">Blogs</h1>
+                            	<div>
+                                <ul class="Blog_Sidebar_BlogList">
+                                  <li class="BlogList" style="padding:0px 6px 0px 0px;"><a href="/blogs/articles/" class="Heading u-h7" style="color:#000;">•&nbsp;Articles</a></li>
+          	                    <li class="BlogList" style="padding:0px 6px 0px 0px;"><a href="/blogs/motivation/" class="Heading u-h7" style="color:#000;">• Motivation</a></li>
+              	                <li class="BlogList" style="padding:0px 6px 0px 0px;"><a href="/blogs/bigger-by-the-day/" class="Heading u-h7" style="color:#000;">• Bigger By The Day</a></li>
+                  	            <li class="BlogList" style="padding:0px 6px 0px 0px;"><a href="/blogs/rich-piana-uncensored/" class="Heading u-h7" style="color:#000;">• Rich Piana Uncensored</a></li>
+                  	            <li class="BlogList" style="padding:0px 6px 0px 0px;"><a href="/blogs/5-nutrition-products/" class="Heading u-h7" style="color:#000;">• Products</a></li>
+                                </ul>
+                              </div>
+          
+                              {%- if section.settings.show_tags and blog.all_tags.size > 0 -%}
+                            <h1 class="full-underline u-h2">Tags</h1>
+                                <ul class="Blog_Sidebar_TagList">
+                                  <li class="TagList">
+                                    <a href="/blogs/{{ blog.handle }}" class="Heading Link Link--primary Text--subdued u-h8 {% if current_tags == blank %}is-active{% endif %}">{{ 'blog.general.all_tag' | t }} tags</a>
+                                  </li>
+          
+                                  {%- for tag in blog.all_tags -%}
+                                    <li class="TagList">
+                                      <a href="/blogs/{{ blog.handle }}/tagged/{{ tag | handle }}" class="Heading Link Link--primary Text--subdued u-h8 {% if current_tags contains tag %}is-active{% endif %}">{{ tag }}</a>
+                                    </li>
+                                  {%- endfor -%}
+                                </ul>
+                              {%- endif -%}
+          
+                          </div>
+                      </div>
+                      {% endif %}
+                    </div>
+          
+                   {%- include 'pagination' -%}
+                  {%- endpaginate -%} 
+                </div>
+              </div>
+            {%- endif -%}
+</div>
+              
+</section>
+
+  <div
+     class="yotpo yotpo-pictures-widget {% if section.settings.show_yotpo %} yotpo-active {% else %} yotpo-hidden {% endif %}"
+     data-gallery-id="5e7d1d70e71d9a270fd75a15" style="margin-top: 5px; margin-bottom: 0px;">
+  </div>
+
+<style>
+  #section-{{ section.id }} .ImageHero,
+  #section-{{ section.id }} .ImageHero .Heading {
+    color: #ffffff;
+  }
+
+  #section-{{ section.id }} .ImageHero__TextContent {
+    bottom: auto;
+    top: auto;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  #section-{{ section.id }} .ImageHero__TextContent .SectionHeader {
+    margin-top:20%;
+  }
+
+
+  #section-{{ section.id }} .ImageHero .Button {
+    color: #1c1c1c;
+    border-color: #ffffff;
+  }
+
+  #section-{{ section.id }} .ImageHero .Button::before {
+    background-color: #ffffff;
+  }
+
+  {%- if settings.show_button_transition -%}
+    @media (-moz-touch-enabled: 0), (hover: hover) {
+      #section-{{ section.id }} .ImageHero .Button:hover {
+        color: #ffffff;
+      }
+    }
+  {%- endif -%}
+</style>
+
+{% schema %}
+{
+  "name": "Blog page",
+  "settings": [
+    {
+      "type" : "header",
+      "content" : "Section 1"
+    },
+    {
+      "type" : "text",
+      "id" : "blog_heading",
+      "label" : "Heading"
+    },
+    {
+      "type" : "link_list",
+      "id" : "blogmenu",
+      "label" : "Blog menu"
+    },
+     {
+      "type" : "checkbox",
+      "id" : "featured_first_image",
+      "label" : "Featured first image",
+      "default" : true
+    },
+    {
+      "type" : "checkbox",
+      "id" : "show_title",
+      "label" : "Show Title",
+      "default" : true
+    },
+    {
+      "type" : "checkbox",
+      "id" : "sidebar",
+      "label" : "Show Sidebar",
+      "default" : true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rss",
+      "label": "Show RSS",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tags",
+      "label": "Show filters",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_featured_article",
+      "label": "Show featured article",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_category",
+      "label": "Show article category",
+      "info": "The first article's tag is used as the main category.",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_yotpo",
+      "label": "Show Yotpo",
+      "default": false
+    }
+  ]
+}
+{% endschema %}

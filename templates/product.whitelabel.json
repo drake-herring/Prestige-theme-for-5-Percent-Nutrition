@@ -1,0 +1,272 @@
+{
+  "sections": {
+    "main": {
+      "type": "product-whitelabel",
+      "blocks": {
+        "e96709b7-8de5-415c-9bd0-cbc83e8dbc69": {
+          "type": "block",
+          "settings": {
+            "font_awesome_icon": "cgmp-logo",
+            "text": "<p>Products manufactured with Good Manufacturing Practice facilities in the United States<\/p>"
+          }
+        },
+        "c5cbcb60-e394-4709-ac80-19da850c1a75": {
+          "type": "block",
+          "settings": {
+            "font_awesome_icon": "stackable",
+            "text": "<p>We use only the highest quality ingredients in efficaciously dosed formulas<\/p>"
+          }
+        },
+        "49e6ba28-4cf6-4fc3-8858-9bbd857260d9": {
+          "type": "block",
+          "settings": {
+            "font_awesome_icon": "3rd-party-tested",
+            "text": "<p>We independently test each lot before releasing products to our customers<\/p>"
+          }
+        },
+        "82360e59-b907-4d01-8be7-ae5320809bbd": {
+          "type": "title",
+          "settings": {}
+        },
+        "317e3227-1ea9-489f-a539-a89037bb7f7e": {
+          "type": "description",
+          "settings": {
+            "short_desc": true
+          }
+        },
+        "a9678b41-e4c9-4b47-9ab2-08f4d8df4fe8": {
+          "type": "price",
+          "settings": {}
+        },
+        "d0dc0437-8e5f-435f-a8ed-9042708079a6": {
+          "type": "yotpo_stars",
+          "settings": {}
+        },
+        "41e3271d-f669-472a-a983-de68879ed96d": {
+          "type": "addtocart",
+          "settings": {}
+        },
+        "abb852a7-d977-49fc-ae29-ad46c5969cf9": {
+          "type": "chart",
+          "settings": {}
+        },
+        "84ffc7dc-f4a3-4ca4-9d0c-9fef6251ffcd": {
+          "type": "full_description",
+          "settings": {
+            "full_description_hide_mobile": false
+          }
+        },
+        "187c3bc3-3a39-4c37-9c87-70ddb42a4eac": {
+          "type": "benefits",
+          "settings": {
+            "benefits_hide_mobile": false
+          }
+        },
+        "9ffac7f7-5541-481b-9530-5704f739fa0d": {
+          "type": "fact",
+          "settings": {
+            "fact_hide_mobile": false
+          }
+        },
+        "3e1c1763-7f41-4f5d-a4c5-db6cf8fac71f": {
+          "type": "f_together",
+          "settings": {
+            "f_together_hide_mobile": false
+          }
+        },
+        "e7e49183-14f6-418f-a72c-902942a07f90": {
+          "type": "delivery_options",
+          "settings": {
+            "delivery_options_hide_mobile": false
+          }
+        },
+        "9f9184a2-1d78-40f6-ab6b-d5add0290a89": {
+          "type": "yotpo",
+          "settings": {
+            "review_hide_mobile": false
+          }
+        },
+        "afab19cf-d6d8-4131-b279-d1bd3a1ae4f8": {
+          "type": "percent-nation",
+          "settings": {
+            "percent_nation_hide_mobile": false
+          }
+        },
+        "99556a86-b32f-48e4-bb68-4efff451112b": {
+          "type": "faq",
+          "settings": {
+            "faq_hide_mobile": false
+          }
+        },
+        "46a9c79c-c987-422a-904a-0daf2d1bd6e0": {
+          "type": "product_reference",
+          "settings": {
+            "product_reference_hide_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "e96709b7-8de5-415c-9bd0-cbc83e8dbc69",
+        "c5cbcb60-e394-4709-ac80-19da850c1a75",
+        "49e6ba28-4cf6-4fc3-8858-9bbd857260d9",
+        "82360e59-b907-4d01-8be7-ae5320809bbd",
+        "317e3227-1ea9-489f-a539-a89037bb7f7e",
+        "a9678b41-e4c9-4b47-9ab2-08f4d8df4fe8",
+        "d0dc0437-8e5f-435f-a8ed-9042708079a6",
+        "41e3271d-f669-472a-a983-de68879ed96d",
+        "abb852a7-d977-49fc-ae29-ad46c5969cf9",
+        "84ffc7dc-f4a3-4ca4-9d0c-9fef6251ffcd",
+        "187c3bc3-3a39-4c37-9c87-70ddb42a4eac",
+        "9ffac7f7-5541-481b-9530-5704f739fa0d",
+        "3e1c1763-7f41-4f5d-a4c5-db6cf8fac71f",
+        "e7e49183-14f6-418f-a72c-902942a07f90",
+        "9f9184a2-1d78-40f6-ab6b-d5add0290a89",
+        "afab19cf-d6d8-4131-b279-d1bd3a1ae4f8",
+        "99556a86-b32f-48e4-bb68-4efff451112b",
+        "46a9c79c-c987-422a-904a-0daf2d1bd6e0"
+      ],
+      "settings": {
+        "light-mode-background-image": "{{ product.metafields.custom.light_mode_background_image.value }}",
+        "light-mode-background-color": "#ffffff",
+        "light-mode-heading-color": "{{ product.metafields.custom.additional_information_color.value }}",
+        "light-mode-text-color": "{{ product.metafields.custom.lightmode_default_font_color_.value }}",
+        "review_type": "slider",
+        "show_quantity_selector": true,
+        "show_inventory_quantity": false,
+        "inventory_quantity_threshold": 0,
+        "show_price_in_button": false,
+        "show_payment_button": false,
+        "show_section": false,
+        "title": "Related Products",
+        "show_product_info": false,
+        "show-sezzle-widget": true,
+        "color": "inherit",
+        "font-size": 14,
+        "font-family": "inherit",
+        "product-page-alignment": "auto",
+        "cart-page-alignment": "auto"
+      }
+    },
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "settings": {}
+    },
+    "shogun-above": {
+      "type": "shogun-above",
+      "settings": {}
+    },
+    "bar-section": {
+      "type": "bar-section",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_color": "#ffffff",
+        "background": "radial-gradient(rgba(72, 72, 72, 1), rgba(0, 0, 0, 1) 100%)",
+        "color": "#ffffff"
+      }
+    },
+    "a5b05fb5-76d1-4f63-89b5-fce237fd9a20": {
+      "type": "custom-html",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "html": "<div class=\"container frequently_bought_together_app\"><\/div>"
+      }
+    },
+    "668cce3b-f9a9-4d1f-b248-3f49cc083b05": {
+      "type": "product-navigation",
+      "blocks": {
+        "a6460229-1079-4e50-8350-20a47ab18056": {
+          "type": "tab",
+          "settings": {
+            "hide_mobile": false,
+            "title": "Description",
+            "tab_url": "#descriptionSection",
+            "content_position": "product_description"
+          }
+        },
+        "dd22fe71-a832-45b3-8a10-fb6464a6f8ac": {
+          "type": "review",
+          "settings": {
+            "title": "Reviews",
+            "review_type": "list",
+            "tab_url": "#reviewSection",
+            "content_position": "reviews_homepage"
+          }
+        },
+        "e2a89ac5-7c59-4f2b-be87-6cfa5d3ff194": {
+          "type": "tab",
+          "settings": {
+            "hide_mobile": false,
+            "title": "Benefits",
+            "tab_url": "#benefits-section",
+            "content_position": "product-benefits"
+          }
+        },
+        "da889e21-4ad3-4bc1-ac64-bbecedaf0e1b": {
+          "type": "tab",
+          "settings": {
+            "hide_mobile": false,
+            "title": "",
+            "tab_url": "#vimeo-iframe",
+            "content_position": "vimeo-iframe"
+          }
+        },
+        "0da5761e-720f-4152-a3b7-15795fa14cd3": {
+          "type": "tab",
+          "settings": {
+            "hide_mobile": false,
+            "title": "Supplement Facts",
+            "tab_url": "#supplementFactsSection",
+            "content_position": "supplements"
+          }
+        },
+        "a1e85fe2-1bd6-43f6-9a5e-f98b766ae7b1": {
+          "type": "tab",
+          "settings": {
+            "hide_mobile": false,
+            "title": "",
+            "tab_url": "#5NationSection",
+            "content_position": "5percent-nation"
+          }
+        },
+        "df99a8f9-a033-4b63-83b2-694e76c4ec16": {
+          "type": "tab",
+          "settings": {
+            "hide_mobile": false,
+            "title": "FAQs",
+            "tab_url": "#faqSection",
+            "content_position": "product-faq"
+          }
+        }
+      },
+      "block_order": [
+        "a6460229-1079-4e50-8350-20a47ab18056",
+        "dd22fe71-a832-45b3-8a10-fb6464a6f8ac",
+        "e2a89ac5-7c59-4f2b-be87-6cfa5d3ff194",
+        "da889e21-4ad3-4bc1-ac64-bbecedaf0e1b",
+        "0da5761e-720f-4152-a3b7-15795fa14cd3",
+        "a1e85fe2-1bd6-43f6-9a5e-f98b766ae7b1",
+        "df99a8f9-a033-4b63-83b2-694e76c4ec16"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_addtocart": true
+      }
+    },
+    "shogun-below": {
+      "type": "shogun-below",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "shogun-helper",
+    "shogun-above",
+    "bar-section",
+    "a5b05fb5-76d1-4f63-89b5-fce237fd9a20",
+    "668cce3b-f9a9-4d1f-b248-3f49cc083b05",
+    "shogun-below"
+  ]
+}

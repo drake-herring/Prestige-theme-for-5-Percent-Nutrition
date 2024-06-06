@@ -1,0 +1,17 @@
+{% unless product.metafields.meta.references == blank %}
+<section id="shopify-section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="shopify-section">
+<div class="references-section">
+    <div class="container">
+        <h4 class="references-heading references_font_header" style="margin-bottom: 2px;">References</h4>
+        <div class="references_font">{{ product.metafields.meta.references }}</div>
+      	<h4 class="references-heading references_font_sub_header" style="margin-bottom: 2px;">Product Warnings</h4>
+          {% if product.tag contains 'supplement' or product.type == 'Supplements' %}
+ 			<div class="references_font">
+				{{ product.metafields.product_compliance.adults_only.value }}<br>{{ product.metafields.product_compliance.fda_disclaimer.value }}
+      		</div>
+      	{% endif %}
+        <div class="references_font_p65warning"><i class="fas fa-exclamation-triangle"></i>&nbsp;WARNING: Consuming this product can expose you to chemicals including lead, which is known to the State of California to cause cancer, birth defects or other reproductive harm. For more information go to <a target="_blank" href="https://www.P65Warnings.ca.gov/food" >www.P65Warnings.ca.gov/food</a>.</div>
+    </div>
+</div>
+</section>
+{% endunless %}

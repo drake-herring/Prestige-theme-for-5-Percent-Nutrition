@@ -1,0 +1,58 @@
+{% if product.metafields.custom.product_benefit_title %}
+  <section class="benefits-section js-benefits-section hiden-mobile-core">
+    <div class="container"> 
+      <div class="benefits-content-container">
+  
+        <!-- For Mobile ccc -->
+        <div class="benefits-mob">
+            <ul class="loop group benefits-content owl-carousel">
+              {% for i in (1..10) %}
+              {% assign icon = 'benefits_icon_' | append: i %}
+              {% assign color = 'benefits_icon_color_' | append: i %}
+              {% assign title = 'benefits_title_' | append: i %}
+              {% assign content = 'benefits_content_' | append: i %}
+          
+              {% if product.metafields.custom[icon] or product.metafields.custom[title] or product.metafields.custom[content] %}
+                <li>
+                  <div class="benefits-content__image"><span style="color: {{ product.metafields.custom[color] | default: '#fff' }};"><i class="fak fa-{{ product.metafields.custom[icon] }} fa-10x"></i></span></div>
+                  {% if product.metafields.custom[title] %}
+                    <h3 class="benefits-content__heading">{{ product.metafields.custom[title] }}</h3>
+                  {% endif %}
+                  {% if product.metafields.custom[content] %}
+                    <p class="benefits-content__desc">{{ product.metafields.custom[content] }}</p>
+                  {% endif %}
+                </li>
+              {% endif %}
+            {% endfor %}
+            </ul>
+        </div>
+
+        <!-- For Desktop -->
+        <div class="benefits-desk">
+      <ul class="desk-loop benefits-list owl-carousel">
+      {% for i in (1..10) %}
+        {% assign icon = 'benefits_icon_' | append: i %}
+        {% assign color = 'benefits_icon_color_' | append: i %}
+        {% assign title = 'benefits_title_' | append: i %}
+        {% assign content = 'benefits_content_' | append: i %}
+    
+        {% if product.metafields.custom[icon] or product.metafields.custom[title] or product.metafields.custom[content] %}
+          <li>
+            <div class="benefits-content__image"><span style="color: {{ product.metafields.custom[color] | default: '#fff' }};"><i class="fak fa-{{ product.metafields.custom[icon] }} fa-10x"></i></span></div>
+            {% if product.metafields.custom[title] %}
+              <h3 class="benefits-content__heading">{{ product.metafields.custom[title] }}</h3>
+            {% endif %}
+            {% if product.metafields.custom[content] %}
+              <p class="benefits-content__desc">{{ product.metafields.custom[content] }}</p>
+            {% endif %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+      
+    </div>
+        
+      </div>
+    </div>
+  </section>
+{% endif %}

@@ -1,0 +1,154 @@
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "disabled": true,
+      "settings": {}
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "16621190493361eda3": {
+      "type": "main-banner-section",
+      "settings": {
+        "banner_image": "shopify:\/\/shop_images\/Banner_blog.jpg",
+        "apply_overlay": false
+      }
+    },
+    "1662457411acdefa39": {
+      "type": "The_blog",
+      "blocks": {
+        "dce045b0-d9a2-427e-9bcb-b432024ad8f0": {
+          "type": "text",
+          "settings": {
+            "btn_url": "shopify:\/\/blogs\/articles",
+            "the-blog-title": "Articles"
+          }
+        },
+        "7cb14142-6b67-4ab7-a1b9-4164b966c417": {
+          "type": "text",
+          "settings": {
+            "btn_url": "shopify:\/\/blogs\/motivation",
+            "the-blog-title": "Motivation"
+          }
+        },
+        "584d602b-730f-4328-8b2c-d134fb965ff3": {
+          "type": "text",
+          "settings": {
+            "btn_url": "shopify:\/\/blogs\/bigger-by-the-day",
+            "the-blog-title": "Bigger By the Day"
+          }
+        },
+        "99006935-a8ee-42cf-8e08-9322523c0253": {
+          "type": "text",
+          "settings": {
+            "btn_url": "shopify:\/\/blogs\/rich-piana-uncensored",
+            "the-blog-title": "Uncensored"
+          }
+        },
+        "512bc194-7186-4322-a42b-71f4ae5c2384": {
+          "type": "text",
+          "settings": {
+            "btn_url": "shopify:\/\/blogs\/product-breakdowns",
+            "the-blog-title": "Product Breakdowns"
+          }
+        }
+      },
+      "block_order": [
+        "dce045b0-d9a2-427e-9bcb-b432024ad8f0",
+        "7cb14142-6b67-4ab7-a1b9-4164b966c417",
+        "584d602b-730f-4328-8b2c-d134fb965ff3",
+        "99006935-a8ee-42cf-8e08-9322523c0253",
+        "512bc194-7186-4322-a42b-71f4ae5c2384"
+      ],
+      "settings": {
+        "blog-content": "<p>Fresh content from Rich Piana, Team 5% athletes, product breakdowns, motivational content and more! If you're searching for the reason people love the 5% brand, you've come to the right place!<\/p>",
+        "blog-main-title": "<p>The Blogs<\/p>"
+      }
+    },
+    "1662117300f5f8477f": {
+      "type": "blog-custom-blog-post",
+      "blocks": {
+        "384a6d4f-9f7e-4b9a-b48e-d580aad7c2d2": {
+          "type": "blog",
+          "settings": {
+            "heading": "",
+            "blog": "articles",
+            "svg_icon_name": "<span style=\"color: #AE1F24;\"><i class=\"fak fa-fast fa-10x\"><\/i><\/span>"
+          }
+        },
+        "3867d564-c6d0-48fd-8848-eba073784508": {
+          "type": "blog",
+          "settings": {
+            "heading": "",
+            "blog": "motivation",
+            "svg_icon_name": "<span style=\"color: #AE1F24;\"><i class=\"fak fa-training fa-10x\"><\/i><\/span>"
+          }
+        },
+        "6ecdf0af-fdaa-429b-a573-5ef29fd06f78": {
+          "type": "blog",
+          "settings": {
+            "heading": "PRODUCT BREAKDOWNS",
+            "blog": "product-breakdowns",
+            "svg_icon_name": "<span style=\"color: #AE1F24;\"><i class=\"fak fa-stackable fa-10x\"><\/i><\/span>"
+          }
+        },
+        "405d280b-dc77-4d83-b634-e502caec3014": {
+          "type": "blog",
+          "settings": {
+            "heading": "",
+            "blog": "bigger-by-the-day",
+            "svg_icon_name": "<span style=\"color: #AE1F24;\"><i class=\"fak fa-vascularity fa-10x\"><\/i><\/span>"
+          }
+        }
+      },
+      "block_order": [
+        "384a6d4f-9f7e-4b9a-b48e-d580aad7c2d2",
+        "3867d564-c6d0-48fd-8848-eba073784508",
+        "6ecdf0af-fdaa-429b-a573-5ef29fd06f78",
+        "405d280b-dc77-4d83-b634-e502caec3014"
+      ],
+      "settings": {
+        "content": "",
+        "hide_excerpt": false,
+        "show_category": true
+      }
+    },
+    "16621218921fcaa6df": {
+      "type": "Featured-blog",
+      "settings": {
+        "blog_image": "shopify:\/\/shop_images\/Uncensored_2.png",
+        "mobile_image": "shopify:\/\/shop_images\/Uncensored_2.png",
+        "blog": "rich-piana-uncensored",
+        "blog_content": "<p>Rich's videos have been flagged, banned, and censored on nearly every media platform. now, see them all completely uncensored!<\/p>",
+        "btn_text": "VIEW ALL",
+        "apply_overlay": true,
+        "content_position": "bottomRight"
+      }
+    },
+    "1663248157052e8e40": {
+      "type": "newsletter-sitewide",
+      "settings": {
+        "enable_bar": true,
+        "section_size": "small",
+        "text_color": "#ffffff",
+        "button_color": "#000000",
+        "subheading": "",
+        "title": "NEW ARTICLES TO YOUR INBOX!",
+        "content": "",
+        "graphic_aligment": "black"
+      }
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "main",
+    "16621190493361eda3",
+    "1662457411acdefa39",
+    "1662117300f5f8477f",
+    "16621218921fcaa6df",
+    "1663248157052e8e40"
+  ]
+}

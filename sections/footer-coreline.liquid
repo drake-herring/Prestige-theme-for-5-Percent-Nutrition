@@ -1,0 +1,67 @@
+<section class="Coreline-Footer-Mobile" style="background: {{ section.settings.background }};">
+    <div class="Container" style="padding-bottom:20px;">
+    {%- for block in section.blocks -%}
+    {%- assign linklist = linklists[block.settings.menu] -%}
+    {%- if linklist != empty -%}
+    <div class="Collapsible Collapsible--large">
+      <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible" aria-expanded="false">
+        <p class="Button-title" 
+        style="color: {{ section.settings.text_color }}"
+        style="color: {{ section.settings.text_color }};">{{- linklist.title 
+          -}}</p> <span class="Collapsible__Plus"></span>
+      </button>
+      
+      <div class="Collapsible__Inner">
+        <div class="Collapsible__Content" style="background: {{ section.settings.background }}; padding-top:0px;">
+        {%- for link in linklist.links -%}
+            {%- comment %}<locksmith:632c>{% endcomment -%}
+              {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklist, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
+            {%- comment %}</locksmith:632c>{% endcomment -%}
+            <a href="{{ link.url }}" style="color: {{ section.settings.text_color }}">
+            <i class="fa-solid fa-square-chevron-right" style="font-size:0.6em; margin:0 4px 2px 0;"></i> {{ link.title }}
+            </a>
+        {%- endfor -%}
+        </div>
+      </div>
+    </div>
+
+    {% endif %}
+    {%- endfor -%}
+</div> 
+</section>
+
+
+{% schema %}
+{
+"name": "Mobile Footer",
+"class": "shopify-section--footer",
+"settings": [
+{
+    "type": "color",
+    "id": "background",
+    "label": "Background",
+    "default": "#000000"
+},
+{
+    "type": "color",
+    "id": "text_color",
+    "label": "Text color",
+    "default": "#ffffff"
+}
+],
+"blocks": [
+    {
+    "type": "links",
+    "name": "Links",
+    "settings": [
+        {
+        "type": "link_list",
+        "id": "menu",
+        "label": "Menu",
+        "info": "This menu won't show dropdown items."
+        }
+    ]
+    }
+]
+}
+{% endschema %}

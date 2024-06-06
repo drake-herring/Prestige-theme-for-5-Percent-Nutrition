@@ -1,0 +1,50 @@
+{
+  "sections": {
+    "page-rich-text-image": {
+      "type": "page-rich-text-image",
+      "settings": {
+        "subheading": "",
+        "title": "John Harris",
+        "image": "shopify:\/\/shop_images\/John_Harris_61f36daa-b950-4ac4-a938-3f2a2c7cc22f.png",
+        "image_position": "left",
+        "content": "",
+        "height": "5' 8\"",
+        "weight": "245 lbs",
+        "DOB": "",
+        "residence": "Cleves, Ohio",
+        "facebook_url": "https:\/\/www.facebook.com\/john.harris.710667",
+        "instagram_url": "https:\/\/www.instagram.com\/accounts\/login\/?next=\/johnnyjuice1\/",
+        "youtube_url": "",
+        "pinterest_url": "",
+        "snapchat_url": "",
+        "twitter_url": "",
+        "tumblr_url": "",
+        "google_plus_url": "",
+        "vimeo_url": "",
+        "linkedin_url": ""
+      }
+    },
+    "main": {
+      "type": "John_Harris",
+      "settings": {
+        "title1": "EXPERIENCE",
+        "title2": "INSTAGRAM"
+      }
+    },
+    "page-featured-video": {
+      "type": "page-featured-video",
+      "settings": {
+        "section_size": "large",
+        "text_color": "#ffffff",
+        "subheading": "",
+        "title": "Your video",
+        "video_url": ""
+      }
+    }
+  },
+  "order": [
+    "page-rich-text-image",
+    "main",
+    "page-featured-video"
+  ]
+}

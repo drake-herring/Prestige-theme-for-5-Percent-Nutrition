@@ -1,0 +1,47 @@
+{
+  "sections": {
+    "page-rich-text-image": {
+      "type": "page-rich-text-image",
+      "settings": {
+        "subheading": "",
+        "title": "Neal Kirby",
+        "image": "shopify:\/\/shop_images\/NealKirby_Bio-WEB_beb46616-d94f-4465-a8e0-241277297c3a.png",
+        "image_position": "left",
+        "content": "",
+        "height": "6'",
+        "weight": "240 lbs",
+        "DOB": "June 14, 1988",
+        "residence": "Raton, New Mexico, USA",
+        "facebook_url": "https:\/\/www.facebook.com\/neal.kirby21",
+        "instagram_url": "https:\/\/www.instagram.com\/accounts\/login\/?next=\/nealkirby21\/",
+        "youtube_url": "https:\/\/www.youtube.com\/channel\/UCzBW1LBkfv3ZZ9-4TeqDS7Q",
+        "pinterest_url": "",
+        "snapchat_url": "",
+        "twitter_url": "",
+        "tumblr_url": "",
+        "google_plus_url": "",
+        "vimeo_url": "",
+        "linkedin_url": ""
+      }
+    },
+    "main": {
+      "type": "Athlete21",
+      "settings": {}
+    },
+    "page-featured-video": {
+      "type": "page-featured-video",
+      "settings": {
+        "section_size": "large",
+        "text_color": "#ffffff",
+        "subheading": "",
+        "title": "Your video",
+        "video_url": ""
+      }
+    }
+  },
+  "order": [
+    "page-rich-text-image",
+    "main",
+    "page-featured-video"
+  ]
+}

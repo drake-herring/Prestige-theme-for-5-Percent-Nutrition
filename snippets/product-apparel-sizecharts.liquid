@@ -1,0 +1,10 @@
+{%- if product.type = 'Apparel' -%}
+  {%- capture product.metafields.apparel_sizechart.file.value -%}{%- endcapture -%}
+{%- endif -%}
+
+{%- if product.metafields.apparel_sizechart.file.value != blank -%}
+  {%- assign product.metafields.apparel_sizechart.file.value = filter_value | file_img_url -%}
+  
+  <a class="image-popup-vertical-fit sizechart_button" href="{{ product.metafields.apparel_sizechart.file.value | file_img_url }}"><i class="far fa-file-image"></i> Size Chart</a>
+  
+{%- endif -%}

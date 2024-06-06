@@ -1,0 +1,26 @@
+<div class="accordion">
+  {% for i in (1..10) %}
+    {% assign icon = 'accordion_icon_' | append: i %}
+    {% assign heading = 'accordion_heading_' | append: i %}
+    {% assign text = 'accordion_text_' | append: i %}
+    {% if product.metafields.custom[heading] and product.metafields.custom[text] and product.metafields.custom[icon] %}
+      <div class="accordion-item">
+        <div class="accordion-title">
+          <div class="accordion-icon">
+            <i class="fak fa-{{ product.metafields.custom[icon] }} fa-2x"></i>
+          </div>
+          <h3>{{ product.metafields.custom[heading] }}</h3>
+          <div class="accordion-toggle">
+            <span class="accordion-icon-plus">+</span>
+            <span class="accordion-icon-minus">-</span>
+          </div>
+        </div>
+          
+        <div class="accordion-content">
+          <p>{{ product.metafields.custom[text] }}</p>
+        </div>
+
+      </div> 
+    {% endif %}
+  {% endfor %}
+</div>

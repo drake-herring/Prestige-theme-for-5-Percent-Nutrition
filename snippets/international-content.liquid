@@ -1,0 +1,25 @@
+  const usa = document.getElementsByClassName("usa-msg");
+  const can = document.getElementsByClassName("can-msg");
+  const eur = document.getElementsByClassName("eur-msg");
+  $(document).ready(function() {
+    if (window.location.href.indexOf(".com") > -1) {
+	usa[0].style.display = "block";
+	can[0].style.display = "none";
+	eur[0].style.display = "none";
+    }
+    else if (window.location.href.indexOf(".ca") > -1) {
+	usa[0].style.display = "none";
+	can[0].style.display = "block";
+	eur[0].style.display = "none";
+  }
+    else if (window.location.href.indexOf(".eu") > -1) {
+	usa[0].style.display = "none";
+	can[0].style.display = "none";
+	eur[0].style.display = "block";
+  }
+    else if (window.location.href.indexOf(".uk") > -1) {
+	usa[0].style.display = "none";
+	can[0].style.display = "none";
+	eur[0].style.display = "block";
+  }
+  });

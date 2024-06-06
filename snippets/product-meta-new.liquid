@@ -1,0 +1,137 @@
+<div class="ProductMeta">
+  {% comment %} {%- if section.settings.show_vendor and product.vendor != blank -%}
+    <h2 class="ProductMeta__Vendor Heading u-h6">
+      {%- assign vendor_handle = product.vendor | handle -%}
+      {%- assign collection_for_vendor = collections[vendor_handle] -%}
+
+      {%- unless collection_for_vendor.empty? -%}
+        <a href="{{ collection_for_vendor.url }}">{{ product.vendor }}</a>
+      {%- else -%}
+        {{- product.vendor -}}
+      {%- endunless -%}
+    </h2>
+  {%- endif -%} {% endcomment %}
+  {% for block in blocks %}
+    {% case block.type %}
+      {% when 'title' %}
+        <div class="heading-wrapper js-heading-wrapper">
+          <h1 class="ProductMeta__Title product-page-title full-underline full-underline--productPageTile Heading u-h2 js-product-heading checking">
+            {%- if template.name == 'product' -%}
+              {{- product.title -}}
+            {%- else -%}
+              <a href="{{ product.url }}">{{ product.title }}</a>
+            {%- endif -%}
+          </h1>
+        </div>
+      {% when 'description' %}
+        {% if block.settings.short_desc %}
+          {% unless product.metafields.meta.short_description == blank %}
+            <div class="short-description-container">
+                {{ product.metafields.meta.short_description }}
+            </div>
+          {% endunless %}
+        {% endif %}
+      {% when 'chart' %}
+        <div class="chart">
+          <div class="graph-chart">
+            {% unless product.metafields.graph_chart.energy == blank %}
+              {% assign metafield_item = product.metafields.graph_chart.energy %}
+              {% for item in metafield_item %}
+                {% assign item_parts = item | split: ':' %}
+                
+                  <div class="bar-chart">
+                    <p class="chart-heading">{{ item_parts[0] }}</p> 
+                    <div class="chart-bar">
+                      <div class="bar" style="width: {{ item_parts[1] }}%;"></div>
+                    </div>
+                  </div>
+              {% endfor %}
+            {% endunless %}
+          </div>
+        
+        <div class="graph-chart">
+          {% unless product.metafields.graph_chart.pump == blank %}
+            {% assign metafield_item = product.metafields.graph_chart.pump %}
+            {% for item in metafield_item %}
+              {% assign item_parts = item | split: ':' %}
+              
+                <div class="bar-chart">
+                  <p class="chart-heading">{{ item_parts[0] }}</p> 
+                  <div class="chart-bar">
+                    <div class="bar" style="width: {{ item_parts[1] }}%;"></div>
+                  </div>
+                </div>
+            {% endfor %}
+          {% endunless %}
+        </div>
+        
+        <div class="graph-chart">
+          {% unless product.metafields.graph_chart.focus == blank %}
+            {% assign metafield_item = product.metafields.graph_chart.focus %}
+            {% for item in metafield_item %}
+              {% assign item_parts = item | split: ':' %}
+              
+              <div class="bar-chart">
+                <p class="chart-heading">{{ item_parts[0] }}</p> 
+                <div class="chart-bar">
+                  <div class="bar" style="width: {{ item_parts[1] }}%;"></div>
+                </div>
+              </div>
+            {% endfor %}
+          {% endunless %}
+        </div>
+        
+        <div class="graph-chart">
+          {% unless product.metafields.graph_chart.strenght == blank %}
+            {% assign metafield_item = product.metafields.graph_chart.strenght %}
+            {% for item in metafield_item %}
+              {% assign item_parts = item | split: ':' %}
+              
+              <div class="bar-chart">
+                <p class="chart-heading">{{ item_parts[0] }}</p> 
+                <div class="chart-bar">
+                  <div class="bar" style="width: {{ item_parts[1] }}%;"></div>
+                </div>
+              </div>
+            {% endfor %}
+          {% endunless %}
+        </div>
+        
+        </div>
+        
+        <!-- New Code -->
+        
+        <div class="chart">
+          <div class="graph-chart">
+          
+          {% for i in (1..10) %}
+            {% assign title = 'bar_' | append: i | append: '_title' %}
+            {% assign value = 'bar_' | append: i | append: '_value' %}
+            
+            {% if product.metafields.custom[title] and product.metafields.custom[value] %}
+              <div class="bar-chart">
+                <p class="chart-heading">{{ product.metafields.custom[title] }}</p> 
+                <div class="chart-bar">
+                  <div class="bar" style="width: {{ product.metafields.custom[value] }}%; background-color: {{ product.metafields.custom.progress_bar_color_1.value[0] }};"></div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+          
+          </div>
+        </div>
+    {% endcase %}
+  {% endfor %}
+  
+  
+
+
+  
+
+
+
+
+
+
+  
+</div>

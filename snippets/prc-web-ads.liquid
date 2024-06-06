@@ -1,0 +1,45 @@
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+
+    googletag.pubads().collapseEmptyDivs();
+
+    var squareSlot = googletag.defineSlot('/22699319405/5_percent_blog/5_percent_blog_unit', [[250, 250], [200, 200]], 'div-gpt-ad-1647624527868-0').addService(googletag.pubads());
+    
+    var bannerAdSlot = googletag.defineSlot('/22699319405/5_percent_blog_leaderboard', [[728, 90], [320, 50], [468, 60]], 'div-gpt-ad-1648065204360-0').addService(googletag.pubads());
+
+    var square_mapping =
+      googletag.sizeMapping()
+             .addSize([1200, 768], [[250, 250]])
+             .addSize([0, 0], [[200, 200]])
+             .build();      
+
+    var banner_mapping =
+      googletag.sizeMapping()
+             .addSize([1300, 768], [[728, 90]])
+             .addSize([600, 768], [[468, 60]])
+             .addSize([0, 0], [320, 50])
+             .build(); 
+            
+    bannerAdSlot.defineSizeMapping(banner_mapping);   
+    
+    squareSlot.defineSizeMapping(square_mapping);    
+     
+    googletag.pubads().enableSingleRequest();
+
+    googletag.enableServices();
+    
+    googletag.pubads().setTargeting('article_product', '{{ article.metafields.meta.article_ads }}');
+  
+  });
+
+    prcResizeAds = function(){
+        googletag.cmd.push(function() {
+            googletag.pubads().refresh();
+        }); 
+    }    
+
+    window.addEventListener('resize', prcResizeAds);   
+
+</script>

@@ -1,0 +1,23 @@
+<a name="reviewSection"></a>
+<section id="reviewSection" class="review-section js-review-section">
+  <div class="container">
+    <div class="product-h2 t-center">
+      <h2 class="full-underline full-underline--fivenation">CUSTOMER REVIEWS</h2>
+  
+{% if section.settings.review_type == 'list' %}
+    <div class="yotpo-widget-instance" data-yotpo-instance-id="529786" data-yotpo-product-id="{{product.id}}" data-yotpo-cart-product-id="{{item.product.id}}"></div>
+{% endif %}
+
+{% if section.settings.review_type == 'slider' %}
+      <!--div class="yotpo yotpo-reviews-carousel"  data-background-color="transparent"  data-mode="top_rated"  data-type="per_product"  data-count="6"  data-show-bottomline="1"  data-autoplay-enabled="1"  data-autoplay-speed="3000"  data-show-navigation="1" data-product-id="{{ product.id }}">&nbsp;</div-->
+      <!--Widget3.0--><div class="yotpo-widget-instance" data-yotpo-instance-id="498668" data-yotpo-product-id="{{product.id}}" data-yotpo-name="{{ product.title | escape }}" data-yotpo-url="{{ shop.url }}{{ product.url }}" data-yotpo-image-url="{{ product.featured_image | product_img_url: "large" | prepend: "https:" | replace: '?', '%3F' | replace: '&','%26'}}" data-yotpo-price="{{ product.price | divided_by: 100.00 }}" data-yotpo-currency="{{ shop.currency }}" data-yotpo-description="{{ product.description | escape }}"></div>
+      <!--script type="text/javascript">(function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/Z9jfTDCkDiMPGstYrUBX1MB2QyT6vNrJ6LAqLsDN/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})(); </script-->
+{% endif %}
+{% if section.settings.review_type == blank %}
+    <div class="yotpo-widget-instance" data-yotpo-instance-id="498668" data-yotpo-product-id="{{product.id}}" data-yotpo-name="{{ product.title | escape }}" data-yotpo-url="{{ shop.url }}{{ product.url }}" data-yotpo-image-url="{{ product.featured_image | product_img_url: "large" | prepend: "https:" | replace: '?', '%3F' | replace: '&','%26'}}" data-yotpo-price="{{ product.price | divided_by: 100.00 }}" data-yotpo-currency="{{ shop.currency }}" data-yotpo-description="{{ product.description | escape }}"></div>
+{% endif %}
+      
+  </div>
+</div>
+</section>
+

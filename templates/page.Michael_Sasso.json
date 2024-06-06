@@ -1,0 +1,50 @@
+{
+  "sections": {
+    "page-rich-text-image": {
+      "type": "page-rich-text-image",
+      "settings": {
+        "subheading": "",
+        "title": "Chris \"Kable\" Martinez",
+        "image": "shopify:\/\/shop_images\/Kable_Web_Bio_c1c20190-33d7-477f-be93-baa767b06eda.png",
+        "image_position": "left",
+        "content": "<p>• U.S. Army Veteran<br\/>• 19 Year Police Veteran<br\/>• SWAT Team Member<\/p><p>• Personal Trainer<br\/>• NPC Mens Physique & GBO Beach Body Competitor<\/p>",
+        "height": "6' 0\"",
+        "weight": "215 lbs",
+        "DOB": "June 8, 1976",
+        "residence": "Cutler Bay, Florida",
+        "facebook_url": "",
+        "instagram_url": "https:\/\/www.instagram.com\/accounts\/login\/?next=\/kable_official\/",
+        "youtube_url": "",
+        "pinterest_url": "",
+        "snapchat_url": "",
+        "twitter_url": "",
+        "tumblr_url": "",
+        "google_plus_url": "",
+        "vimeo_url": "",
+        "linkedin_url": ""
+      }
+    },
+    "main": {
+      "type": "Michael_Sasso",
+      "settings": {
+        "title1": "EXPERIENCE",
+        "title2": "INSTAGRAM"
+      }
+    },
+    "page-featured-video": {
+      "type": "page-featured-video",
+      "settings": {
+        "section_size": "large",
+        "text_color": "#ffffff",
+        "subheading": "",
+        "title": "Your video",
+        "video_url": ""
+      }
+    }
+  },
+  "order": [
+    "page-rich-text-image",
+    "main",
+    "page-featured-video"
+  ]
+}

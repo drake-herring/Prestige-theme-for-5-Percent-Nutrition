@@ -1,0 +1,527 @@
+{%- if section.settings.enable_bar -%}
+  {%- unless section.settings.home_page_only and template != 'index' -%}
+    <section id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="announcement-bar">
+      {% for block in section.blocks %}
+      {% case block.type %}
+      {% when 'global_announcement' %}
+      <div class="global-show AnnouncementBar container container--lg" style="display:none;">
+        <div class="AnnouncementBar__Wrapper">
+          <p class="AnnouncementBar__Content Heading">
+            {%- if block.settings.link -%}
+              <a class="announcement-bold" href="{{ block.settings.link }}">{{ block.settings.content | escape }}</a>
+            {%- else -%}
+              {{ block.settings.content | escape }}
+            {%- endif -%}
+          </p>
+        </div>
+      <div class="AnnouncementBar__Wrapper">
+          <ul class="announcementbar-list">
+            <li class="link-accessibility">
+                <a id="accessibilityEnablerCustomTrigger" href="{{ block.settings.menu_link1 }}" class="Heading Link Text--subdued u-h8">
+                    <span>{{ block.settings.menu_1 }}</span>
+                    <!--img style="width:12px; height: 12px;vertical-align: middle; margin-right: 5px;" src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/accessibility-svg-icon-3.png" alt="accessibility"/-->
+                </a>
+            </li>
+            <li class="rewards">
+                <a href="{{ block.settings.menu_link2 }}" class="Heading Link Text--subdued u-h8">
+                    <span>{{ block.settings.menu_2 }}</span>
+                    <img loading="lazy" style="width:12px; height: 12px;vertical-align: middle; margin-right: 5px;" src="{{'Location.svg' | asset_url}}" alt="location"/>
+                </a>
+              </li>
+            <li class="rewards">
+                {% if customer %}
+                  <a href="{{ block.settings.menu_link3 }}" class="Heading Link Text--subdued u-h8">{{ block.settings.menu_3 }} 
+                    <span class="sweettooth-points-balance" style="color:#ffffff;">
+                    <i class="fas fa-trophy-alt"></i></span>
+                  </a>
+                {% else %}
+                  <a href="{{ block.settings.menu_link4 }}" class="Heading Link Text--subdued u-h8">
+                  {{ block.settings.menu_4 }} <span class="rewards-new">rewards</span>
+                  </a>
+                {% endif %}
+              </li>
+              <li class="">
+                <a href="{{ block.settings.menu_link5 }}" class="Heading Link Text--subdued u-h8">
+                  <span>{{ block.settings.menu_5 }}</span>
+                </a>
+              </li>
+          </ul>
+        </div>
+      </div>
+       {% when 'US_announcement' %}
+       <div class="us-show AnnouncementBar container container--lg" style="display:none;">
+        <div class="AnnouncementBar__Wrapper">
+          <p class="AnnouncementBar__Content Heading">
+            {%- if block.settings.link -%}
+              <a class="announcement-bold" href="{{ block.settings.link }}">{{ block.settings.content | escape }}</a>
+            {%- else -%}
+              {{ block.settings.content | escape }}
+            {%- endif -%}
+          </p>
+        </div>
+        <div class="AnnouncementBar__Wrapper">
+          <ul class="announcementbar-list">
+            <li class="link-accessibility">
+                <a id="accessibilityEnablerCustomTrigger" href="{{ block.settings.menu_link1 }}" class="Heading Link Text--subdued u-h8">
+                    <span>{{ block.settings.menu_1 }}</span>
+                    <!--img style="width:12px; height: 12px;vertical-align: middle; margin-right: 5px;" src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/accessibility-svg-icon-3.png" alt="accessibility"/-->
+                </a>
+            </li>
+            <li class="rewards">
+                <a href="{{ block.settings.menu_link2 }}" class="Heading Link Text--subdued u-h8">
+                    <span>{{ block.settings.menu_2 }}</span>
+                    <img style="width:12px; height: 12px;vertical-align: middle; margin-right: 5px;" src="{{'Location.svg' | asset_url}}" alt="location"/>
+                </a>
+              </li>
+            <li class="rewards">
+                {% if customer %}
+                  <a href="{{ block.settings.menu_link3 }}" class="Heading Link Text--subdued u-h8">{{ block.settings.menu_3 }} 
+                    <span class="sweettooth-points-balance" style="color:#ffffff;">
+                    <i class="fas fa-trophy-alt"></i></span>
+                  </a>
+                {% else %}
+                  <a href="{{ block.settings.menu_link4 }}" class="Heading Link Text--subdued u-h8">
+                  {{ block.settings.menu_4 }} <span class="rewards-new">rewards</span>
+                  </a>
+                {% endif %}
+              </li>
+              <li class="">
+                <a href="{{ block.settings.menu_link5 }}" class="Heading Link Text--subdued u-h8">
+                  <span>{{ block.settings.menu_5 }}</span>
+                </a>
+              </li>
+          </ul>
+        </div>
+      </div>
+       {% when 'ca_announcement' %}
+       <div class="ca-show AnnouncementBar container container--lg" style="display:none;">
+        <div class="AnnouncementBar__Wrapper">
+          <p class="AnnouncementBar__Content Heading">
+            {%- if block.settings.link -%}
+              <a class="announcement-bold" href="{{ block.settings.link }}">{{ block.settings.content | escape }}</a>
+            {%- else -%}
+              {{ block.settings.content | escape }}
+            {%- endif -%}
+          </p>
+        </div>
+       <div class="AnnouncementBar__Wrapper">
+          <ul class="announcementbar-list">
+            <li class="link-accessibility">
+                <a id="accessibilityEnablerCustomTrigger" href="{{ block.settings.menu_link1 }}" class="Heading Link Text--subdued u-h8">
+                    <span>{{ block.settings.menu_1 }}</span>
+                    <!--img style="width:12px; height: 12px;vertical-align: middle; margin-right: 5px;" src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/accessibility-svg-icon-3.png" alt="accessibility"/-->
+                </a>
+            </li>
+            <li class="rewards">
+                <a href="{{ block.settings.menu_link2 }}" class="Heading Link Text--subdued u-h8">
+                    <span>{{ block.settings.menu_2 }}</span>
+                    <img style="width:12px; height: 12px;vertical-align: middle; margin-right: 5px;" src="{{'Location.svg' | asset_url}}" alt="location"/>
+                </a>
+              </li>
+            <li class="rewards">
+                {% if customer %}
+                  <a href="{{ block.settings.menu_link3 }}" class="Heading Link Text--subdued u-h8">{{ block.settings.menu_3 }} 
+                    <span class="sweettooth-points-balance" style="color:#ffffff;">
+                    <i class="fas fa-trophy-alt"></i></span>
+                  </a>
+                {% else %}
+                  <a href="{{ block.settings.menu_link4 }}" class="Heading Link Text--subdued u-h8">
+                  {{ block.settings.menu_4 }} <span class="rewards-new">rewards</span>
+                  </a>
+                {% endif %}
+              </li>
+              <li class="">
+                <a href="{{ block.settings.menu_link5 }}" class="Heading Link Text--subdued u-h8">
+                  <span>{{ block.settings.menu_5 }}</span>
+                </a>
+              </li>
+          </ul>
+        </div>
+      </div>
+       {% when 'uk_ue_announcement' %}
+       <div class="uk-eu-show AnnouncementBar container container--lg" style="display:none;">
+        <div class="AnnouncementBar__Wrapper">
+          <p class="AnnouncementBar__Content Heading">
+            {%- if block.settings.link -%}
+              <a class="announcement-bold" href="{{ block.settings.link }}">{{ block.settings.content | escape }}</a>
+            {%- else -%}
+              {{ block.settings.content | escape }}
+            {%- endif -%}
+          </p>
+        </div>
+         <div class="AnnouncementBar__Wrapper">
+          <ul class="announcementbar-list">
+            <li class="link-accessibility">
+                <a id="accessibilityEnablerCustomTrigger" href="{{ block.settings.menu_link1 }}" class="Heading Link Text--subdued u-h8">
+                    <span>{{ block.settings.menu_1 }}</span>
+                    <!--img style="width:12px; height: 12px;vertical-align: middle; margin-right: 5px;" src="https://cdn.shopify.com/s/files/1/0063/4218/0928/files/accessibility-svg-icon-3.png" alt="accessibility"/-->
+                </a>
+            </li>
+            <li class="rewards">
+                <a href="{{ block.settings.menu_link2 }}" class="Heading Link Text--subdued u-h8">
+                    <span>{{ block.settings.menu_2 }}</span>
+                    <img style="width:12px; height: 12px;vertical-align: middle; margin-right: 5px;" src="{{'Location.svg' | asset_url}}" alt="location"/>
+                </a>
+              </li>
+            <li class="rewards">
+                {% if customer %}
+                  <a href="{{ block.settings.menu_link3 }}" class="Heading Link Text--subdued u-h8">{{ block.settings.menu_3 }} 
+                    <span class="sweettooth-points-balance" style="color:#ffffff;">
+                    <i class="fas fa-trophy-alt"></i></span>
+                  </a>
+                {% else %}
+                  <a href="{{ block.settings.menu_link4 }}" class="Heading Link Text--subdued u-h8">
+                  {{ block.settings.menu_4 }} <span class="rewards-new">rewards</span>
+                  </a>
+                {% endif %}
+              </li>
+              <li class="">
+                <a href="{{ block.settings.menu_link5 }}" class="Heading Link Text--subdued u-h8">
+                  <span>{{ block.settings.menu_5 }}</span>
+                </a>
+              </li>
+          </ul>
+        </div>
+      </div>
+       {% endcase %}
+      {% endfor %}
+    </section>
+
+    <style>
+      #section-{{ section.id }} {
+        background: {{ section.settings.background }};
+        color: {{ section.settings.text_color }};
+      }
+    </style>
+
+    <script>
+      document.documentElement.style.setProperty('--announcement-bar-height', document.getElementById('shopify-section-announcement').offsetHeight + 'px');
+    </script>
+  {%- endunless -%}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Announcement bar",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_bar",
+      "label": "Enable bar",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "home_page_only",
+      "label": "Home page only",
+      "default": false
+    },
+      {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#AE1E24"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "global_announcement",
+      "type": "global_announcement",
+      "settings": [
+    {
+      "type": "text",
+      "id": "content",
+      "label": "Text",
+      "default": "Announce something here"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "menu_1",
+      "label": "Right Text",
+      "default": "Accessibility"
+    },
+    {
+      "type": "url",
+      "id": "menu_link1",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "menu_2",
+      "label": "Text",
+      "default": "Where to Buy"
+    },
+    {
+      "type": "url",
+      "id": "menu_link2",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "menu_3",
+      "label": "Text",
+      "default": "Kill It Points:"
+    },
+    {
+      "type": "url",
+      "id": "menu_link3",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "menu_4",
+      "label": "Text",
+      "default": "Earn"
+    },
+    {
+      "type": "url",
+      "id": "menu_link4",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "menu_5",
+      "label": "Text",
+      "default": "About Us"
+    },
+    {
+      "type": "url",
+      "id": "menu_link5",
+      "label": "Link"
+    }
+      ]
+    },
+    {
+      "type": "US_announcement",
+      "name": "US announcement",
+      "settings": [
+    {
+      "type": "text",
+      "id": "content",
+      "label": "Text",
+      "default": "Announce something here"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "menu_1",
+      "label": "Right Text",
+      "default": "Accessibility"
+    },
+    {
+      "type": "url",
+      "id": "menu_link1",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "menu_2",
+      "label": "Text",
+      "default": "Where to Buy"
+    },
+    {
+      "type": "url",
+      "id": "menu_link2",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "menu_3",
+      "label": "Text",
+      "default": "Kill It Points:"
+    },
+    {
+      "type": "url",
+      "id": "menu_link3",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "menu_4",
+      "label": "Text",
+      "default": "Earn"
+    },
+    {
+      "type": "url",
+      "id": "menu_link4",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "menu_5",
+      "label": "Text",
+      "default": "About Us"
+    },
+    {
+      "type": "url",
+      "id": "menu_link5",
+      "label": "Link"
+    }
+
+    	]
+   	 },
+      {
+      "type": "ca_announcement",
+      "name": "CA Announcement",
+      "settings": [
+    {
+      "type": "text",
+      "id": "content",
+      "label": "Text",
+      "default": "Announce something here"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "menu_1",
+      "label": "Right Text",
+      "default": "Accessibility"
+    },
+    {
+      "type": "url",
+      "id": "menu_link1",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "menu_2",
+      "label": "Text",
+      "default": "Where to Buy"
+    },
+    {
+      "type": "url",
+      "id": "menu_link2",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "menu_3",
+      "label": "Text",
+      "default": "Kill It Points:"
+    },
+    {
+      "type": "url",
+      "id": "menu_link3",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "menu_4",
+      "label": "Text",
+      "default": "Earn"
+    },
+    {
+      "type": "url",
+      "id": "menu_link4",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "menu_5",
+      "label": "Text",
+      "default": "About Us"
+    },
+    {
+      "type": "url",
+      "id": "menu_link5",
+      "label": "Link"
+    }
+
+    	]
+   	 },
+         {
+      "type": "uk_ue_announcement",
+      "name": "UK-UE Announcement",
+      "settings": [
+    {
+      "type": "text",
+      "id": "content",
+      "label": "Text",
+      "default": "Announce something here"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "menu_1",
+      "label": "Right Text",
+      "default": "Accessibility"
+    },
+    {
+      "type": "url",
+      "id": "menu_link1",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "menu_2",
+      "label": "Text",
+      "default": "Where to Buy"
+    },
+    {
+      "type": "url",
+      "id": "menu_link2",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "menu_3",
+      "label": "Text",
+      "default": "Kill It Points:"
+    },
+    {
+      "type": "url",
+      "id": "menu_link3",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "menu_4",
+      "label": "Text",
+      "default": "Earn"
+    },
+    {
+      "type": "url",
+      "id": "menu_link4",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "menu_5",
+      "label": "Text",
+      "default": "About Us"
+    },
+    {
+      "type": "url",
+      "id": "menu_link5",
+      "label": "Link"
+    }
+
+    	]
+   	 }
+      ]
+    }
+{% endschema %}

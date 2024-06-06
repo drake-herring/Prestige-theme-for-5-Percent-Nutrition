@@ -1,0 +1,115 @@
+{% if product.metafields.custom.bar_1_title != blank and product.metafields.custom.bar_1_value != blank or product.metafields.custom.bar_2_title != blank and product.metafields.custom.bar_2_value != blank or product.metafields.custom.bar_3_title != blank and product.metafields.custom.bar_3_value != blank or product.metafields.custom.bar_4_title != blank and product.metafields.custom.bar_4_value != blank %}
+    {% style %}
+      section.bar-section{
+        background : {{section.settings.background}} ;
+      }
+      .bar-section .content-wrapper .bar-wrapper h3.title{
+        color : {{ section.settings.color}};
+      }
+      .bar-section .heading-wrapper h2 span{
+        color : {{section.settings.heading_color}};
+      }
+      /* value: */
+
+     {% assign related_products = product.metafields.custom.progress_bar_color_1.value %}
+       {%- comment %}<locksmith:a8f2>{% endcomment -%}
+         {%- assign locksmith_46b1_forloop__size = 0 %}{%  for color in related_products %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: color, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_46b1_forloop__size = locksmith_46b1_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_46b1_forloop__index = nil -%}
+       {%- comment %}</locksmith:a8f2>{% endcomment -%}
+       {%  for color in related_products %}
+          {%- comment %}<locksmith:e1a9>{% endcomment -%}
+            {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: color, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_46b1_forloop__index == nil %}{% assign locksmith_46b1_forloop__index = 1 %}{% assign locksmith_46b1_forloop__index0 = 0 %}{% else %}{% assign locksmith_46b1_forloop__index = locksmith_46b1_forloop__index | plus: 1 %}{% assign locksmith_46b1_forloop__index0 = locksmith_46b1_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_46b1_forloop__index == 1 %}{% assign locksmith_46b1_forloop__first = true %}{% else %}{% assign locksmith_46b1_forloop__first = false %}{% endif %}{% if locksmith_46b1_forloop__index == locksmith_46b1_forloop__size %}{% assign locksmith_46b1_forloop__last = true %}{% else %}{% assign locksmith_46b1_forloop__last = false %}{% endif %}{% assign locksmith_46b1_forloop__rindex = locksmith_46b1_forloop__size | minus: locksmith_46b1_forloop__index | minus: 1 %}{% assign locksmith_46b1_forloop__rindex0 = locksmith_46b1_forloop__size | minus: locksmith_46b1_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+          {%- comment %}</locksmith:e1a9>{% endcomment -%}
+          progress.bar{{ locksmith_46b1_forloop__index }}::-webkit-progress-value {background-color: {{ color }} !important;}
+          progress.bar{{ locksmith_46b1_forloop__index }}::-moz-progress-bar {background-color: {{ color }} !important;}
+       {% endfor %}
+    {% endstyle %}
+  <section class="bar-section">
+  <div class="container">
+    {% if section.settings.heading  != blank %}
+        <div class="heading-wrapper">
+          <h2 class="text-uppercase product-h2 t-center">
+             <span class="">{{ section.settings.heading }}</span>
+          </h2>
+        </div>
+      {% endif %}
+    <div class="content-wrapper">
+      {% if product.metafields.custom.bar_1_title != blank and product.metafields.custom.bar_1_value != blank %}
+        <div class="bar-wrapper">
+          <div class="bar-title">
+            <h3 class="title">{{ product.metafields.custom.bar_1_title }}</h3>
+          </div>
+          <div class="bar">
+            <progress class="bar1" id="file" value="{{ product.metafields.custom.bar_1_value }}" max="100"> {{ product.metafields.custom.bar_1_value }} </progress>
+          </div>
+        </div>
+      {% endif %}
+      {% if product.metafields.custom.bar_2_title != blank and product.metafields.custom.bar_2_value != blank %}
+        <div class="bar-wrapper">
+          <div class="bar-title">
+            <h3 class="title">{{ product.metafields.custom.bar_2_title }}</h3>
+          </div>
+          <div class="bar">
+            <progress class="bar2" id="file" value="{{ product.metafields.custom.bar_2_value }}" max="100"> {{ product.metafields.custom.bar_2_value }} </progress>
+          </div>
+        </div>
+      {% endif %}
+      {% if product.metafields.custom.bar_3_title != blank and product.metafields.custom.bar_3_value != blank %}
+        <div class="bar-wrapper">
+          <div class="bar-title">
+            <h3 class="title">{{ product.metafields.custom.bar_3_title }}</h3>
+          </div>
+          <div class="bar">
+            <progress class="bar3" id="file" value="{{ product.metafields.custom.bar_3_value }}" max="100"> {{ product.metafields.custom.bar_3_value }} </progress>
+          </div>
+        </div>
+      {% endif %}
+      {% if product.metafields.custom.bar_4_title != blank and product.metafields.custom.bar_4_value != blank %}
+        <div class="bar-wrapper">
+          <div class="bar-title">
+            <h3 class="title">{{ product.metafields.custom.bar_4_title }}</h3>
+          </div>
+          <div class="bar">
+            <progress class="bar4" id="file" value="{{ product.metafields.custom.bar_4_value }}" max="100"> {{ product.metafields.custom.bar_4_value }} </progress>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+{% schema %}
+  {
+    "name": "Bar section",
+    "settings": [
+      {
+        "type" : "text",
+        "id" : "heading",
+        "label" : "Heading"
+      },
+      {
+        "type" : "color",
+        "id" : "heading_color",
+        "label" : "Heading Text color",
+        "default" : "#000000"
+      },
+      {
+        "type": "color_background",
+        "id": "background",
+        "label": "Background",
+        "default": "linear-gradient(#ffffff, #000000)"
+      },
+      {
+        "type" : "color",
+        "id" : "color",
+        "label" : "Text color",
+        "default" : "#000000"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

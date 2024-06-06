@@ -1,0 +1,117 @@
+{
+  "sections": {
+    "166247012081b51889": {
+      "type": "main-banner-section",
+      "settings": {
+        "banner_image": "shopify:\/\/shop_images\/BlogHeader_BiggerByTheDay.jpg",
+        "apply_overlay": true
+      }
+    },
+    "166247014840eea00f": {
+      "type": "The_blog",
+      "disabled": true,
+      "settings": {
+        "blog-content": "",
+        "blog-main-title": "<p>The Blogs<\/p>"
+      }
+    },
+    "main": {
+      "type": "blog-template",
+      "settings": {
+        "blog_heading": "",
+        "blogmenu": "blog-category",
+        "featured_first_image": false,
+        "show_title": false,
+        "sidebar": false,
+        "show_rss": false,
+        "show_tags": false,
+        "show_featured_article": false,
+        "show_category": false,
+        "show_yotpo": false
+      }
+    },
+    "d512492c-bd3b-44f5-99d8-d1432684d45c": {
+      "type": "featured-product",
+      "settings": {
+        "subheading": "",
+        "title": "Featured product",
+        "show_headings_on_mobile": true,
+        "product": "bigger-by-the-day-muscle-builder-with-turkesterone",
+        "show_vendor": false,
+        "show_description": false,
+        "description_below_add_to_cart": false,
+        "show_color_swatch": false,
+        "show_color_carousel": false,
+        "show_size_swatch": false,
+        "show_quantity_selector": false,
+        "show_inventory_quantity": false,
+        "inventory_quantity_threshold": 0,
+        "show_price_in_button": false,
+        "show_payment_button": false
+      }
+    },
+    "1662710164ec6e5ec3": {
+      "type": "featured-collections",
+      "disabled": true,
+      "blocks": {
+        "16627101644425f3ca-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "bbtd-muscle-builders",
+            "title": "",
+            "grid_items_count": 3,
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "16627101644425f3ca-0"
+      ],
+      "settings": {
+        "title": "Featured Products",
+        "layout_mode": "grid",
+        "show_product_info": true,
+        "title_position": "above",
+        "show_vendor": false,
+        "show_color_swatch": false,
+        "grid_mobile_items_per_row": "2",
+        "grid_desktop_items_per_row": 4
+      }
+    },
+    "1663248374d1c119d6": {
+      "type": "newsletter-sitewide",
+      "settings": {
+        "enable_bar": true,
+        "section_size": "small",
+        "text_color": "#ffffff",
+        "button_color": "#000000",
+        "subheading": "",
+        "title": "WANT TO SEE MORE?",
+        "content": "<p>Signup to get notices for all posts!<\/p>",
+        "graphic_aligment": "white"
+      }
+    },
+    "shop-now": {
+      "type": "shop-now",
+      "disabled": true,
+      "settings": {
+        "show_section": false,
+        "title": "Best Sellers",
+        "collection": "best-sellers",
+        "grid_items_count": 9,
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false
+      }
+    }
+  },
+  "order": [
+    "166247012081b51889",
+    "166247014840eea00f",
+    "main",
+    "d512492c-bd3b-44f5-99d8-d1432684d45c",
+    "1662710164ec6e5ec3",
+    "1663248374d1c119d6",
+    "shop-now"
+  ]
+}

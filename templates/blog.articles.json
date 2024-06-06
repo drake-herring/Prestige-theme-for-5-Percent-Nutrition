@@ -1,0 +1,100 @@
+{
+  "sections": {
+    "166246894364309bea": {
+      "type": "main-banner-section",
+      "settings": {
+        "banner_image": "shopify:\/\/shop_images\/BlogHeader_Articles.jpg",
+        "apply_overlay": true
+      }
+    },
+    "16624689575c63248c": {
+      "type": "The_blog",
+      "disabled": true,
+      "settings": {
+        "blog-content": "",
+        "blog-main-title": "<p>The Blogs<\/p>"
+      }
+    },
+    "main": {
+      "type": "blog-template",
+      "settings": {
+        "blog_heading": "The Blogs",
+        "blogmenu": "blog-category",
+        "featured_first_image": false,
+        "show_title": false,
+        "sidebar": false,
+        "show_rss": false,
+        "show_tags": true,
+        "show_featured_article": false,
+        "show_category": false,
+        "show_yotpo": false
+      }
+    },
+    "1662530247c9976e6e": {
+      "type": "blog-custom-blog-post",
+      "blocks": {
+        "b5d1bffb-1e88-49ce-a90e-087eddbd2351": {
+          "type": "article",
+          "settings": {
+            "heading": "MORE ARTICLES",
+            "sub-heading": "",
+            "article_1": "",
+            "article_2": "",
+            "article_3": ""
+          }
+        },
+        "e2520ab3-6dcb-40e4-930e-bbf53ebbbb16": {
+          "type": "blog",
+          "settings": {
+            "heading": "LATEST ARTICLES",
+            "blog": "articles",
+            "svg_icon_name": ""
+          }
+        }
+      },
+      "block_order": [
+        "b5d1bffb-1e88-49ce-a90e-087eddbd2351",
+        "e2520ab3-6dcb-40e4-930e-bbf53ebbbb16"
+      ],
+      "settings": {
+        "content": "",
+        "hide_excerpt": true,
+        "show_category": true
+      }
+    },
+    "166324829356e492d2": {
+      "type": "newsletter-sitewide",
+      "settings": {
+        "enable_bar": true,
+        "section_size": "small",
+        "text_color": "#ffffff",
+        "button_color": "#000000",
+        "subheading": "",
+        "title": "",
+        "content": "<p>Get new articles right in your inbox! Sign up below and update your preferences anytime.<\/p>",
+        "graphic_aligment": "black"
+      }
+    },
+    "shop-now": {
+      "type": "shop-now",
+      "disabled": true,
+      "settings": {
+        "show_section": false,
+        "title": "Best Sellers",
+        "collection": "best-sellers",
+        "grid_items_count": 9,
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false
+      }
+    }
+  },
+  "order": [
+    "166246894364309bea",
+    "16624689575c63248c",
+    "main",
+    "1662530247c9976e6e",
+    "166324829356e492d2",
+    "shop-now"
+  ]
+}
